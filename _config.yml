@@ -9,9 +9,20 @@ sub_title: Yonsei Univ (ME/CS)
 url: "https://ybkim95.github.io"
 baseurl: "" 
 
+# 메인 화면 및 sidebar 문구
+tagline:               >
+  Robotics Engineer (ME/CS)
+
 # 설명
 description: >- # this means to ignore newlines until "baseurl:"
   Robotics Engineer
+
+# 메뉴 구성
+menu:
+  - title:             HOME
+    url:               /about/
+  - title:             ABOUT
+    url:               /about/
 
 # 사이트 메인 화면 이미지 및 로고
 accent_image: "/assets/img/ybk_teaser.jpg"
@@ -25,9 +36,27 @@ author:
   github_username: ybkim95
   linkedin_username: ybkim95
 
+# 페이지 하단의 FOOTER; cookie- or privacy policy (if appliable), etc..
+legal:
+  - title:             Impress
+    url:               /impress/
+  - title:             Cookies Policy
+    url:               /cookies-policy/
+
+# COPYRIGHT 설정
+copyright:             © 2020 All rights reserved
+
+# Format of the permalinks
+permalink:             pretty #/:categories/:year-:month-:day-:title/
+
+# Pagination configuration (used by the `blog` layout)
+paginate:              10
+paginate_path:         /page-:num/
+
 # Build settings
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
