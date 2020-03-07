@@ -1,19 +1,29 @@
-
+# 언어 설정
 lang: en
+
+# 메인 화면 및 페이지 상단 제목
 title: yu bin, kim
+sub_title: Yonsei Univ (ME/CS)
 
-email: ybkim95@yonsei.ac.kr
-
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
+# web의 주소 설정
 url: "https://ybkim95.github.io"
 baseurl: "" 
 
-twitter_username: jekyllrb
-github_username:  ybkim95
+# 설명
+description: >- # this means to ignore newlines until "baseurl:"
+  Robotics Engineer
+
+# 사이트 메인 화면 이미지 및 로고
+accent_image: "/assets/img/ybk_teaser.jpg"
+logo: "/assets/icons/ybk_logo.jpg"
+
+# 저자 정보
+author:
+  name: 'Yu Bin, Kim'
+  email: ybkim95@yonsei.ac.kr
+  facebook_username: kimyoubin25
+  github_username: ybkim95
+  linkedin_username: ybkim95
 
 # Build settings
 plugins:
