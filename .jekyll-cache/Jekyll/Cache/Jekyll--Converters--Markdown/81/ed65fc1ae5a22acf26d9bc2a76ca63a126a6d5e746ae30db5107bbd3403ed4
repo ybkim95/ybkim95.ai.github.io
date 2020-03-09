@@ -1,0 +1,76 @@
+I"<p>this area is for me to organize all the researchs that I have done so far</p>
+
+<!--HTML 방법
+[<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
+-->
+
+<html>
+<head>
+  <style type="text/css">
+    .pic
+    {
+      width:400px;
+      height:217px;
+      background: url(/assets/img/roborts_original.png) no-repeat;
+    }
+    .text
+    {
+      width:340px;
+      height:217px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic:hover .text
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="pic">
+  <div class="text">
+  <br />
+  RoboRTS
+  </div>
+</div>
+</body>
+</html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS</title>
+    <style>
+      input {
+        vertical-align: middle;
+      }
+      input.form-text {
+        border: 1px solid #bcbcbc;
+        height: 28px;
+      }
+      input.img-button {
+        background: url( "images/button_search.png" ) no-repeat;
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <p>
+        <input type="text" class="form-text" />
+        <input type="button" class="img-button" />
+      </p>
+    </form>
+  </body>
+</html>
+
+:ET

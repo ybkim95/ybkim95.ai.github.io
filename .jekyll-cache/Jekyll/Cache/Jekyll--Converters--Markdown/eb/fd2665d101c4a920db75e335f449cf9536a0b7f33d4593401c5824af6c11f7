@@ -1,0 +1,113 @@
+I"[<p>this area is for me to organize all the researchs that I have done so far</p>
+
+<!--HTML 방법
+[<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
+-->
+
+<html>
+<head>
+  <style type="text/css">
+    .pic
+    {
+      width:400px;
+      height:217px;
+      background: url(/assets/img/roborts_original.png) no-repeat;
+    }
+    .text
+    {
+      width:340px;
+      height:217px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic:hover .text
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:50px;
+    }
+.mainbox {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+}
+            /*박스에 들어가는 버튼이다*/
+            .button {
+                    width: 100px;
+                    height: 30px;
+                    text-align: center;
+                    border: 0px solid red;
+                    position: relative;
+                    top: 220px;
+                    line-height: 30px;
+                    color: #fff;
+            }
+            .button:hover {
+                    background-color: #000;
+                    transition: all linear 0.2s;
+            }
+            /*버튼마다의 색상을 변경한다*/
+            .but1 {
+                    background-color: #2d73db
+            }
+            .but2 {
+                    background-color: #1a7120
+            }
+            .but3 {
+                    background-color: #eb3838
+            }
+
+            /*이미지가 표시될 영역이다*/
+            .img1,.img2,.img3 {
+                    width: 200px;
+                    height: 200px;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    position: relative;
+                    top: -30px;
+            }
+
+            /*박스에 배경이미지를 삽입하고 개체가 잘보이지않도록 opacity를 주었다*/
+            .img1 {
+                    background-image: url("./images/bustayo.jpg");
+                    opacity: 0.2;
+            }
+            .img2 {
+                    background-image: url("./images/busrogy.jpg");
+                    opacity: 0.2;
+            }
+            .img3 {
+                    background-image: url("./images/busgani.jpg");
+                    opacity: 0.2;
+            }
+
+            /*마우스를 오버하면 그림을 선명히 보이게한다*/
+            .but1:hover+.img1{
+                    opacity: 1;
+                    transition: all linear 0.5s;
+            }
+            .but2:hover+.img2{
+                    opacity: 1;
+                    transition: all linear 0.5s;
+            }
+            .but3:hover+.img3{
+                    opacity: 1;
+                    transition: all linear 0.5s;
+            }
+  </style>
+</head>
+<body>
+  <div class="pic">
+  <div class="text">
+  <br />
+  RoboRTS
+  </div>
+</div>
+</body>
+</html>
+
+:ET

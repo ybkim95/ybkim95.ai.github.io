@@ -1,0 +1,26 @@
+I"ù<p>this area is for me to organize all the researchs that I have done so far</p>
+
+<p><a href="/roborts/"><img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" onmouseout="this.src='/assets/img/roborts_original.png'" /></a></p>
+
+<p>&lt;!DOCTYPE html&gt;</p>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Change Image on Hover in CSS</title>
+<style>
+    .card {
+        width: 130px;
+        height: 195px;
+        background: url("/assets/img/roborts_original.png") no-repeat;
+        display: inline-block;
+    }
+    .card:hover {
+        background: url("images/card-front.jpg") no-repeat;
+    }
+</style>
+</head>
+<body>
+    <div class="card"></div>
+</body>
+</html>
+:ET
