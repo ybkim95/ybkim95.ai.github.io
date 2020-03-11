@@ -1,14 +1,8 @@
----
-layout: page
-title: RESEARCH
-permalink: /research/
----
-
+I"�<p>this area is for me to organize all the researchs that I have done so far</p>
 
 <!--HTML 방법
 [<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
 -->
-
 
 <!-- RoboRTS -->
 <html>
@@ -17,10 +11,10 @@ permalink: /research/
     .pic1
     {
       position:absolute;
-      top:16.0%;
+      top:20.0%;
       left:2%;
-      width:auto;
-      height:14%;
+      width:40%;
+      height:18%;
       background: url(/assets/img/roborts_original.png) no-repeat;
       background-size: contain;
     }
@@ -44,10 +38,10 @@ permalink: /research/
     .pic2
     {
       position:absolute;
-      top:16.0%;
+      top:20.0%;
       right:13.5%;
       width:auto;
-      height:14%;
+      height:auto;
       background: url(/assets/img/burger.png) no-repeat;
       background-size: contain;
       max-width: 400px;
@@ -74,9 +68,8 @@ permalink: /research/
 <body>
   <div class="pic1">
   <div class="text1">
-  <br>
-  <a href="/roborts/" class="no-uline" 
-  style="
+  <br />
+  <a href="/roborts/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -88,9 +81,8 @@ permalink: /research/
 </div>
   <div class="pic2">
   <div class="text2">
-  <br>
-  <a href="/stargazer/" class="no-uline" 
-  style="
+  <br />
+  <a href="/stargazer/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -103,9 +95,4 @@ permalink: /research/
 </body>
 </html>
 
-
-
-
-
-
-
+:ET
