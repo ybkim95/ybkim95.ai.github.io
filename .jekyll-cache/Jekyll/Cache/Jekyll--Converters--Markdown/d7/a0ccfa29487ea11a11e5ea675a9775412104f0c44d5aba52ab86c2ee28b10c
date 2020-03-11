@@ -1,15 +1,8 @@
----
-layout: page
-title: RESEARCH
-permalink: /research/
----
-
-this area is for me to organize all the researchs that I have done so far 
+I"�<p>this area is for me to organize all the researchs that I have done so far</p>
 
 <!--HTML 방법
 [<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
 -->
-
 
 <!-- RoboRTS -->
 <html>
@@ -74,9 +67,8 @@ this area is for me to organize all the researchs that I have done so far
 <body>
   <div class="pic1">
   <div class="text1">
-  <br>
-  <a href="/roborts/" class="no-uline" 
-  style="
+  <br />
+  <a href="/roborts/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -88,9 +80,8 @@ this area is for me to organize all the researchs that I have done so far
 </div>
   <div class="pic2">
   <div class="text2">
-  <br>
-  <a href="/stargazer/" class="no-uline" 
-  style="
+  <br />
+  <a href="/stargazer/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -103,9 +94,4 @@ this area is for me to organize all the researchs that I have done so far
 </body>
 </html>
 
-
-
-
-
-
-
+:ET

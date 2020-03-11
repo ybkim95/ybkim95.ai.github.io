@@ -1,15 +1,8 @@
----
-layout: page
-title: RESEARCH
-permalink: /research/
----
-
-this area is for me to organize all the researchs that I have done so far 
+I"	<p>this area is for me to organize all the researchs that I have done so far</p>
 
 <!--HTML 방법
 [<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
 -->
-
 
 <!-- RoboRTS -->
 <html>
@@ -17,11 +10,8 @@ this area is for me to organize all the researchs that I have done so far
   <style type="text/css">
     .pic1
     {
-      position:absolute;
-      top:20.0%;
-      left:2%;
-      width:380px;
-      height:190px;
+      width:400px;
+      height:217px;
       background: url(/assets/img/roborts_original.png) no-repeat;
     }
     .text1
@@ -43,14 +33,9 @@ this area is for me to organize all the researchs that I have done so far
     }
     .pic2
     {
-      position:absolute;
-      top:20.0%;
-      right:13.5%;
-      width:auto;
-      height:auto;
+      width:400px;
+      height:217px;
       background: url(/assets/img/burger.png) no-repeat;
-      background-size: contain;
-      max-width: 400px;
     }
     .text2
     {
@@ -67,16 +52,15 @@ this area is for me to organize all the researchs that I have done so far
       font-size:20px;
       font-weight:700;
       font-family:"Times New Roman", Times, serif;
-      padding:45px;
+      padding:50px;
     }
   </style>
 </head>
 <body>
   <div class="pic1">
   <div class="text1">
-  <br>
-  <a href="/roborts/" class="no-uline" 
-  style="
+  <br />
+  <a href="/roborts/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -86,11 +70,43 @@ this area is for me to organize all the researchs that I have done so far
   </a>
   </div>
 </div>
+</body>
+</html>
+
+<!-- Stargazer -->
+<html>
+<head>
+  <style type="text/css">
+    .pic2
+    {
+      width:400px;
+      height:217px;
+      background: url(/assets/img/burger.png) no-repeat;
+    }
+    .text2
+    {
+      width:340px;
+      height:217px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic2:hover .text2
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:50px;
+    }
+  </style>
+</head>
+<body>
   <div class="pic2">
   <div class="text2">
-  <br>
-  <a href="/stargazer/" class="no-uline" 
-  style="
+  <br />
+  <a href="/stargazer/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -103,9 +119,4 @@ this area is for me to organize all the researchs that I have done so far
 </body>
 </html>
 
-
-
-
-
-
-
+:ET
