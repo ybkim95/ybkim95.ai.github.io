@@ -1,14 +1,7 @@
----
-layout: page
-title: RESEARCH
-permalink: /research/
----
-
-
+I"t
 <!--HTML 방법
 [<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
 -->
-
 
 <!-- RoboRTS -->
 <html>
@@ -72,18 +65,18 @@ permalink: /research/
     .pic3
     {
       position:absolute;
-      top:380px;
+      top:400px;
       left:335px;
-      width:355px;
-      height:196px;
+      width:350px;
+      height:195px;
       background: url(/assets/img/DORI.png) no-repeat;
       background-size: contain;
       max-width: 400px;
     }
     .text3
     {
-      width:355px;
-      height:196px;
+      width:340px;
+      height:217px;
       background:#FFF;
       opacity:0;
     }
@@ -102,9 +95,8 @@ permalink: /research/
 <body>
   <div class="pic1">
   <div class="text1">
-  <br>
-  <a href="/roborts/" class="no-uline" 
-  style="
+  <br />
+  <a href="/roborts/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -116,9 +108,8 @@ permalink: /research/
 </div>
   <div class="pic2">
   <div class="text2">
-  <br>
-  <a href="/stargazer/" class="no-uline" 
-  style="
+  <br />
+  <a href="/stargazer/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -130,9 +121,8 @@ permalink: /research/
 </div>
   <div class="pic3">
   <div class="text3">
-  <br>
-  <a href="/dori/" class="no-uline" 
-  style="
+  <br />
+  <a href="/dori/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -145,9 +135,4 @@ permalink: /research/
 </body>
 </html>
 
-
-
-
-
-
-
+:ET
