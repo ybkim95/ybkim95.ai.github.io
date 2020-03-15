@@ -17,7 +17,7 @@
 .fixed-common {
   position: fixed;
   left: 0;
-  width: 100%;
+  width: 100%; // 좌우 스크롤시 사용되는 메뉴 버튼의 위치 조절
   z-index: 2;
 }
 

@@ -21,7 +21,7 @@ hy-drawer {
 
   @media screen {
     // <<< link
-    --hy-drawer-width: 100%;
+    --hy-drawer-width: 100%; // 접혔을 때 width에 관여
     --hy-drawer-slide-width: calc(100% - .5rem);
     --hy-drawer-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
     // >>>
@@ -66,7 +66,7 @@ hy-drawer {
   // >>>
 }
 
-.sidebar {
+.sidebar { // 접었을 때 나타나는 로고, 글씨, 메뉴 위치 관련
   // <<< inline
   position: relative;
   display: flex;
@@ -81,7 +81,7 @@ hy-drawer {
   a {
     color: #fff; // inline
     border-bottom-color: rgba(255, 255, 255, 0.2); // inline
-    &:hover { border-bottom-color: #fff; } // link
+    &:hover { border-bottom-color: rgb(255, 255, 255); } // 메인에서 마우스 올려놓았을 때 아이콘 밑에 그림자 색깔!!
   }
 }
 
@@ -95,7 +95,7 @@ hy-drawer.loaded .sidebar {
   // <<< inline
   position: absolute;
   top: 0;
-  left: calc(50% - 50vw);
+  left: calc(50% - 50vw); // 배경화면 위치 결정
   width: 100vw;
   height: 100%;
   background: #202020 center / cover;
@@ -158,7 +158,7 @@ a.sidebar-nav-item {
   }
 }
 
-#_swipe {
+#_swipe { // SWIPE
   position: absolute;
   z-index: 4;
   opacity: 0.33;

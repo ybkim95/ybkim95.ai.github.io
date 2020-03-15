@@ -2,7 +2,7 @@
 lang: en
 
 # 메인 화면 및 페이지 상단 제목
-title: yu bin, kim!
+title: yu bin, kim
 sub_title: Yonsei Univ (ME/CS)
 
 # web의 주소 설정
@@ -34,9 +34,10 @@ logo: "/assets/icons/ybk_logo.jpg"
 author:
   name: 'Yu Bin, Kim'
   email: ybkim95@yonsei.ac.kr
-  facebook_username: kimyoubin25
-  github_username: ybkim95
-  linkedin_username: ybkim95
+  github: ybkim95
+  #facebook: kimyoubin25
+  instagram: yubb_95
+  linkedin: ybkim95
 
 # 페이지 하단의 FOOTER; cookie- or privacy policy (if appliable), etc..
 legal:

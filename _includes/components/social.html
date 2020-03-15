@@ -5,6 +5,12 @@
       {% include components/social-list-item.html platform=link.first username=link.last %}
     {% endfor %}
   {% else %}
+
+    {% assign email = author.email | default: site.email %}
+    {% if email %}
+      {% include components/social-list-item.html platform="email" username=email %}
+    {% endif %}
+
     {% assign twitter_username = author.twitter.username | default: author.twitter | default:site.twitter.username | default:site.twitter | default:site.twitter_username %}
     {% if twitter_username %}
       {% include components/social-list-item.html platform="twitter" username=twitter_username %}
@@ -15,9 +21,15 @@
       {% include components/social-list-item.html platform="github" username=github_username %}
     {% endif %}
 
-    {% assign email = author.email | default: site.email %}
-    {% if email %}
-      {% include components/social-list-item.html platform="email" username=email %}
+    {% assign linkedin_username = author.linkedin.username | default: author.linkedin | default:site.linkedin.username | default:site.linkedin | default:site.linkedin_username %}
+    {% if linkedin_username %}
+      {% include components/social-list-item.html platform="linkedin" username=linkedin_username %}
     {% endif %}
+
+    {% assign instagram_username = author.instagram.username | default: author.instagram | default:site.instagram.username | default:site.instagram | default:site.instagram_username %}
+    {% if instagram_username %}
+      {% include components/social-list-item.html platform="instagram" username=instagram_username %}
+    {% endif %}
+
   {% endif %}
 </ul>
