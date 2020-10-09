@@ -23,6 +23,8 @@ menu:
     url:               /home/
   - title:             RESEARCH
     url:               /research/
+  - title:             COURSE
+    url:               /course/
   - title:             ABOUT
     url:               /about/
 

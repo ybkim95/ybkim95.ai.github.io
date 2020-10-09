@@ -1,0 +1,4 @@
+I"&<div style=" background-color: gold; padding:10px; width: 300px; height: auto; cursor: pointer;" onclick="location.href='http://moonhouse.co.kr';" viewer="">
+이 곳은 DIV 영역이며, 영역 자체에 링크를 걸었다. DIV 영역을 클릭하면 지정된 주소로 이동한다. 
+</div>
+:ET
