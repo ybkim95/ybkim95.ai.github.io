@@ -88,4 +88,4 @@ padding:0px;
 For more information, please refer to below curriculum vitae:
 </span>
 
- [2020 Y.B.KIM CV](/assets/files/resume.pdf)
+ [2020 Y.B.KIM CV](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing)
