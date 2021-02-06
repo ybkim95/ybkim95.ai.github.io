@@ -1,0 +1,309 @@
+I"#<!-- RoboRTS -->
+<html>
+<head>
+  <style type="text/css">
+    .pic1
+    {
+      position:absolute;
+      top:180px;
+      left:19px;
+      width:300px;
+      height:190px;
+      background: url(/assets/img/roborts_original.png) no-repeat;
+      background-size: contain;
+    }
+    .text1
+    {
+      width:300px;
+      height:190px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic1:hover .text1
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
+    .pic2
+    {
+      position:absolute;
+      top:180px;
+      left:335px;
+      width:auto;
+      height:185px;
+      background: url(/assets/img/burger.png) no-repeat;
+      background-size: contain;
+      max-width: 400px;
+    }
+    .text2
+    {
+      width:340px;
+      height:217px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic2:hover .text2
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
+    .pic3
+    {
+      position:absolute;
+      top:380px;
+      left:335px;
+      width:355px;
+      height:182px;
+      background: url(/assets/img/DORI.png) no-repeat;
+      background-size: contain;
+      max-width: 400px;
+    }
+    .text3
+    {
+      width:340px;
+      height:196px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic3:hover .text3
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
+    .pic4
+    {
+      position:absolute;
+      top:380px;
+      left:19px;
+      width:320px;
+      height:266px;
+      background: url(/assets/img/sentiment-analysis.png) no-repeat;
+      background-size: contain;
+      max-width: 300px;
+    }
+    .text4
+    {
+      width:300px;
+      height:196px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic4:hover .text4
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
+    .pic5
+    {
+      position:absolute;
+      top:580px;
+      left:19px;
+      width:320px;
+      height:300px;
+      background: url(/assets/img/gesture-generation.jpg) no-repeat;
+      background-size: contain;
+      max-width: 300px;
+    }
+    .text5
+    {
+      width:300px;
+      height:196px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic5:hover .text5
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
+    .pic6
+    {
+      position:absolute;
+      border : 1px solid #ccc;
+      top:180px;
+      left:685px;
+      width:380px;
+      height:185px;
+      background: url(/assets/img/odmgpf.jpg) no-repeat;
+      background-size: contain;
+      max-width: 320px;
+    }
+    .text6
+    {
+      width:320px;
+      height:196px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic6:hover .text6
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
+    .pic7
+    {
+      position:absolute;
+      border : 1px solid #ccc;
+      top:580px;
+      left:335px;
+      width:380px;
+      height:196px;
+      background: url(/assets/img/chatbot.jpg) no-repeat;
+      background-size: contain;
+      max-width: 340px;
+    }
+    .text7
+    {
+      width:340px;
+      height:196px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic7:hover .text7
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="pic1">
+  <div class="text1">
+  <br />
+  <a href="/roborts/" class="no-uline" style="
+  color: black;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-decoration: none;
+  ">
+    RoboRTS
+  </a>
+  </div>
+</div>
+  
+  <div class="pic2">
+  <div class="text2">
+  <br />
+  <a href="/stargazer/" class="no-uline" style="
+  color: black;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-decoration: none;
+  ">
+    Stargazer
+  </a>
+  </div>
+</div>
+  
+  <div class="pic3">
+  <div class="text3">
+  <br />
+  <a href="/dori/" class="no-uline" style="
+  color: black;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-decoration: none;
+  ">
+    Digital Companion Robot
+  </a>
+  </div>
+</div>
+
+  <div class="pic4">
+  <div class="text4">
+  <br />
+  <a href="/sentiment-analysis/" class="no-uline" style="
+  color: black;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-decoration: none;
+  ">
+    Sentiment Analysis
+  </a>
+  </div>
+</div>
+
+  <div class="pic5">
+  <div class="text5">
+  <br />
+  <a href="/gesture-generation/" class="no-uline" style="
+  color: black;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-decoration: none;
+  ">
+    Gesture Generation
+  </a>
+  </div>
+</div>
+
+  <div class="pic6">
+  <div class="text6">
+  <br />
+  <a href="/ODMG-PF/" class="no-uline" style="
+  color: black;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-decoration: none;
+  ">
+    ODMG-PF
+  </a>
+  </div>
+</div>
+
+  <div class="pic7">
+  <div class="text7">
+  <br />
+  <a href="/chatbot/" class="no-uline" style="
+  color: black;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-decoration: none;
+  ">
+    Chatbot
+  </a>
+  </div>
+</div>
+
+&lt;/div&gt;
+</body>
+</html>
+
+:ET

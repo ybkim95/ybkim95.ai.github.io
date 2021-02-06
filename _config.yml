@@ -11,22 +11,24 @@ baseurl: ""
 
 # 메인 화면 및 sidebar 문구
 tagline:               >
-  Robotics Engineer (ME/CS)
+  Robotics & Machine Learning Engineer (ME/CS)
 
 # 설명
 description: >- # this means to ignore newlines until "baseurl:"
-  Robotics Engineer
+  Robotics & Machine Learning Engineer
 
 # 메뉴 구성
 menu:
   - title:             HOME
     url:               /home/
-  - title:             RESEARCH
-    url:               /research/
-  - title:             COURSE
-    url:               /course/
   - title:             ABOUT
     url:               /about/
+  - title:             PROJECT
+    url:               /project/
+  - title:             STUDY
+    url:               /course/
+  - title:             ACTIVITY
+    url:               /activity/
 
 # 사이트 메인 화면 이미지 및 로고
 accent_image: "/assets/img/ybk_teaser.jpg"
@@ -35,21 +37,19 @@ logo: "/assets/icons/ybk_logo.jpg"
 # 저자 정보
 author:
   name: 'Yu Bin, Kim'
-  email: ybkim95@yonsei.ac.kr
-  github: ybkim95
+  #email: ybkim95@yonsei.ac.kr
+  #github: ybkim95
   #facebook: kimyoubin25
-  instagram: yubb_95
-  linkedin: ybkim95
+  #instagram: yubb_95
+  #linkedin: ybkim95
 
 # 페이지 하단의 FOOTER; cookie- or privacy policy (if appliable), etc..
 legal:
-  - title:             Impress
+  - title:             
     url:               /impress/
-  - title:             Cookies Policy
-    url:               /cookies-policy/
 
 # COPYRIGHT 설정
-copyright:             © 2020 All rights reserved
+copyright:             © 2019-2021 by Yu Bin, Kim www.ybkim95.github.io
 
 # Format of the permalinks
 permalink:             pretty #/:categories/:year-:month-:day-:title/
@@ -62,6 +62,7 @@ paginate_path:         /page-:num/
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-youtube
 
 # Exclude from processing.
 # The following items will not be processed, by default.

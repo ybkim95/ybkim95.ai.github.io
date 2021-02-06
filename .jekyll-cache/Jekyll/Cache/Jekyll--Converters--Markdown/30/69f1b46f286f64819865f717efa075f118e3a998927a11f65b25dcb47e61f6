@@ -1,0 +1,9 @@
+I"Ó<p>this area is for me to organize all the researchs that I have done so far</p>
+
+<!-- [<img src="/assets/img/roborts_original.png" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270" onmouseout="this.src='/assets/img/roborts_original.png'" />](/roborts/) -->
+<div class="embed-container">
+  <!-- <iframe title="YouTube video player" width="640" height="390" src="https://www.youtube.com/watch?v=oJdBfSafWjM" frameborder="0" allowfullscreen></iframe>
+</div> -->
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/oJdBfSafWjM" frameborder="0" allowfullscreen=""></iframe></div>
+</div>
+:ET

@@ -4,9 +4,9 @@ title: ABOUT
 permalink: /about/
 ---
 
-<img src="/assets/img/photo/ybk_photo.jpg" width="145" height="180"
+<img src="/assets/img/photo/yu-bin.png" width="25%" height="25%"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+     style="float: left;"/>
 
 <span
 style="
@@ -17,7 +17,7 @@ line-height: 1.0em;
 color: black;
 font-family: arial;
 margin:160px;
-padding:10px;
+padding:40px;
 ">
 Yu Bin, Kim
 </span>
@@ -32,12 +32,11 @@ font-family: arial;
 margin:80px;
 padding:10px;
 ">
-Data-driven Robot Control for Human-Robot
+Data-driven Robot Control for Human-Robot Interaction
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-Interaction
 </span>
 
 <br><br>
@@ -88,4 +87,4 @@ padding:0px;
 For more information, please refer to below curriculum vitae:
 </span>
 
- [2020 Y.B.KIM CV](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing)
+ [2021 Y.B.KIM CV](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing)

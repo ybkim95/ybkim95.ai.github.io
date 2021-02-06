@@ -27,28 +27,33 @@ layout: base
 
   {{ content }}
 
-  <!--hr class="dingbat"/-->
-
   {% if site.posts.size > 0 %}
     <!-- 2021년도 -->
     <h2 class="hr">{{ strings.posts | default:"2021" }}</h2>
-    <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
-        {% include components/post-list-item.html post=post %}
-      {% endfor %}
-    </ul>
 
     <!-- 2020년도 -->
     <h2 class="hr">{{ strings.posts | default:"2020" }}</h2>
     <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
+      {% for post in site.posts limit:7 %}
         {% include components/post-list-item.html post=post %}
       {% endfor %}
     </ul>
-
+    
     <!-- 2019년도 -->
     <h2 class="hr">{{ strings.posts | default:"2019" }}</h2>
     
   {% endif %}
+
+
+
+
+
+  
+  <!--            -->
+  <!-- STUDY 영역  -->
+  <header>
+    <h1 class="page-title">{{ page.subtitle | default:strings.home | default:"STUDY" }}</h1>
+    {% include components/message.html text=page.description hide=page.hide_description %}
+  </header>
 
 </article>
