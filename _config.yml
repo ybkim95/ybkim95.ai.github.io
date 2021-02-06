@@ -2,7 +2,7 @@
 lang: en
 
 # 메인 시작 화면 및 페이지 상단 제목
-title: yu bin, kim
+title: Yu bin, Kim
 sub_title: Yonsei Univ (ME/CS)
 
 # web의 주소 설정
@@ -15,20 +15,22 @@ tagline:               >
 
 # 설명
 description: >- # this means to ignore newlines until "baseurl:"
-  Robotics & Machine Learning Engineer
+  
 
 # 메뉴 구성
 menu:
-  - title:             HOME
-    url:               /home/
+  # - title:             HOME
+  #   url:               /home/
   - title:             ABOUT
     url:               /about/
-  - title:             PROJECT
-    url:               /project/
-  - title:             STUDY
-    url:               /course/
-  - title:             ACTIVITY
-    url:               /activity/
+  - title:             WORK
+    url:               /work/
+  # - title:             PROJECT
+  #   url:               /project/
+  # - title:             STUDY
+  #   url:               /course/
+  # - title:             ACTIVITY
+  #   url:               /activity/
 
 # 사이트 메인 화면 이미지 및 로고
 accent_image: "/assets/img/ybk_teaser.jpg"

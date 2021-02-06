@@ -294,7 +294,7 @@ permalink: /project/
   <div class="pic6">
   <div class="text6">
   <br>
-  <a href="/ODMG-PF/" class="no-uline" 
+  <a href="/odmgpf/" class="no-uline" 
   style="
   color: black;
   font-size: 1.0em;

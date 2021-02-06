@@ -1,4 +1,8 @@
-I"#<!-- RoboRTS -->
+I"$<!--HTML 방법
+[<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
+-->
+
+<!-- RoboRTS -->
 <html>
 <head>
   <style type="text/css">
@@ -277,7 +281,7 @@
   <div class="pic6">
   <div class="text6">
   <br />
-  <a href="/ODMG-PF/" class="no-uline" style="
+  <a href="/odmgpf/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;

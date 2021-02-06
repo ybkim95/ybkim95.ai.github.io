@@ -2,10 +2,16 @@
   <div class="content">
     <div class="nav-btn-bar">
       <span class="sr-only">{{ site.data.strings.jump_to | default:"Jump to" }}{{ site.data.strings.colon | default:":" }}</span>
+      
+      <!-- 1. 메뉴 버튼 만들고 싶을 때-->
+
       <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
         <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}</span>
         <span class="icon-menu"></span>
       </a>
+      
+      <!-- 2. 검색 버튼 만들고 싶을 때-->
+
       <!-- <a id="_search" class="nav-btn no-hover fl" href="#_search">
         <span class="sr-only">{{ site.data.strings.search | default:"Search" }}</span>
         <span class="icon-search"></span>
@@ -18,6 +24,7 @@
         <input type="hidden" name="q" value="site:hydejack.com" />
         <input type="hidden" name="ia" value="web" />
       </form> -->
+
     </div>
   </div>
 </div>
