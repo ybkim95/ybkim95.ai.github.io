@@ -30,12 +30,25 @@ layout: base
   <!--hr class="dingbat"/-->
 
   {% if site.posts.size > 0 %}
-    <h2 class="hr">{{ strings.posts | default:"2020-1학기" }}</h2>
+    <!-- 2021년도 -->
+    <h2 class="hr">{{ strings.posts | default:"2021" }}</h2>
     <ul class="related-posts">
       {% for post in site.posts limit:5 %}
         {% include components/post-list-item.html post=post %}
       {% endfor %}
     </ul>
+
+    <!-- 2020년도 -->
+    <h2 class="hr">{{ strings.posts | default:"2020" }}</h2>
+    <ul class="related-posts">
+      {% for post in site.posts limit:5 %}
+        {% include components/post-list-item.html post=post %}
+      {% endfor %}
+    </ul>
+
+    <!-- 2019년도 -->
+    <h2 class="hr">{{ strings.posts | default:"2019" }}</h2>
+    
   {% endif %}
 
 </article>
