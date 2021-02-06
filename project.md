@@ -4,13 +4,10 @@ title: PROJECT
 permalink: /project/
 ---
 
-
 <!--HTML 방법
 [<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
 -->
 
-
-<!-- RoboRTS -->
 <html>
 <head>
   <style type="text/css">

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: DORI
+title: Digital Companion Robot, "DORI"
 permalink: /dori/
 ---
 
-this area is for me to organize all the researchs that I have done so far 
+[<img src="/assets/img/tdrc.jpg" width="580" height="270"/>](https://blog.naver.com/PostList.nhn?blogId=tdrcenter&from=postList&categoryNo=10&parentCategoryNo=10)
 
-[<img src="/assets/img/roborts_original.png" width="400" height="270" onmouseover="this.src='/assets/img/burger.png'" width="400" height="270" onmouseout="this.src='/assets/img/burger.png'" />](/stargazer/)
+TDRC Members
