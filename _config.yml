@@ -64,7 +64,7 @@ paginate_path:         /page-:num/
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-youtube
+  # - jekyll-youtube
 
 # Exclude from processing.
 # The following items will not be processed, by default.
