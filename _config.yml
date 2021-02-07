@@ -65,7 +65,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-pdf-embed
-  - jekyll-youtube
 
 # Exclude from processing.
 # The following items will not be processed, by default.
