@@ -1,11 +1,11 @@
 ---
 layout: post
-title: CSI3108-01 Database
+title: Reinforcement Learning - Richard Sutton
 year: 2020
 description: >
-category: course
 author: Yu Bin
 noindex: false
+category: study
 ---
 
 <p>

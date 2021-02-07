@@ -32,16 +32,26 @@ layout: base
     <h3 class="one">{{ strings.posts | default:"2020" }}</h3>
     <ol class="related-posts">
       {% for post in site.posts limit:7 %}
-        {% include components/post-list-item.html post=post %}
+        {% if post.category contains "course" %}
+          {% include components/post-list-item.html post=post %}
+        {% endif %}
       {% endfor %}
     </ol>
     
   {% endif %}
   
-  <!--            -->
+
+
   <!-- STUDY 영역  -->
-  <header>
-    <h2 class="hr">{{ page.subtitle | default:strings.home | default:"STUDY" }}</h2>
-  </header>
+  <h2 class="hr">{{ page.subtitle | default:strings.home | default:"STUDY" }}</h2>
+  <ol class="related-posts">
+    {% for post in site.posts %}
+      {% if post.category contains "study" %}
+        {% include components/post-list-item.html post=post %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+  
+  
 
 </article>
