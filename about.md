@@ -12,12 +12,13 @@ permalink: /about/
 style="
 font-style: ; 
 font-weight: bold; 
-font-size: 1.8em;
+font-size: 1.5em;
 line-height: 1.0em; 
 color: black;
 font-family: arial;
 margin:160px;
 padding:90px;
+text-align: left;
 ">
 Yu Bin, Kim
 </span>
@@ -25,13 +26,13 @@ Yu Bin, Kim
 <span
 style="
 font-style: ; 
-font-size: 1em;
+font-size: 0.9em;
 line-height: 0.6em; 
 color: black;
 font-family: arial;
 margin:80px;
 padding:10px;
-text-align: center;
+text-align: left;
 ">
 Robotics & ML Engineer
 <br>
