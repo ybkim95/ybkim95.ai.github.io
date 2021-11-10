@@ -1,6 +1,6 @@
 ---
-layout: work
-title: WORK
+layout: page
+title: PROJECTS
 permalink: /work/
 ---
 
@@ -85,7 +85,7 @@ permalink: /work/
       <a class="location-title" href="/minerl/">
           MineRL          </a>
       <div class="location-image">
-        <a href="/odmgpf/">
+        <a href="/minerl/">
             <img width="300" height="169" src="/assets/img/minerl.jpg" alt="paris">          
           </a>
       </div>

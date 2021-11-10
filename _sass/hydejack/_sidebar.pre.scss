@@ -97,7 +97,7 @@ hy-drawer.loaded .sidebar {
   top: 0;
   left: calc(50% - 50vw); // 배경화면 위치 결정
   width: 100vw;
-  height: 112%; // 메인화면에서 로고 및 메뉴 위치를 '실질적'으로 결정하는 인자 
+  height: 110%; // 메인화면에서 로고 및 메뉴 위치를 '실질적'으로 결정하는 인자 
   background: #202020 center / cover;
 
   &::after {

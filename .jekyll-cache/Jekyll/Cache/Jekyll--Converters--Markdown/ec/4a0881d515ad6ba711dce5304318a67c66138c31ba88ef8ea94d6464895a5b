@@ -1,0 +1,12 @@
+I"¥<h2 id="introduction"><strong>Introduction</strong></h2>
+
+<p>The MineRL 2021 Diamond Competition aims to foster the development of algorithms which can efficiently leverage human demonstrations to drastically reduce the number of samples needed to solve complex, hierarchical, and sparse environments.</p>
+
+<p><img src="/assets/img/minerl.gif" width="60%" height="60%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p><a href="https://www.aicrowd.com/challenges/neurips-2021-minerl-diamond-competition">MineRL</a></p>
+
+<h2 id="task"><strong>Task</strong></h2>
+
+<p>The task of the competition is solving the MineRLObtainDiamond-v0 environment (or MineRLObtainDiamondVectorObf-v0 for Research track). In this environment, the agent begins in a random starting location without any items, and is tasked with obtaining a diamond. This task can only be accomplished by navigating the complex item hierarchy of Minecraft.</p>
+:ET

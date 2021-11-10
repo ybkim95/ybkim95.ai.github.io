@@ -1,0 +1,41 @@
+I"<<h2 id="introduction"><strong>Introduction</strong></h2>
+
+<p>The MineRL 2021 Diamond Competition aims to foster the development of algorithms which can efficiently leverage human demonstrations to drastically reduce the number of samples needed to solve complex, hierarchical, and sparse environments.</p>
+
+<p><img src="/assets/img/minerl.gif" width="60%" height="60%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p><a href="https://www.aicrowd.com/challenges/neurips-2021-minerl-diamond-competition">MineRL</a></p>
+
+<h2 id="task"><strong>Task</strong></h2>
+
+<p>The task of the competition is solving the MineRLObtainDiamond-v0 environment (or MineRLObtainDiamondVectorObf-v0 for Research track). In this environment, the agent begins in a random starting location without any items, and is tasked with obtaining a diamond. This task can only be accomplished by navigating the complex item hierarchy of Minecraft.</p>
+
+<p><img src="/assets/img/task.png" width="80%" height="80%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p>The agent receives a high reward for obtaining a diamond as well as smaller, auxiliary rewards for obtaining prerequisite items. In addition to the main environment, we provide a number of auxiliary environments. These consist of tasks which are either subtasks of ObtainDiamond or other tasks within Minecraft.</p>
+
+<h2 id="minerlobtaindiamond-v0-env"><strong>MineRLObtainDiamond-v0 Env</strong></h2>
+
+<p><img src="/assets/img/diamond1.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" />
+<img src="/assets/img/diamond2.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" />
+<img src="/assets/img/diamond3.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" />
+<img src="/assets/img/diamond4.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p>In this environment the agent is required to obtain a diamond. The agent begins in a random starting location on a random survival map without any items, matching the normal starting conditions for human players in Minecraft. The agent is given access to a selected summary of its inventory and GUI free crafting, smelting, and inventory management actions.</p>
+
+<p>During an episode the agent is rewarded only once per item the first time it obtains that item in the requisite item hierarchy to obtaining a diamond. The rewards for each item are given here:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Item reward="1" type="log" /&gt;
+&lt;Item reward="2" type="planks" /&gt;
+&lt;Item reward="4" type="stick" /&gt;
+&lt;Item reward="4" type="crafting_table" /&gt;
+&lt;Item reward="8" type="wooden_pickaxe" /&gt;
+&lt;Item reward="16" type="cobblestone" /&gt;
+&lt;Item reward="32" type="furnace" /&gt;
+&lt;Item reward="32" type="stone_pickaxe" /&gt;
+&lt;Item reward="64" type="iron_ore" /&gt;
+&lt;Item reward="128" type="iron_ingot" /&gt;
+&lt;Item reward="256" type="iron_pickaxe" /&gt;
+&lt;Item reward="1024" type="diamond" /&gt;
+</code></pre></div></div>
+:ET

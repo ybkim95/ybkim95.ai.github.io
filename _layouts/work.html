@@ -17,17 +17,16 @@
 layout: base
 ---
 
-{% assign strings = site.data.strings %}
+<!-- {% assign strings = site.data.strings %} -->
 
-<article class="page" role="article">
-  <h2 class="hr">{{ strings.posts | default:"PROJECT" }}</h2>
+<!-- <article class="page" role="article">
+  <h2 class="hr">{{ strings.posts | default:"PROJECT" }}</h2> -->
 
   <section>
     {{ content }}
   </section>
 
-  {% if site.posts.size > 0 %}
-    <!-- 2020년도 -->
+  <!-- {% if site.posts.size > 0 %}
     <h2 class="hr">{{ strings.posts | default:"COURSE" }}</h2>
     <h3 class="one">{{ strings.posts | default:"2020" }}</h3>
     <ol class="related-posts">
@@ -38,20 +37,6 @@ layout: base
       {% endfor %}
     </ol>
     
-  {% endif %}
-  
+  {% endif %} -->
 
-
-  <!-- STUDY 영역  -->
-  <h2 class="hr">{{ page.subtitle | default:strings.home | default:"STUDY" }}</h2>
-  <ol class="related-posts">
-    {% for post in site.posts %}
-      {% if post.category contains "study" %}
-        {% include components/post-list-item.html post=post %}
-      {% endif %}
-    {% endfor %}
-  </ol>
-  
-  
-
-</article>
+<!-- </article> -->

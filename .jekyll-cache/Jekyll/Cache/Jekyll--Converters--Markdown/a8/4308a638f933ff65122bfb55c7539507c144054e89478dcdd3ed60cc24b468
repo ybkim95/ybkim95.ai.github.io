@@ -1,0 +1,75 @@
+I"Ù%<h2 id="introduction"><strong>Introduction</strong></h2>
+
+<p>The MineRL 2021 Diamond Competition aims to foster the development of algorithms which can efficiently leverage human demonstrations to drastically reduce the number of samples needed to solve complex, hierarchical, and sparse environments.</p>
+
+<p><img src="/assets/img/minerl.gif" width="60%" height="60%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p><a href="https://www.aicrowd.com/challenges/neurips-2021-minerl-diamond-competition">MineRL</a></p>
+
+<h2 id="task"><strong>Task</strong></h2>
+
+<p>The task of the competition is solving the MineRLObtainDiamond-v0 environment (or MineRLObtainDiamondVectorObf-v0 for Research track). In this environment, the agent begins in a random starting location without any items, and is tasked with obtaining a diamond. This task can only be accomplished by navigating the complex item hierarchy of Minecraft.</p>
+
+<p><img src="/assets/img/task.png" width="80%" height="80%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p>The agent receives a high reward for obtaining a diamond as well as smaller, auxiliary rewards for obtaining prerequisite items. In addition to the main environment, we provide a number of auxiliary environments. These consist of tasks which are either subtasks of ObtainDiamond or other tasks within Minecraft.</p>
+
+<h2 id="minerlobtaindiamond-v0-env"><strong>MineRLObtainDiamond-v0 Env</strong></h2>
+
+<p><img src="/assets/img/diamond1.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" />
+<img src="/assets/img/diamond2.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" />
+<img src="/assets/img/diamond3.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" />
+<img src="/assets/img/diamond4.gif" width="10%" height="10%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p>In this environment the agent is required to obtain a diamond. The agent begins in a random starting location on a random survival map without any items, matching the normal starting conditions for human players in Minecraft. The agent is given access to a selected summary of its inventory and GUI free crafting, smelting, and inventory management actions.</p>
+
+<p>During an episode the agent is rewarded only once per item the first time it obtains that item in the requisite item hierarchy to obtaining a diamond. The rewards for each item are given here:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"1"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"log"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"2"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"planks"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"4"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"stick"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"4"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"crafting_table"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"8"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"wooden_pickaxe"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"16"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"cobblestone"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"32"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"furnace"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"32"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"stone_pickaxe"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"64"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"iron_ore"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"128"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"iron_ingot"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"256"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"iron_pickaxe"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="no">Item</span> <span class="n">reward</span><span class="o">=</span><span class="s2">"1024"</span> <span class="n">type</span><span class="o">=</span><span class="s2">"diamond"</span> <span class="o">/&gt;</span>
+</code></pre></div></div>
+
+<h2 id="observation-space"><strong>Observation Space</strong></h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Dict</span><span class="p">({</span>
+    <span class="s2">"equipped_items"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"mainhand"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"damage"</span><span class="p">:</span> <span class="s2">"Box(low=-1, high=1562, shape=())"</span><span class="p">,</span>
+                    <span class="s2">"maxDamage"</span><span class="p">:</span> <span class="s2">"Box(low=-1, high=1562, shape=())"</span><span class="p">,</span>
+                    <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"Enum(air,iron_axe,iron_pickaxe,none,other,stone_axe,stone_pickaxe,wooden_axe,wooden_pickaxe)"</span>
+            <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">"inventory"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"coal"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"cobblestone"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"crafting_table"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"dirt"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"furnace"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"iron_axe"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"iron_ingot"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"iron_ore"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"iron_pickaxe"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"log"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"planks"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"stick"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"stone"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"stone_axe"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"stone_pickaxe"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"torch"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"wooden_axe"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span><span class="p">,</span>
+            <span class="s2">"wooden_pickaxe"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=2304, shape=())"</span>
+    <span class="p">},</span>
+    <span class="s2">"pov"</span><span class="p">:</span> <span class="s2">"Box(low=0, high=255, shape=(64, 64, 3))"</span>
+<span class="p">})</span>
+</code></pre></div></div>
+:ET

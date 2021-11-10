@@ -53,7 +53,7 @@ font-family: arial;
 margin:0px;
 padding:0px;
 ">
-I'm a M.S. candidate at KAIST AI Graduate. My research interest in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
+I'm a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
 </span>
 
 <!--
@@ -74,8 +74,23 @@ As an Engineer, I tried to analyze the world in a logical and systematical way b
 However, there were many values that cannot be judged to be the only truth, I realized that I could not interpret them solely by Engineering knowledge.
 Accordingly, I became interested not only in Engineering but also in convergence studies where various studies gets combined.    
 My lifetime goal is to make advances in technology by intermingling the various kinds of studies and always strive to create something from that gained knowledge to make a better future.     
-</span>
+<br>
+Also, I love to play ice-hockey and do work out in my spare time and also like to cook and see an exhibition. </span>
 
+<img src="/assets/img/ice-hockey.png" width="20%" height="20%"
+     alt="Markdown Monster icon"
+     style="float: center;"/> &nbsp; &nbsp;
+<img src="/assets/img/exhibition.png" width="26%" height="26%"
+     alt="Markdown Monster icon"
+     style="float: center;"/> &nbsp; &nbsp; 
+<img src="/assets/img/noodle.png" width="17%" height="17%"
+     alt="Markdown Monster icon"
+     style="float: center;"/> &nbsp; &nbsp;
+<img src="/assets/img/cafe.png" width="23%" height="23%"
+     alt="Markdown Monster icon"
+     style="float: center;"/> 
+
+<br>
 <span
 style="
 font-style: ; 
@@ -87,3 +102,4 @@ margin:0px;
 padding:0px;
 ">
 For more information, please refer to my [Curriculum Vitae(CV)](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing)
+</span>
