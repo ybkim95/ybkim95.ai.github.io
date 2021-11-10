@@ -32,7 +32,7 @@ font-family: arial;
 margin:80px;
 padding:10px;
 ">
-Data-driven Robot Control for Human-Robot Interaction
+Robotics & Machine Learning Engineer
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
@@ -51,7 +51,7 @@ font-family: arial;
 margin:0px;
 padding:0px;
 ">
-I am a Undergraduate who is majoring Mechanical Engineering and Computer Science at the Yonsei University. My research broadly focuses on hardware, programming, and evaluating robotic systems to create engaging and natural Human-Robot Interaction.  
+I am a M.S. candidate at KAIST AI Graduate. My research interest in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
 </span>
 
 <!--
@@ -84,7 +84,7 @@ font-family: arial;
 margin:0px;
 padding:0px;
 ">
-For more information, please refer to below curriculum vitae:
+For more information, please refer to below curriculum vitae(CV):
 </span>
 
  [2021 Y.B.KIM CV](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing)

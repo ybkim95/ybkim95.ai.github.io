@@ -11,7 +11,7 @@ baseurl: ""
 
 # 메인 화면 및 sidebar 문구
 tagline:               >
-  Robotics & Machine Learning Engineer (ME/CS)
+  Robotics & Machine Learning Engineer
 
 # 설명
 description: >- # this means to ignore newlines until "baseurl:"
