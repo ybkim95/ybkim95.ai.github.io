@@ -32,7 +32,7 @@ font-family: arial;
 margin:80px;
 padding:10px;
 ">
-Robotics & Machine Learning Engineer
+Robotics & ML Engineer
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
