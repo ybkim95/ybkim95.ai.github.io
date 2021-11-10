@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PROJECT
+title: PROJECTS
 permalink: /project/
 ---
 
@@ -11,6 +11,33 @@ permalink: /project/
 <html>
 <head>
   <style type="text/css">
+    .pic0
+    {
+      position:absolute;
+      top:180px;
+      left:19px;
+      width:300px;
+      height:190px;
+      background: url(/assets/img/minerl.jpg) no-repeat;
+      background-size: contain;
+    }
+    .text0
+    {
+      width:300px;
+      height:190px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic0:hover .text0
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
     .pic1
     {
       position:absolute;

@@ -12,16 +12,17 @@ ICRA’s RoboMaster challenge asks teams to use the same hardware to build one o
 
 <br>
 
-<img src="/assets/img/roborts2.png" width="50%" height="50%"
+<img src="/assets/img/roborts2.png" width="40%" height="40%"
      alt="Markdown Monster icon"
      style="float: left;"/>
 
-<img src="/assets/img/roborts3.jpg" width="40%" height="40%"
+<img src="/assets/img/roborts3.jpg" width="50%" height="50%"
      alt="Markdown Monster icon"
      style="float: left;"/>
 
 <iframe width="650" height="385" src="https://www.youtube.com/embed/oJdBfSafWjM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+<br><br>
 The below is the result for the final competition and the team Beyonsei, Yonsei University (Ours) have won 3rd Prize.
 
 [LINK](https://www.robomaster.com/en-US/resource/pages/announcement/1027)
