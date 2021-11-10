@@ -25,10 +25,8 @@ menu:
     url:               /about/
   - title:             WORK
     url:               /work/
-  # - title:             PROJECT
-  #   url:               /project/
-  # - title:             STUDY
-  #   url:               /course/
+  - title:             STUDY
+    url:               /study/
   # - title:             ACTIVITY
   #   url:               /activity/
 

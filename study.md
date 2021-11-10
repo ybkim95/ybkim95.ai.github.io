@@ -1,0 +1,9 @@
+---
+layout: page
+title: STUDY
+permalink: /study/
+---
+
+<img src="/assets/img/photo/yu-bin.png" width="25%" height="25%"
+     alt="Markdown Monster icon"
+     style="float: left;"/>

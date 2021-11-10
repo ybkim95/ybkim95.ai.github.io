@@ -12,13 +12,13 @@ permalink: /about/
 style="
 font-style: ; 
 font-weight: bold; 
-font-size: 1.6em;
+font-size: 1.7em;
 line-height: 1.0em; 
 color: black;
 font-family: arial;
-margin:80px;
-padding:10px;
-text-align: left;
+margin:90px;
+padding:50px;
+text-align: center;
 ">
 Yu Bin, Kim
 </span>
@@ -31,8 +31,8 @@ line-height: 0.6em;
 color: black;
 font-family: arial;
 margin:80px;
-padding:10px;
-text-align: right;
+padding:50px;
+text-align: center;
 ">
 Robotics & ML Engineer
 <br>
@@ -41,7 +41,7 @@ Robotics & ML Engineer
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 </span>
 
-<br><br>
+<br><br><br>
 
 <span
 style="
@@ -53,7 +53,7 @@ font-family: arial;
 margin:0px;
 padding:0px;
 ">
-I am a M.S. candidate at KAIST AI Graduate. My research interest in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
+I'm a M.S. candidate at KAIST AI Graduate. My research interest in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
 </span>
 
 <!--
@@ -86,7 +86,4 @@ font-family: arial;
 margin:0px;
 padding:0px;
 ">
-For more information, please refer to below curriculum vitae(CV):
-</span>
-
- [2021 Y.B.KIM CV](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing)
+For more information, please refer to my [Curriculum Vitae(CV)](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing)

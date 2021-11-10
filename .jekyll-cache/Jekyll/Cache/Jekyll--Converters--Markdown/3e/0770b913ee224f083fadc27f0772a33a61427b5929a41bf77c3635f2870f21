@@ -1,10 +1,37 @@
-I"<!--HTML 방법
+I"<!--HTML 방법
 [<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
 -->
 
 <html>
 <head>
   <style type="text/css">
+    .pic0
+    {
+      position:absolute;
+      top:180px;
+      left:19px;
+      width:300px;
+      height:190px;
+      background: url(/assets/img/minerl.jpg) no-repeat;
+      background-size: contain;
+    }
+    .text0
+    {
+      width:300px;
+      height:190px;
+      background:#FFF;
+      opacity:0;
+    }
+    .pic0:hover .text0
+    {
+      opacity:0.6;
+      text-align:center;
+      color:#000000;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Times New Roman", Times, serif;
+      padding:45px;
+    }
     .pic1
     {
       position:absolute;
@@ -206,7 +233,21 @@
   </style>
 </head>
 <body>
-  
+
+  <div class="pic0">
+    <div class="text0">
+    <br />
+    <a href="/minerl/" class="no-uline" style="
+    color: black;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-decoration: none;
+    ">
+      MineRL
+    </a>
+    </div>
+  </div>  
+
   <div class="pic1">
   <div class="text1">
   <br />

@@ -1,0 +1,41 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+layout: base
+---
+
+{% assign strings = site.data.strings %}
+
+<article class="page" role="article">
+  <h2 class="hr">{{ strings.posts | default:"STUDY" }}</h2>
+
+  <section>
+    {{ content }}
+  </section>
+
+  <!-- STUDY 영역  -->
+  <h2 class="hr">{{ page.subtitle | default:strings.home | default:"STUDY" }}</h2>
+  <ol class="related-posts">
+    {% for post in site.posts %}
+      {% if post.category contains "study" %}
+        {% include components/post-list-item.html post=post %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+  
+  
+
+</article>
