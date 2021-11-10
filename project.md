@@ -239,7 +239,22 @@ permalink: /project/
   </style>
 </head>
 <body>
-  
+
+  <div class="pic0">
+    <div class="text0">
+    <br>
+    <a href="/minerl/" class="no-uline" 
+    style="
+    color: black;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-decoration: none;
+    ">
+      MineRL
+    </a>
+    </div>
+  </div>  
+
   <div class="pic1">
   <div class="text1">
   <br>
