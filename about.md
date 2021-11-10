@@ -12,12 +12,13 @@ permalink: /about/
 style="
 font-style: ; 
 font-weight: bold; 
-font-size: 1.5em;
+font-size: 1.6em;
 line-height: 1.0em; 
 color: black;
 font-family: arial;
-margin:160px;
+margin:80px;
 padding:10px;
+text-align: left;
 ">
 Yu Bin, Kim
 </span>
@@ -25,7 +26,7 @@ Yu Bin, Kim
 <span
 style="
 font-style: ; 
-font-size: 0.9em;
+font-size: 1.0em;
 line-height: 0.6em; 
 color: black;
 font-family: arial;
