@@ -32,7 +32,7 @@ color: black;
 font-family: arial;
 margin:80px;
 padding:10px;
-text-align: left;
+text-align: right;
 ">
 Robotics & ML Engineer
 <br>
