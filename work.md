@@ -81,6 +81,15 @@ permalink: /work/
 
 <div class="child-page-listing">
   <div class="grid-container">
+      <article id="3700" class="location-listing">
+      <a class="location-title" href="/minerl/">
+          MineRL          </a>
+      <div class="location-image">
+        <a href="/odmgpf/">
+            <img width="300" height="169" src="/assets/img/minerl.jpg" alt="paris">          
+          </a>
+      </div>
+    </article>
     <article id="3685" class="location-listing">
       <a class="location-title" href="/roborts/">
           RoboMaster AI Challenge           </a>
