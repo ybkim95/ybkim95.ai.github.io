@@ -17,7 +17,7 @@ line-height: 1.0em;
 color: black;
 font-family: arial;
 margin:160px;
-padding:40px;
+padding:10px;
 ">
 Yu Bin, Kim
 </span>
