@@ -17,7 +17,7 @@ line-height: 1.0em;
 color: black;
 font-family: arial;
 margin:160px;
-padding:10px;
+padding:90px;
 ">
 Yu Bin, Kim
 </span>
@@ -31,6 +31,7 @@ color: black;
 font-family: arial;
 margin:80px;
 padding:10px;
+text-align: center;
 ">
 Robotics & ML Engineer
 <br>
