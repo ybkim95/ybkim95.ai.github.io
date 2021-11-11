@@ -4,9 +4,7 @@ title: ABOUT
 permalink: /about/
 ---
 
-<img src="/assets/img/photo/yu-bin.png" width="25%" height="25%"
-     alt="Markdown Monster icon"
-     style="float: left;"/>
+<img src="/assets/img/photo/yu-bin.png" width="25%" height="25%" style="float: left;"/> 
 
 <span
 style="
@@ -27,7 +25,7 @@ Yu Bin, Kim
 style="
 font-style: ; 
 font-size: 1.0em;
-line-height: 0.6em; 
+line-height: 0em; 
 color: black;
 font-family: arial;
 margin:80px;
@@ -35,10 +33,7 @@ padding:0px;
 text-align: center;
 ">
 Robotics & ML Engineer
-<br>
-</span>
-
-<br><br><br>
+</span><br><br><br><br><br>
 
 <span
 style="

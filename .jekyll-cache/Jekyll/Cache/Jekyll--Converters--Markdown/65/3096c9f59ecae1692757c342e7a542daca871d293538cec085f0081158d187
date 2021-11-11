@@ -1,5 +1,14 @@
-I""
+I"�
 <p><img src="/assets/img/photo/yu-bin.png" width="25%" height="25%" alt="Markdown Monster icon" style="float: left;" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="/assets/img/photo/yu-bin.png" alt="Flowers" /></td>
+      <td>I am text to the right</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><span style=" font-style: ;  font-weight: bold;  font-size: 1.7em; line-height: 1.0em;  color: black; font-family: arial; margin:90px; padding:0px; text-align: center; ">
 Yu Bin, Kim
@@ -10,10 +19,8 @@ Robotics &amp; ML Engineer
 <br />
 </span></p>
 
-<p><br /><br /><br /></p>
-
 <p><span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; ">
-I’m a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest in Sim2Real transfer and solving tasks in our daily routine with robotic systems.<br />
+I’m a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in Sim2Real transfer and solving tasks in our daily routine with robotic systems.<br />
 </span></p>
 
 <!--
@@ -28,9 +35,9 @@ My lifetime goal is to make advances in technology by intermingling the various 
 <br />
 Also, I love to play ice-hockey and do work out in my spare time and also like to cook and see an exhibition. </span></p>
 
-<p><img src="/assets/img/ice-hockey.png" width="20%" height="20%" alt="Markdown Monster icon" style="float: center;" />    
-<img src="/assets/img/exhibition.png" width="26%" height="26%" alt="Markdown Monster icon" style="float: center;" />     
-<img src="/assets/img/noodle.png" width="17%" height="17%" alt="Markdown Monster icon" style="float: center;" />    
+<p><img src="/assets/img/ice-hockey.png" width="20%" height="20%" alt="Markdown Monster icon" style="float: center;" />  
+<img src="/assets/img/exhibition.png" width="26%" height="26%" alt="Markdown Monster icon" style="float: center;" />  
+<img src="/assets/img/noodle.png" width="17%" height="17%" alt="Markdown Monster icon" style="float: center;" />   
 <img src="/assets/img/cafe.png" width="23%" height="23%" alt="Markdown Monster icon" style="float: center;" /></p>
 
 <p><br />
