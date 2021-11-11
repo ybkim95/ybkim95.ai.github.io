@@ -76,13 +76,13 @@ Also, I love to play ice-hockey and do work out in my spare time and also like t
 
 <img src="/assets/img/ice-hockey.png" width="20%" height="20%"
      alt="Markdown Monster icon"
-     style="float: center;"/> &nbsp; &nbsp;
+     style="float: center;"/> &nbsp;
 <img src="/assets/img/exhibition.png" width="26%" height="26%"
      alt="Markdown Monster icon"
-     style="float: center;"/> &nbsp; &nbsp; 
+     style="float: center;"/> &nbsp;
 <img src="/assets/img/noodle.png" width="17%" height="17%"
      alt="Markdown Monster icon"
-     style="float: center;"/> &nbsp; &nbsp;
+     style="float: center;"/> &nbsp; 
 <img src="/assets/img/cafe.png" width="23%" height="23%"
      alt="Markdown Monster icon"
      style="float: center;"/> 
