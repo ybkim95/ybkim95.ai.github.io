@@ -36,9 +36,6 @@ text-align: center;
 ">
 Robotics & ML Engineer
 <br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 </span>
 
 <br><br><br>
