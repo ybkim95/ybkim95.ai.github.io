@@ -27,8 +27,8 @@ menu:
     url:               /work/
   - title:             STUDY
     url:               /study/
-  # - title:             ACTIVITY
-  #   url:               /activity/
+  - title:             GAME
+    url:               /game/
 
 # 사이트 메인 화면 이미지 및 로고
 accent_image: "/assets/img/ybk_teaser.jpg"
