@@ -4,7 +4,7 @@ title: ABOUT
 permalink: /about/
 ---
 
-<img src="/assets/img/photo/yu-bin.png" width="25%" height="25%" style="float: left;"/><br>
+<img src="/assets/img/photo/yu-bin.png" width="35%" height="35%" style="float: left;"/><br>
 
 <span
 style="
@@ -14,7 +14,7 @@ font-size: 1.7em;
 line-height: 1.0em; 
 color: black;
 font-family: arial;
-margin:90px;
+margin:70px;
 padding:0px;
 text-align: right;
 ">
@@ -28,7 +28,7 @@ font-size: 1.0em;
 line-height: 0em; 
 color: black;
 font-family: arial;
-margin:80px;
+margin:60px;
 padding:0px;
 text-align: right;
 ">
