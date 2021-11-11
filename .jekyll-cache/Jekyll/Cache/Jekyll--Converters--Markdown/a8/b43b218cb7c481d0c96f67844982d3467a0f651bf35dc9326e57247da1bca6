@@ -1,4 +1,4 @@
-I"(
+I"8
 <html lang="en">
 <head>
 	<title>Minecraft</title>
@@ -18,8 +18,8 @@
 <main>
 <button class="button" onclick="play()">Singleplayer</button>
 <br />
-<button class="button" onclick="playmulti()" id="playmulti">Multiplayer</button> <br />
-<button class="button" onclick="alert('Thanks to classic.minecraft.net for the game part')">Credits</button>
+<!-- <button class="button" onclick="playmulti()" id="playmulti">Multiplayer</button> <br> -->
+<!-- <button class="button" onclick="alert('Thanks to classic.minecraft.net for the game part')">Credits</button> -->
 <!-- <button class="button" onclick="how()">How to play</button> -->
 <audio id="audio">
   <source src="minecraft.mp4" />

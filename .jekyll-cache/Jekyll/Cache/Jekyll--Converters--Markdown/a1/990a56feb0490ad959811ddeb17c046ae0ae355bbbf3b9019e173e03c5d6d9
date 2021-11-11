@@ -1,4 +1,4 @@
-I"
+I"9
 <html lang="en">
 <head>
 	<title>Minecraft</title>
@@ -16,15 +16,15 @@
 		<img alt="Minecraft" id="logo" src="https://minecraft--duck132912.repl.co/minecraft.svg" />
 <div id="flashingtext">Bees! bees! bees!</div>
 <main>
-<button class="button" onclick="play()">Singleplayer</button>
+<button class="button" onclick="play()">Play</button>
 <br />
-<button class="button" onclick="playmulti()" id="playmulti">Multiplayer</button> <br />
-<button class="button" onclick="alert('Thanks to classic.minecraft.net for the game part')">Credits</button>
-<button class="button" onclick="how()">How to play</button>
+<!-- <button class="button" onclick="playmulti()" id="playmulti">Multiplayer</button> <br> -->
+<!-- <button class="button" onclick="alert('Thanks to classic.minecraft.net for the game part')">Credits</button> -->
+<!-- <button class="button" onclick="how()">How to play</button> -->
 <audio id="audio">
   <source src="minecraft.mp4" />
 </audio>
-<button id="button" class="button">Play audio</button>
+<!-- <button id="button" class="button">Play audio</button> -->
 <button class="button button_small left" onclick="change()">Options</button>
 <button class="button button_small right" onclick="quit();">Quit Game</button>
 <script src="https://minecraft--duck132912.repl.co/minecraft.js"></script>
