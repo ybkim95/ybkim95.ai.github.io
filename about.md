@@ -4,7 +4,7 @@ title: ABOUT
 permalink: /about/
 ---
 
-<img src="/assets/img/photo/yu-bin.png" width="35%" height="35%" style="float: left;"/><br>
+<img src="/assets/img/photo/yu-bin.png" width="20%" height="20%" style="float: left;"/><br>
 
 <span
 style="
@@ -44,7 +44,7 @@ color: black;
 font-family: arial;
 margin:0px;
 padding:0px;
-"><br><br>
+"> <br>
 I'm a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
 </span>
 

@@ -1,16 +1,25 @@
-I"�	<p><img src="/assets/img/photo/yu-bin.png" width="25%" height="25%" style="float: left;" /><br /></p>
+I"�	<p><img src="/assets/img/photo/yu-bin.png" width="20%" height="20%" style="float: left;" /><br /></p>
 
-<p><span style=" font-style: ;  font-weight: bold;  font-size: 1.7em; line-height: 1.0em;  color: black; font-family: arial; margin:80px; padding:0px; text-align: right; ">
+<p><span style=" font-style: ;  font-weight: bold;  font-size: 1.7em; line-height: 1.0em;  color: black; font-family: arial; margin:70px; padding:0px; text-align: right; ">
 Yu Bin, Kim
 </span></p>
 
-<p><span style=" font-style: ;  font-size: 1.0em; line-height: 0em;  color: black; font-family: arial; margin:70px; padding:0px; text-align: right; ">
+<p><span style=" font-style: ;  font-size: 1.0em; line-height: 0em;  color: black; font-family: arial; margin:60px; padding:0px; text-align: right; ">
 Robotics &amp; ML Engineer
 </span></p>
 
-<p><span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; "><br /><br />
+<p>&lt;span
+style=”
+font-style: ; 
+font-size: 1em;
+line-height: 0.4em; 
+color: black;
+font-family: arial;
+margin:0px;
+padding:0px;
+“<br />
 I’m a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in Sim2Real transfer and solving tasks in our daily routine with robotic systems.<br />
-</span></p>
+&lt;/span&gt;</p>
 
 <!--
 주석 처리
