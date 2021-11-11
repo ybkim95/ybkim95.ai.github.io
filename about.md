@@ -50,7 +50,7 @@ font-family: arial;
 margin:0px;
 padding:0px;
 ">
-I'm a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
+I'm a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in Sim2Real transfer and solving tasks in our daily routine with robotic systems.  
 </span>
 
 <!--
