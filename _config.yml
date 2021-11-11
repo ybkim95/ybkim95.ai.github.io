@@ -31,7 +31,7 @@ menu:
   #   url:               /activity/
 
 # 사이트 메인 화면 이미지 및 로고
-accent_image: "/assets/img/background.jpg"
+accent_image: "/assets/img/ybk_teaser.jpg"
 logo: "/assets/icons/ybk_logo.jpg"
 
 # 저자 정보
