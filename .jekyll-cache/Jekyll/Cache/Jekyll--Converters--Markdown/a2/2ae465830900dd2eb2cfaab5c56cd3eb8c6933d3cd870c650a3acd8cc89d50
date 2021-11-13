@@ -1,0 +1,95 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://leetcode.com/problems/palindrome-number/">LeetCode #9</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>Given an integer x, return true if x is palindrome integer.</p>
+
+<p>An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.</p>
+
+<p><br /></p>
+
+<p><strong>Example 1:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
+Output: [3,3,5,5,6,7]
+Explanation: 
+Window position                Max
+---------------               -----
+[1  3  -1] -3  5  3  6  7       3
+ 1 [3  -1  -3] 5  3  6  7       3
+ 1  3 [-1  -3  5] 3  6  7       5
+ 1  3  -1 [-3  5  3] 6  7       5
+ 1  3  -1  -3 [5  3  6] 7       6
+ 1  3  -1  -3  5 [3  6  7]      7
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [1], k = 1
+Output: [1]
+</code></pre></div></div>
+
+<p><strong>Example 3:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [1,-1], k = 1
+Output: [1,-1]
+</code></pre></div></div>
+
+<p><strong>Example 4:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [9,11], k = 2
+Output: [11]
+</code></pre></div></div>
+
+<p><strong>Example 5:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: nums = [4,-2], k = 2
+Output: [4]
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<p>1 &lt;= nums.length &lt;= 105</p>
+
+<p>-104 &lt;= nums[i] &lt;= 104</p>
+
+<p>1 &lt;= k &lt;= nums.length</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+
+<span class="n">dq</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+    
+    <span class="k">if</span> <span class="n">dq</span> <span class="ow">and</span> <span class="n">dq</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">:</span>
+        <span class="n">dq</span><span class="p">.</span><span class="n">popleft</span><span class="p">()</span>
+    
+    <span class="c1"># deque의 마지막 값(idx)가 오히려 i보다 작은값을 내놓을 때 마지막을 pop()
+</span>    <span class="k">while</span> <span class="n">dq</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">dq</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&lt;=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="n">dq</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+    
+    <span class="n">dq</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+    <span class="c1"># window 사이즈를 채울 수 있는 순간부터는 무조건 append 가능하다는 뜻
+</span>    <span class="k">if</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">:</span>
+        <span class="n">ret</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">dq</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        
+<span class="k">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>처음에는 가장 무식한 방법으로 다음과 같은 방법을 생각함:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">-</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">tmp_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">])</span>
+    <span class="n">res</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp_max</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이는 가장 심플한 방법이 될 수 있겠으나, 예상하는 것처럼 Time Limit Exceeded(TLE)가 발생한다.</p>
+:ET

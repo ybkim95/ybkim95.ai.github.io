@@ -1,0 +1,21 @@
+I"9<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://leetcode.com/problems/sliding-window-maximum/">LeetCode #239</a></p>
+
+<p>You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.</p>
+
+<p>Return the max sliding window.</p>
+
+<p>Example 1:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Input</span><span class="p">:</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="no">Explanation</span><span class="p">:</span> 
+<span class="no">Window</span> <span class="n">position</span>                <span class="no">Max</span>
+<span class="o">---------------</span>               <span class="o">-----</span>
+<span class="p">[</span><span class="mi">1</span>  <span class="mi">3</span>  <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">3</span>  <span class="mi">5</span>  <span class="mi">3</span>  <span class="mi">6</span>  <span class="mi">7</span>       <span class="mi">3</span>
+ <span class="mi">1</span> <span class="p">[</span><span class="mi">3</span>  <span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="mi">5</span>  <span class="mi">3</span>  <span class="mi">6</span>  <span class="mi">7</span>       <span class="mi">3</span>
+ <span class="mi">1</span>  <span class="mi">3</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mi">3</span>  <span class="mi">5</span><span class="p">]</span> <span class="mi">3</span>  <span class="mi">6</span>  <span class="mi">7</span>       <span class="mi">5</span>
+ <span class="mi">1</span>  <span class="mi">3</span>  <span class="o">-</span><span class="mi">1</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span>  <span class="mi">5</span>  <span class="mi">3</span><span class="p">]</span> <span class="mi">6</span>  <span class="mi">7</span>       <span class="mi">5</span>
+ <span class="mi">1</span>  <span class="mi">3</span>  <span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mi">3</span> <span class="p">[</span><span class="mi">5</span>  <span class="mi">3</span>  <span class="mi">6</span><span class="p">]</span> <span class="mi">7</span>       <span class="mi">6</span>
+ <span class="mi">1</span>  <span class="mi">3</span>  <span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mi">3</span>  <span class="mi">5</span> <span class="p">[</span><span class="mi">3</span>  <span class="mi">6</span>  <span class="mi">7</span><span class="p">]</span>      <span class="mi">7</span>
+</code></pre></div></div>
+:ET
