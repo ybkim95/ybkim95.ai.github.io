@@ -1,0 +1,59 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://leetcode.com/problems/plus-one/">LeetCode #66</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0’s.</p>
+
+<p>Increment the large integer by one and return the resulting array of digits.</p>
+
+<p><br /></p>
+
+<p><strong>Example 1:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: x = 121
+Output: true
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+</code></pre></div></div>
+
+<p><strong>Example 3:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+</code></pre></div></div>
+
+<p><strong>Example 4:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: x = -101
+Output: false
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<p>-231 &lt;= x &lt;= 231 - 1</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">x</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="bp">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+        <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>굉장히 쉬운 문제다. 우선 input x를 받을 때, 음의 정수이면 바로 return False를 해주고, 다음으로 str()을 통해 문자열로 바꾼뒤 x가 empty가 될때까지 양끝의 문자를 비교해가는 문제이다.</p>
+:ET

@@ -67,6 +67,8 @@ Tic-Tac-Toe 같은 경우 환경을 정의하고 묘사한 모델이 있었지�
 이후는 챕터 요약과 강화학습의 역사에 대해서 여러 장을 할애하는데 생략하도록 하겠습니다.
 
 
-본 글은 IREALISM 블로그의 글을 참고로 하였습니다. 본문은 아래 링크를 참조부탁드리겠습니다.
+본 글은 [IREALISM](https://irealist.org/data-science/?mod=document&uid=7864) 블로그의 글을 참고로 하였습니다. 본문은 아래 링크를 참조부탁드리겠습니다.
 
-[Reference](https://irealist.org/data-science/?mod=document&uid=7864)
+<br>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji=""  data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>

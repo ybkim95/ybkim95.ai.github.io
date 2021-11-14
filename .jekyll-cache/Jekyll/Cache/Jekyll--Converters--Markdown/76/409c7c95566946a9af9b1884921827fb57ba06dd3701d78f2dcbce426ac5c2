@@ -1,0 +1,72 @@
+I"U<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://leetcode.com/problems/plus-one/">LeetCode #66</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0’s.</p>
+
+<p>Increment the large integer by one and return the resulting array of digits.</p>
+
+<p><br /></p>
+
+<p><strong>Example 1:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: digits = [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
+Incrementing by one gives 123 + 1 = 124.
+Thus, the result should be [1,2,4].
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: digits = [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.
+Incrementing by one gives 4321 + 1 = 4322.
+Thus, the result should be [4,3,2,2].
+</code></pre></div></div>
+
+<p><strong>Example 3:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: digits = [0]
+Output: [1]
+Explanation: The array represents the integer 0.
+Incrementing by one gives 0 + 1 = 1.
+Thus, the result should be [1].
+</code></pre></div></div>
+
+<p><strong>Example 4:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: digits = [9]
+Output: [1,0]
+Explanation: The array represents the integer 9.
+Incrementing by one gives 9 + 1 = 10.
+Thus, the result should be [1,0].
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<p>1 &lt;= digits.length &lt;= 100</p>
+
+<p>0 &lt;= digits[i] &lt;= 9</p>
+
+<p>digits does not contain any leading 0’s.</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">plusOne</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">digits</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">digits</span><span class="p">]))</span>
+        <span class="n">tmp</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">tmp</span><span class="p">)]</span>
+        
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>쉬운 문제다. int()와 str() method만 잘 생각하고 join()을 활용하면 쉽게 풀리는 문제다.</p>
+
+<p><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET
