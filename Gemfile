@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   # gem "jekyll-youtube"
   gem "jekyll-pdf-embed"
+  gem "jekyll-sitemap"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
