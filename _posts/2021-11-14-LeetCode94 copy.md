@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode 94. Binary Tree Inorder Traversal
+title: LeetCode 94번 - Binary Tree Inorder Traversal [Python]
 year: 2021.11.14
 description: >
 author: Y.B.KIM
