@@ -1,0 +1,74 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">LeetCode #94</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>Given the root of a binary tree, return the inorder traversal of its nodes’ values.</p>
+
+<p><br /></p>
+
+<p><strong>Example 1:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: root = [1,null,2,3]
+Output: [1,3,2]
+</code></pre></div></div>
+
+<p><strong>Example 2:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: root = []
+Output: []
+</code></pre></div></div>
+
+<p><strong>Example 3:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: root = [1]
+Output: [1]
+</code></pre></div></div>
+
+<p><strong>Example 4:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: root = [1,2]
+Output: [2,1]
+</code></pre></div></div>
+
+<p><strong>Constraints:</strong></p>
+
+<p>The number of nodes in the tree is in the range [0, 100].
+-100 &lt;= Node.val &lt;= 100</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">traversal</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">def</span> <span class="nf">inorderTraversal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">inorderTraversal</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">left</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">traversal</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">val</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">inorderTraversal</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">traversal</span> 
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>Inorder Traversal은 트리에서 중위 순회를 말한다. 이는 먼저 왼쪽 서브 트리를 중위 순회하고, 노드를 방문한 뒤, 오른쪽 서브 트리를 중위 순회하는 것이다. 
+위키피디안의 Pseudo Code를 참조하면 아래와 같다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inorder(node)
+  if node.left  ≠ null then inorder(node.left)
+  print node.value
+  if node.right ≠ null then inorder(node.right)
+</code></pre></div></div>
+
+<p><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET
