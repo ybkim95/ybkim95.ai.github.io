@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ybkim95.github.io/sitemap.xml
