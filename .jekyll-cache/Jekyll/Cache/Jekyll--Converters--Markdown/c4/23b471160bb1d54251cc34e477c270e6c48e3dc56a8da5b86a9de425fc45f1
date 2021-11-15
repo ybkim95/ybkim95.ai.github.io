@@ -1,4 +1,4 @@
-I"�<<h2 id="chapter-6-temporal-difference-learning"><strong>Chapter 6: Temporal-Difference Learning</strong></h2>
+I"�=<h2 id="chapter-6-temporal-difference-learning"><strong>Chapter 6: Temporal-Difference Learning</strong></h2>
 
 <p>이 챕터에서는 Dynamic Programming(DP)과 Monte Carlo(MC) 방법을 혼합한 Temporal-Difference(TD) learning에 대해서 배워 본다.</p>
 
@@ -138,4 +138,7 @@ TD 방법은 이러한 장점들을 가지고 있으며, 최적값에의 수렴(
 <p>본 글은 IREALISM 블로그의 글을 참고로 하였습니다. 본문은 아래 링크를 참조부탁드리겠습니다.</p>
 
 <p><a href="https://irealist.org/data-science/?mod=document&amp;uid=7864">Reference</a></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
 :ET

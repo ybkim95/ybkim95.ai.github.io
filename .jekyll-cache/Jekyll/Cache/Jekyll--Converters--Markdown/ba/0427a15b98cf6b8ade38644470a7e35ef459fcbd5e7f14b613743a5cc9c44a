@@ -1,4 +1,4 @@
-I"e2<h2 id="chapter-3-finite-markov-decision-processes"><strong>Chapter 3: Finite Markov Decision Processes</strong></h2>
+I"�3<h2 id="chapter-3-finite-markov-decision-processes"><strong>Chapter 3: Finite Markov Decision Processes</strong></h2>
 
 <p>이번 chapter는 Markov Decision Process(MDP)로, 사실상 강화학습 공부는 이 편부터 시작한다고 봐도 과언이 아니라고 할 수 있다. 각 파트별로 MDP의 여러 요소들을 정의하고 이것이 강화학습 문제를 어떻게 프레임하는지 알아본다.</p>
 
@@ -105,4 +105,7 @@
 <p>본 글은 IREALISM 블로그의 글을 참고로 하였습니다. 본문은 아래 링크를 참조부탁드리겠습니다.</p>
 
 <p><a href="https://irealist.org/data-science/?mod=document&amp;uid=7864">Reference</a></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
 :ET

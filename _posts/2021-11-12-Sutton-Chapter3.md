@@ -130,3 +130,5 @@ q∗(s,a)=E[Rt+1+γv∗(St+1)|St=s,At=a]
 본 글은 IREALISM 블로그의 글을 참고로 하였습니다. 본문은 아래 링크를 참조부탁드리겠습니다.
 
 [Reference](https://irealist.org/data-science/?mod=document&uid=7864)
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji=""  data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
