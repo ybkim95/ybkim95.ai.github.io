@@ -15,12 +15,12 @@ category: study
 
 **6.1 TD Prediction**
 
-TD는 MC와 마찬가지로 샘플링한 경험을 이용해서 prediction 문제를 풉니다. 여기서 prediction 문제란 상태 가치 함수 V를 구하는 문제입니다.
+TD는 MC와 마찬가지로 샘플링한 경험을 이용해서 prediction 문제를 풉니다. 여기서 prediction 문제란 상태 가치 함수 V를 구하는 문제이다.
 
 V(St)←V(St)+α[Gt−V(St)]
 V(St)←V(St)+α[Rt+1+γV(St+1)−V(St)]
 
-위에서 첫번째 식이 MC이고, 두번째 식이 TD입니다. Prediction 문제라는 것은 V(St)를 찾는 문제이고, MC에서는 에피소드를 끝까지 시뮬레이션해서 얻은 값인 Gt를 향해서 V(St)를 α만큼 업데이트를 해 줍니다. 반면, TD에서는 다음 상태의 V(St+1)값을 이용해 Gt값을 Rt+1+γV(St+1)로 대체합니다. Bootstrapping이라고 하기도 합니다.
+위에서 첫번째 식이 MC이고, 두번째 식이 TD이다. Prediction 문제라는 것은 V(St)를 찾는 문제이고, MC에서는 에피소드를 끝까지 시뮬레이션해서 얻은 값인 Gt를 향해서 V(St)를 α만큼 업데이트를 해 줍니다. 반면, TD에서는 다음 상태의 V(St+1)값을 이용해 Gt값을 Rt+1+γV(St+1)로 대체합니다. Bootstrapping이라고 하기도 합니다.
 
 예를 들어, 제가 회사에 가는데 걸리는 시간을 예측하려 할 때, 집에서 버스정류장까지의 예측 시간이 10분, 버스정류장에서 버스로 회사까지 예측 시간이 15분이라고 가정해 봅시다. 그러면 집에서 회사까지의 예측 시간 V(집)은 25분입니다. 여기서 α값을 0.5로, γ값을 1로 두기로 할 때, 만약 실제로 통근을 한 첫 날, 버스 정류장까지 20분, 버스 정류장에서 회사까지 25분이 걸려서 총 45분이 걸렸다고 한다면, MC 방법을 이용한 첫 업데이트는 V(집)←25+0.5∗(45−25)=35가 됩니다. 여기서 MC 방법을 사용하려면 실제로 집에서 회사까지 끝까지 가야만 합니다.
 
@@ -28,6 +28,9 @@ V(St)←V(St)+α[Rt+1+γV(St+1)−V(St)]
 
 이렇게 바로 다음 상태의 V값을 사용하는 TD 알고리즘을 one-step TD 혹은 TD(0)라고 합니다. 이를 더 일반화한 알고리즘인 TD(λ) 혹은 n-step TD는 챕터 7과 12에서 다룹니다. 아래는 TD(0)의 알고리즘입니다.
 
+<div style="text-align: center;">
+     <img src="https://i1.wp.com/irealist.org/wp-content/uploads/kboard_attached/4/202005/5ec93acdd15f39544136.png?w=840&ssl=1">
+</div>
 
 여기서 대괄호 [ ]안의 값은, 현재 V값과 추정치인 R+γV(S′)값 사이의 오차를 표기하는 값이고, 이를 TD error라고 하며, 강화학습에서 자주 나올 개념입니다.
 
@@ -66,6 +69,10 @@ A, 0, B, 0 | B, 1 | B, 1 | B, 1 | B, 1 | B, 1 | B, 1 | B, 0
 
 만일 우리가 MC 방법을 쓴다면, A는 딱 한번 등장했고 마지막까지 총 리턴이 0이었으니 V(A) = 0이며, B는 8번 등장해 그 중 6번 1의 보상이 주어졌으니 V(B) = 0.75가 될 것입니다. 그러나 TD(0)의 방법을 쓰면, V(B) = 0.75로 동일하지만, V(A)를 계산할 때 V(B)에 의존하게 되므로 V(A) = 0.75을 얻게 됩니다. 우리는 직관적으로 TD(0)의 값이 더 합리적이란 것을 알 수 있습니다. 아래는 이 MRP를 도표로 표현한 그림입니다.
 
+<div style="text-align: center;">
+     <img src="https://i0.wp.com/irealist.org/wp-content/uploads/kboard_attached/4/202005/5ec9686b25f981489960.png?w=840&ssl=1">
+</div>
+
 
 Batch Monte Carlo 방법은 training set, 즉 샘플된 데이터 내에서 mean-squared error를 최소화하게 되는 반면, batch TD(0) 방법은 해당 Markov proess의 maximum-likelihood 모델에 맞는 답을 찾아 냅니다. 여기서 maximum-likelihood 모델은 다음과 같습니다.
 
@@ -86,7 +93,9 @@ Q(St,At)←Q(St,At)+α[Rt+1+γQ(St+1,At+1)−Q(St,At)]
 
 Sarsa 알고리즘은, 모든 상태-행동 쌍(state-action pair)이 무한히 많이 방문되는 이상 최적의 정책에 1의 확률로 수렴합니다. 이러한 조건은 ϵ-greedy 정책에서 ϵ=1t로 두는 방식 등을 사용해서 충족할 수 있습니다. 아래는 Sarsa 알고리즘의 pseudocode입니다. Sarsa 알고리즘을 적용한 구체적인 예는 페이지 130의 Example 6.5를 참조하시기 바랍니다.
 
-
+<div style="text-align: center;">
+     <img src="https://i2.wp.com/irealist.org/wp-content/uploads/kboard_attached/4/202005/5ec98d34847308992917.png?w=840&ssl=1">
+</div>
 
 
 **6.5 Q-learning: Off-policy TD Control**
@@ -96,8 +105,12 @@ Sarsa 알고리즘은, 모든 상태-행동 쌍(state-action pair)이 무한히 
 초기 강화학습에서 가장 혁신을 불러온 Q-learning의 업데이트에서는 행동을 선택할 때, 모든 행동 중 Q함수값이 높은 행동을 이용해 boostrapping합니다. 현재 배워지고 있는 정책을 사용하지 않기 때문에 Q-learning은 off-policy 알고리즘에 속합니다.
 
 Q(St,At)←Q(St,At)+α[Rt+1+γmaxaQ(St+1,a)−Q(St,At)]
-Q-learning의 자세한 예시는 페이지 132의 Example 6.6를 참조하시기 바랍니다.
 
+<div style="text-align: center;">
+     <img src="https://i1.wp.com/irealist.org/wp-content/uploads/kboard_attached/4/202005/5ec98ff37933a6037373.png?w=840&ssl=1">
+</div>
+
+Q-learning의 자세한 예시는 페이지 132의 Example 6.6를 참조하시기 바랍니다.
 
 
 **6.6 Expected Sarsa**
@@ -121,6 +134,11 @@ Sarsa에 비해, expected Sarsa는 계산 비용이 더 들지만, 여러 step-s
 이 문제를 해결하기 위한 알고리즘으로는 Double Q-Learning이 있습니다. 이 알고리즘에서는 두 개의 Q함수 Q1과 Q2를 병렬로 계산하는데, 매 step마다 50%의 확률로  중 한 가지를 선택합니다. 만일 Q1이 선택되었다면, bootstrapping하는 Q값을 계산할 때 어떤 상태-행동(state-action) 쌍을 선택하는지는 Q1를 사용하지만, 그렇게 선택된 쌍의 가치값은 Q2를 이용하게 됩니다.
 
 위에서 예시로 든 MDP의 상태 B에서 terminal state까지 가는데 행동 a, b, c가 있고, 각각의 가치 함수 Q(B, a), Q(B, b), Q(B, c)값들이 -0.3, -0.1, +0.1이라고 가정합니다. 그러면 원래의 Q-learning에서는 현재의 Q값들을 이용해서 행동 c를 선택하고, Q(B, c)의 값인 +0.1를 사용하게 되어서 오른쪽이 아닌 왼쪽 행동을 취하는 케이스가 생겨나게 됩니다. 하지만 Double Q-learning에서는 Q1과 Q2 둘 다에서 우연히 c가 높은 값을 가지게 되는 예외적인 경우를 제외하고는 이런 일이 필연적으로 발생하지는 않습니다.
+
+
+<div style="text-align: center;">
+     <img src="https://i0.wp.com/irealist.org/wp-content/uploads/kboard_attached/4/202005/5ec9e86c3bc8e2778402.png?w=840&ssl=1">
+</div>
 
 
 위는 Double Q-learning의 pseudocode입니다. 참고로 Loop안에서 처음 ϵ-greedy 정책에 따른 행동 선택을 할 때는 Q1과 Q2를 함께 이용해서 선택을 합니다. 예를 들어 각 행동의 probability를 두 Q함수에서 평균을 낸 것을 사용하는 방법이 있습니다.
