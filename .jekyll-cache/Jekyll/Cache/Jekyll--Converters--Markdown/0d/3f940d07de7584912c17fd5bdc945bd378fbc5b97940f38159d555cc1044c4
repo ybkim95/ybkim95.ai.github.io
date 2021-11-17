@@ -1,0 +1,40 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://programmers.co.kr/learn/courses/30/lessons/81301?language=python3">숫자 문자열과 영단어</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">"one"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s">"two"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s">"three"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s">"four"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s">"five"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s">"six"</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> 
+        <span class="s">"seven"</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s">"eight"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s">"nine"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s">"zero"</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+    
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="n">d</span><span class="p">]))</span>
+    
+    <span class="c1"># print(s)
+</span>    
+    <span class="n">answer</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>이번 문제는 아마 카카오 코딩 테스트 중에서는 가장 쉬운 문제중 하나일 것이다. string.replace() 함수를 사용하는게 핵심이지 않을까 싶다.</p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

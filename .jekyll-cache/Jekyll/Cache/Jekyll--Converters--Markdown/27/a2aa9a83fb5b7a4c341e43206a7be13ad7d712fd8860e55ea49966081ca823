@@ -1,0 +1,227 @@
+I"+h<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17682">프로그래머스 다트게임</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>카카오톡에 뜬 네 번째 별! 심심할 땐? 카카오톡 게임별~</p>
+
+<p>Game Star</p>
+
+<p>카카오톡 게임별의 하반기 신규 서비스로 다트 게임을 출시하기로 했다. 다트 게임은 다트판에 다트를 세 차례 던져 그 점수의 합계로 실력을 겨루는 게임으로, 모두가 간단히 즐길 수 있다.<br />
+갓 입사한 무지는 코딩 실력을 인정받아 게임의 핵심 부분인 점수 계산 로직을 맡게 되었다. 다트 게임의 점수 계산 로직은 아래와 같다.<br /></p>
+
+<p>다트 게임은 총 3번의 기회로 구성된다.<br />
+각 기회마다 얻을 수 있는 점수는 0점에서 10점까지이다.<br />
+점수와 함께 Single(S), Double(D), Triple(T) 영역이 존재하고 각 영역 당첨 시 점수에서 1제곱, 2제곱, 3제곱 (점수1 , 점수2 , 점수3 )으로 계산된다.<br />
+옵션으로 스타상(<em>) , 아차상(#)이 존재하며 스타상(</em>) 당첨 시 해당 점수와 바로 전에 얻은 점수를 각 2배로 만든다. 아차상(#) 당첨 시 해당 점수는 마이너스된다.<br />
+스타상(<em>)은 첫 번째 기회에서도 나올 수 있다. 이 경우 첫 번째 스타상(</em>)의 점수만 2배가 된다. (예제 4번 참고)<br />
+스타상(<em>)의 효과는 다른 스타상(</em>)의 효과와 중첩될 수 있다. 이 경우 중첩된 스타상(<em>) 점수는 4배가 된다. (예제 4번 참고)<br />
+스타상(</em>)의 효과는 아차상(#)의 효과와 중첩될 수 있다. 이 경우 중첩된 아차상(#)의 점수는 -2배가 된다. (예제 5번 참고)<br />
+Single(S), Double(D), Triple(T)은 점수마다 하나씩 존재한다.<br />
+스타상(*), 아차상(#)은 점수마다 둘 중 하나만 존재할 수 있으며, 존재하지 않을 수도 있다.<br />
+0~10의 정수와 문자 S, D, T, *, #로 구성된 문자열이 입력될 시 총점수를 반환하는 함수를 작성하라.<br /></p>
+
+<p><strong>입력 형식</strong></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>“점수</td>
+      <td>보너스</td>
+      <td>[옵션]”으로 이루어진 문자열 3세트.<br /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>예) 1S2D*3T<br /></p>
+
+<p>점수는 0에서 10 사이의 정수이다.<br />
+보너스는 S, D, T 중 하나이다.<br />
+옵선은 *이나 # 중 하나이며, 없을 수도 있다.<br /></p>
+
+<p>*출력 형식**
+3번의 기회에서 얻은 점수 합계에 해당하는 정수값을 출력한다.<br />
+예) 37<br /></p>
+
+<p><strong>입출력 예제</strong></p>
+
+<p>예제	dartResult	answer	설명 <br />
+1	1S2D<em>3T	37	11 * 2 + 22 * 2 + 33 <br />
+2	1D2S#10S	9	12 + 21 * (-1) + 101 <br />
+3	1D2S0T	3	12 + 21 + 03  <br />
+4	1S</em>2T<em>3S	23	11 * 2 * 2 + 23 * 2 + 31 <br />
+5	1D#2S</em>3S	5	12 * (-1) * 2 + 21 * 2 + 31 <br />
+6	1T2D3D#	-4	13 + 22 + 32 * (-1) <br />
+7	1D2S3T*	59	12 + 21 * 2 + 33 * 2 <br /></p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">dartResult</span><span class="p">):</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">splitted</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dartResult</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        
+        <span class="k">if</span> <span class="n">dartResult</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="s">"DST"</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">dartResult</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">splitted</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">dartResult</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>
+                <span class="n">dartResult</span> <span class="o">=</span> <span class="n">dartResult</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">elif</span> <span class="n">dartResult</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="s">"*#"</span><span class="p">:</span>
+                <span class="n">splitted</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">dartResult</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>
+                <span class="n">dartResult</span> <span class="o">=</span> <span class="n">dartResult</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:]</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">splitted</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">dartResult</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">dartResult</span> <span class="o">=</span> <span class="n">dartResult</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s">''</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="s">''</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">"S"</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">"D"</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">"T"</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">3</span>
+        
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="c1"># 10이 있는 경우
+</span>            <span class="k">if</span> <span class="s">'10'</span> <span class="ow">in</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">"S"</span><span class="p">:</span>
+                    <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">1</span>
+                <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">"D"</span><span class="p">:</span>
+                    <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">2</span>
+                <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">"T"</span><span class="p">:</span>
+                    <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">3</span>
+            <span class="c1"># 일반적인 경우 + option
+</span>            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">"S"</span><span class="p">:</span>
+                    <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">1</span>
+                    <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">"D"</span><span class="p">:</span>
+                    <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+                    <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">"T"</span><span class="p">:</span>
+                    <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">3</span>
+                    <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+
+        
+        <span class="c1"># 10이 포함되어있고, option까지 있는 경우
+</span>        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">"S"</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">1</span>
+                <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">"D"</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">2</span>
+                <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">"T"</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">3</span>
+                <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">splitted</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s">"#"</span><span class="p">:</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">options</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s">"*"</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+    
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>Level 1 문제이다. 간단한 문제인데, 정규 표현식에 대한 숙지가 안되어있어 굉장히 번거롭게 문제를 해결했다. 특히 10이 포함된 경우를 처리하는게 번거로우니 주의하자. 
+아래 코드는 다른 사람의 모범 답안인데, 이번 기회에 정규 표현식을 좀 익혀보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">dartResult</span><span class="p">):</span>
+    <span class="n">bonus</span> <span class="o">=</span> <span class="p">{</span><span class="s">'S'</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'D'</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'T'</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+    <span class="n">option</span> <span class="o">=</span> <span class="p">{</span><span class="s">''</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'*'</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'#'</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">'(\d+)([SDT])([*#]?)'</span><span class="p">)</span>
+    <span class="n">dart</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="n">dartResult</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dart</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">dart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s">'*'</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">dart</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
+        <span class="n">dart</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="n">bonus</span><span class="p">[</span><span class="n">dart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span> <span class="o">*</span> <span class="n">option</span><span class="p">[</span><span class="n">dart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]]</span>
+
+    <span class="n">answer</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">dart</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<p><strong>코드 리뷰</strong></p>
+
+<p>Python에서 정규 표현식을 사용하려면, re 라이브러리를 import 해야한다.</p>
+
+<p>파이썬 re 모듈의 메타문자는 총 12개로 다음과 같은 것들이 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">`$</span><span class="p">()</span><span class="o">*+</span><span class="p">.</span><span class="err">?</span><span class="p">[</span>\<span class="o">^</span><span class="p">{</span>
+</code></pre></div></div>
+
+<p>위에서 사용한 re.compile()은 정규표현식을 사용하는 방법 중 정규표현식을 미리 컴파일 해서 패턴을 저장해놓는 경우이다.</p>
+
+<p>re.compile() : 패턴저장</p>
+
+<p>예시를 하나 봐보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">pattern1</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"\d{2}"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">pattern1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">pattern1</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>[Output]</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 're.Pattern'&gt;
+[...
+ 'findall',
+ 'finditer',
+ 'flags',
+ 'fullmatch',
+ 'groupindex',
+ 'groups',
+ 'match',
+ 'pattern',
+ 'scanner',
+ 'search',
+ 'split',
+ 'sub',
+ 'subn']
+</code></pre></div></div>
+
+<p>컴파일된 객체는 re.Pattern이라는 타입으로 저장되고, 컴파일된 객체에 바로 함수를 적용해 사용하면 된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern1.findall("dflds78flksd")
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Output]
+['78']
+</code></pre></div></div>
+
+<p>장점은 다음과 같다.</p>
+
+<p>컴파일(compile)을 활용하는 경우, 한 줄 더 써야 하지만 패턴 객체(p)를 만들고 나서 여러번 재사용이 가능하다.
+반복적인 매칭 작업이 필요할 경우에는 패턴을 미리 컴파일해서 시간을 단축할 수 있다.</p>
+
+<p>그렇다면, 다시 다른 사람의 풀이로 돌아가 re.compile()에 인자로 전달되는 부분을 어떤 의미를 담고 있는 것일까?
+이는 정규 표현식을 뜻하는데, ‘(\d+)([SDT])([*#]?)’</p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

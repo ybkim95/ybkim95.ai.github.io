@@ -1,0 +1,116 @@
+I"� <h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://programmers.co.kr/learn/courses/30/lessons/81301?language=python3">숫자 문자열과 영단어</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>이번 문제는 아마 카카오 코딩 테스트 중에서는 가장 쉬운 문제중 하나일 것이다. string.replace() 함수를 사용하는게 핵심이지 않을까 싶다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">"one"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s">"two"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s">"three"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s">"four"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s">"five"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="s">"six"</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> 
+        <span class="s">"seven"</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s">"eight"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s">"nine"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s">"zero"</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+    
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="n">d</span><span class="p">]))</span>
+    
+    <span class="c1"># print(s)
+</span>    
+    <span class="n">answer</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<p><strong>코드 리뷰</strong></p>
+
+<p>Python에서 정규 표현식을 사용하려면, re 라이브러리를 import 해야한다.</p>
+
+<p>파이썬 re 모듈의 메타문자는 총 12개로 다음과 같은 것들이 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">`$</span><span class="p">()</span><span class="o">*+</span><span class="p">.</span><span class="err">?</span><span class="p">[</span>\<span class="o">^</span><span class="p">{</span>
+</code></pre></div></div>
+
+<p>위에서 사용한 re.compile()은 정규표현식을 사용하는 방법 중 정규표현식을 미리 컴파일 해서 패턴을 저장해놓는 경우이다.</p>
+
+<p>re.compile() : 패턴저장</p>
+
+<p>예시를 하나 봐보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">pattern1</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"\d{2}"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">pattern1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">pattern1</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>[Output]</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 're.Pattern'&gt;
+[...
+ 'findall',
+ 'finditer',
+ 'flags',
+ 'fullmatch',
+ 'groupindex',
+ 'groups',
+ 'match',
+ 'pattern',
+ 'scanner',
+ 'search',
+ 'split',
+ 'sub',
+ 'subn']
+</code></pre></div></div>
+
+<p>컴파일된 객체는 re.Pattern이라는 타입으로 저장되고, 컴파일된 객체에 바로 함수를 적용해 사용하면 된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern1.findall("dflds78flksd")
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Output]
+['78']
+</code></pre></div></div>
+
+<p>장점은 다음과 같다.</p>
+
+<p>컴파일(compile)을 활용하는 경우, 한 줄 더 써야 하지만 패턴 객체(p)를 만들고 나서 여러번 재사용이 가능하다.
+반복적인 매칭 작업이 필요할 경우에는 패턴을 미리 컴파일해서 시간을 단축할 수 있다.</p>
+
+<p>그렇다면, 다시 다른 사람의 풀이로 돌아가 re.compile()에 인자로 전달되는 부분을 어떤 의미를 담고 있는 것일까?
+이는 정규 표현식을 뜻하는데, ‘(\d+)([SDT])([*#]?)’를 봐보면 다음과 같은 의미를 해석할 수 있다.</p>
+
+<p>()는 하위표현식을 의미하고, []는 가령 [SDT]이면 S or D or T를 의미하고, [<em>#]은 * or #를 의미한다. [</em>#]?는 * or #가 0개 이상인 경우를 뜻한다. 
+\d는 모든 숫자와 일치하며 [0-9]와 동일한 의미가 있고, 뒤에 +가 붙어있으므로, 이는 앞의 문자나 부분식을 하나 이상 탐욕적으로 찾겠다는 뜻을 담고 있다.</p>
+
+<p>종합적으로, 위 정규 표현식은 1) 모든 숫자 중 하나가 포함되어있는 것을 우선적으로 찾은 뒤, 2) S 혹은 D 혹은 T가 포함되어있어야 하고, * 혹은 #이 0개 이상 포함된 것을 찾겠다는 것이다.</p>
+
+<p>따라서, 이를 기준으로 아래와 같이 dart를 정의하고 print 해보면 아래와 같다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dart</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="n">dartResult</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dart</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[(</span><span class="s">'1'</span><span class="p">,</span> <span class="s">'S'</span><span class="p">,</span> <span class="s">''</span><span class="p">),</span> <span class="p">(</span><span class="s">'2'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">,</span> <span class="s">'*'</span><span class="p">),</span> <span class="p">(</span><span class="s">'3'</span><span class="p">,</span> <span class="s">'T'</span><span class="p">,</span> <span class="s">''</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<p>여기까지 완성이 되었다면, 게임이 끝난것과 다름 없다. 나머지 부분은 너무 직관적인 logic이라 생략한다.</p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET
