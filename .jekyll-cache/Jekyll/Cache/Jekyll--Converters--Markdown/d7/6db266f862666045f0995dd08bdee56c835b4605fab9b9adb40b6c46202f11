@@ -1,0 +1,138 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/ctci-ransom-note/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=dictionaries-hashmaps">Dictionaries and Hashmaps</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>Harold is a kidnapper who wrote a ransom note, but now he is worried it will be traced back to him through his handwriting. He found a magazine and wants to know if he can cut out whole words from it and use them to create an untraceable replica of his ransom note. The words in his note are case-sensitive and he must use only whole words available in the magazine. He cannot use substrings or concatenation to create the words he needs.</p>
+
+<p>Given the words in the magazine and the words in the ransom note, print Yes if he can replicate his ransom note exactly using whole words from the magazine; otherwise, print No.</p>
+
+<p>Example
+ = “attack at dawn”  = “Attack at dawn”</p>
+
+<p>The magazine has all the right words, but there is a case mismatch. The answer is .</p>
+
+<p>Function Description</p>
+
+<p>Complete the checkMagazine function in the editor below. It must print  if the note can be formed using the magazine, or .</p>
+
+<p>checkMagazine has the following parameters:</p>
+
+<p>string magazine[m]: the words in the magazine
+string note[n]: the words in the ransom note
+Prints</p>
+
+<p>string: either  or , no return value is expected
+Input Format</p>
+
+<p>The first line contains two space-separated integers,  and , the numbers of words in the  and the , respectively.
+The second line contains  space-separated strings, each .
+The third line contains  space-separated strings, each .</p>
+
+<p>Constraints</p>
+
+<p>.
+Each word consists of English alphabetic letters (i.e.,  to  and  to ).
+Sample Input 0</p>
+
+<p>6 4
+give me one grand today night
+give one grand today
+Sample Output 0</p>
+
+<p>Yes
+Sample Input 1</p>
+
+<p>6 5
+two times three is not four
+two times two is four
+Sample Output 1</p>
+
+<p>No
+Explanation 1</p>
+
+<p>‘two’ only occurs once in the magazine.</p>
+
+<p>Sample Input 2</p>
+
+<p>7 4
+ive got a lovely bunch of coconuts
+ive got some coconuts
+Sample Output 2</p>
+
+<p>No
+Explanation 2</p>
+
+<p>Harold’s magazine is missing the word .</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'checkMagazine' function below.
+#
+# The function accepts following parameters:
+#  1. STRING_ARRAY magazine
+#  2. STRING_ARRAY note
+#
+</span>
+<span class="k">def</span> <span class="nf">checkMagazine</span><span class="p">(</span><span class="n">magazine</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
+    <span class="c1"># print(magazine, note)
+</span>    <span class="c1"># Write your code here
+</span>    <span class="n">dict1</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">dict2</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">magazine</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dict1</span><span class="p">:</span>
+            <span class="n">dict1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dict1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">note</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dict2</span><span class="p">:</span>
+            <span class="n">dict2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dict2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">note</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">magazine</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dict1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">dict2</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"No"</span><span class="p">)</span>
+                <span class="k">return</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">magazine</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"No"</span><span class="p">)</span>
+            <span class="k">return</span>
+                
+    <span class="k">print</span><span class="p">(</span><span class="s">"Yes"</span><span class="p">)</span>
+    <span class="k">return</span>
+    
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">first_multiple_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">().</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">first_multiple_input</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">first_multiple_input</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">magazine</span> <span class="o">=</span> <span class="nb">input</span><span class="p">().</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="n">note</span> <span class="o">=</span> <span class="nb">input</span><span class="p">().</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="n">checkMagazine</span><span class="p">(</span><span class="n">magazine</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>본 문제는 dict 자료구조를 적절히 활용하여 문제에서 제시한 조건들을 그대로 구현하면 되는 쉬운 문제였다. 참고로 dictionary 자료구조의 경우 Index 및 Store 연산이 O(1)의 시간 복잡도를 가진다.  <br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

@@ -1,0 +1,108 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/mark-and-toys/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=sorting">Sorting</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some. There are a number of different toys lying in front of him, tagged with their prices. Mark has only a certain amount to spend, and he wants to maximize the number of toys he buys with this money. Given a list of toy prices and an amount to spend, determine the maximum number of gifts he can buy.</p>
+
+<p>Note Each toy can be purchased only once.</p>
+
+<p>Example</p>
+
+<p>The budget is  units of currency. He can buy items that cost  for , or  for  units. The maximum is  items.</p>
+
+<p>Function Description</p>
+
+<p>Complete the function maximumToys in the editor below.</p>
+
+<p>maximumToys has the following parameter(s):</p>
+
+<p>int prices[n]: the toy prices
+int k: Mark’s budget
+Returns</p>
+
+<p>int: the maximum number of toys
+Input Format</p>
+
+<p>The first line contains two integers,  and , the number of priced toys and the amount Mark has to spend.
+The next line contains  space-separated integers</p>
+
+<p>Constraints</p>
+
+<p>A toy can’t be bought multiple times.</p>
+
+<p>Sample Input</p>
+
+<p>7 50
+1 12 5 111 200 1000 10
+Sample Output</p>
+
+<p>4
+Explanation</p>
+
+<p>He can buy only  toys at most. These toys have the following prices: .</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'maximumToys' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY prices
+#  2. INTEGER k
+#
+</span>
+<span class="k">def</span> <span class="nf">maximumToys</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="c1"># [1, 5, 10, 12, 111, 200, 1000]
+</span>    
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">break</span>
+        
+        <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">:</span>
+            <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="n">k</span> <span class="o">-=</span> <span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">fptr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'OUTPUT_PATH'</span><span class="p">],</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">first_multiple_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">().</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">first_multiple_input</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">first_multiple_input</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">prices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">maximumToys</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>본 문제는 sorted()만 도입하면 쉽게 해결되는 문제이다. Knapsack problem의 sub-problem 느낌이 나는 문제였다. <br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

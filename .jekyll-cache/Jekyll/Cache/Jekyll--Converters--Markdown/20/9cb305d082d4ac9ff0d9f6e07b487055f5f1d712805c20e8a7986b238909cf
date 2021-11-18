@@ -1,0 +1,133 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/repeated-string/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=warmup">Warm-up Challenges</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>There is a string, , of lowercase English letters that is repeated infinitely many times. Given an integer, , find and print the number of letter a’s in the first  letters of the infinite string.</p>
+
+<p><strong>Example</strong></p>
+
+<p>The substring we consider is , the first  characters of the infinite string. There are  occurrences of a in the substring.</p>
+
+<p><strong>Function Description</strong></p>
+
+<p>Complete the repeatedString function in the editor below.</p>
+
+<p>repeatedString has the following parameter(s):</p>
+
+<p>s: a string to repeat
+n: the number of characters to consider</p>
+
+<p><strong>Returns</strong></p>
+
+<p>int: the frequency of a in the substring
+Input Format</p>
+
+<p>The first line contains a single string, .
+The second line contains an integer, .</p>
+
+<p><strong>Constraints</strong></p>
+
+<p>For  of the test cases, .</p>
+
+<p><strong>Sample Input</strong></p>
+
+<p>aba</p>
+
+<p>10</p>
+
+<p><strong>Sample Output 0</strong></p>
+
+<p>7</p>
+
+<p><strong>Explanation 0</strong></p>
+
+<p>The first  letters of the infinite string are abaabaabaa. Because there are  a’s, we return .</p>
+
+<p><strong>Sample Input 1</strong></p>
+
+<p>a</p>
+
+<p>1000000000000</p>
+
+<p><strong>Sample Output 1</strong></p>
+
+<p>1000000000000</p>
+
+<p><strong>Explanation 1</strong></p>
+
+<p>Because all of the first  letters of the infinite string are a, we return .</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'repeatedString' function below.
+#
+# The function is expected to return a LONG_INTEGER.
+# The function accepts following parameters:
+#  1. STRING s
+#  2. LONG_INTEGER n
+#
+</span>
+<span class="k">def</span> <span class="nf">repeatedString</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">"a"</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">n</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+    
+    <span class="n">check</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s">"a"</span><span class="p">:</span>
+            <span class="n">check</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">check</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="n">_a</span><span class="p">,</span><span class="n">_b</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+
+    <span class="c1"># s = s * a + s[:b]
+</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s">"a"</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="n">ans</span> <span class="o">*=</span> <span class="n">_a</span>
+    
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">s</span><span class="p">[:</span><span class="n">_b</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s">"a"</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span> 
+
+    <span class="k">return</span> <span class="n">ans</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">fptr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'OUTPUT_PATH'</span><span class="p">],</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">().</span><span class="n">strip</span><span class="p">())</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">repeatedString</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>이번 문제의 핵심은 일반적인 상황에서 실행 시간을 줄이기 위해 기본 s에 대해서 “a”의 개수를 알아낸 뒤에 몫을 그 개수에 곱해주고 slicing된 sub-string에서 “a”가 등장하는 횟수를 계산하는 것이었다. (초창기 error들이 모두 run-time error였음.) <br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

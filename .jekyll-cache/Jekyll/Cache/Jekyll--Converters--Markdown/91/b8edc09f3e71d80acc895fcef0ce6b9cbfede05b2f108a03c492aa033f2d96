@@ -1,0 +1,154 @@
+I"%<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=warmup">Warm-up Challenges</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>There is a new mobile game that starts with consecutively numbered clouds. Some of the clouds are thunderheads and others are cumulus. The player can jump on any cumulus cloud having a number that is equal to the number of the current cloud plus  or . The player must avoid the thunderheads. Determine the minimum number of jumps it will take to jump from the starting postion to the last cloud. It is always possible to win the game.<br /></p>
+
+<p>For each game, you will get an array of clouds numbered  if they are safe or  if they must be avoided.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Index the array from . The number on each cloud is its index in the list so the player must avoid the clouds at indices  and . They could follow these two paths:  or . The first path takes  jumps while the second takes . Return .</p>
+
+<p><strong>Function Description</strong></p>
+
+<p>Complete the jumpingOnClouds function in the editor below.</p>
+
+<p>jumpingOnClouds has the following parameter(s):</p>
+
+<p>int c[n]: an array of binary integers</p>
+
+<p><strong>Returns</strong></p>
+
+<p>int: the minimum number of jumps required</p>
+
+<p><strong>Input Format</strong></p>
+
+<p>The first line contains an integer , the total number of clouds. The second line contains  space-separated binary integers describing clouds  where .</p>
+
+<p><strong>Constraints</strong></p>
+
+<ul>
+  <li>2 &lt;= n &lt;= 100</li>
+  <li>c[i] \in {0,1}</li>
+  <li>c[0] = c[n-1] = 0</li>
+</ul>
+
+<p><strong>Output Format</strong></p>
+
+<p>Print the minimum number of jumps needed to win the game.</p>
+
+<p><strong>Sample Input 0</strong></p>
+
+<p>7</p>
+
+<p>0 0 1 0 0 1 0</p>
+
+<p><strong>Sample Output 0</strong></p>
+
+<p>4</p>
+
+<p><strong>Explanation 0:</strong></p>
+
+<p>The player must avoid  and . The game can be won with a minimum of  jumps:</p>
+
+<div style="text-align: center;">
+     <img src="https://s3.amazonaws.com/hr-challenge-images/20832/1461134731-c258160d15-jump2.png" />
+     <br />
+</div>
+
+<p><strong>Sample Input 1</strong></p>
+
+<p>6</p>
+
+<p>0 0 0 0 1 0</p>
+
+<p><strong>Sample Output 1</strong></p>
+
+<p>3</p>
+
+<p><strong>Explanation 1:</strong></p>
+
+<p>The only thundercloud to avoid is . The game can be won in  jumps:</p>
+
+<div style="text-align: center;">
+     <img src="https://s3.amazonaws.com/hr-challenge-images/20832/1461136358-764298d363-jump5.png" />
+     <br />
+</div>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'jumpingOnClouds' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY c as parameter.
+#
+</span>
+<span class="k">def</span> <span class="nf">jumpingOnClouds</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="k">break</span>
+                    <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+                        <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span> 
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+                    <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span> 
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+                <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="k">print</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">ans</span>
+    
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">fptr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'OUTPUT_PATH'</span><span class="p">],</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">().</span><span class="n">strip</span><span class="p">())</span>
+
+    <span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">jumpingOnClouds</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>이번 문제의 핵심 한 칸을 뛰냐 두 칸을 넘어 뛰냐를 case by case로 잘 simulate하냐이다. code를 조리있게 잘짜지는 못했지만, corner case를 고려하면 쉽게 풀리는 문제인거 같았다.<br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

@@ -1,0 +1,92 @@
+I"<<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=recursion-backtracking">The Fibonacci Sequence</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>The Fibonacci Sequence</p>
+
+<p>The Fibonacci sequence appears in nature all around us, in the arrangement of seeds in a sunflower and the spiral of a nautilus for example.</p>
+
+<p>The Fibonacci sequence begins with  and  as its first and second terms. After these first two elements, each subsequent element is equal to the sum of the previous two elements.</p>
+
+<p>Programmatically:</p>
+
+<ul>
+  <li><em>fibonacci</em>(0) = 0</li>
+  <li><em>fibonacci</em>(1) = 1</li>
+  <li><em>fibonacci</em>(n) = <em>fibonacci</em>(n-1) + <em>fibonacci</em>(n-2)</li>
+</ul>
+
+<p>Given <em>n</em>, return the <em>n</em>th number in the sequence.</p>
+
+<p><strong>Example</strong></p>
+
+<p>The Fibonacci sequence to 6  is . With zero-based indexing, .</p>
+
+<p><strong>Function Description</strong></p>
+
+<p>Complete the recursive function  in the editor below.</p>
+
+<p>fibonacci has the following parameter(s):</p>
+
+<p>int n: the index of the sequence to return
+Returns</p>
+<ul>
+  <li>int: the  element in the Fibonacci sequence</li>
+</ul>
+
+<p>Input Format</p>
+
+<p>The integer .</p>
+
+<p>Constraints</p>
+
+<p>Sample Input</p>
+
+<p>STDIN   Function
+—–   ——–
+3       n = 3
+Sample Output</p>
+
+<p>2
+Explanation</p>
+
+<p>The Fibonacci sequence begins as follows:</p>
+
+<p><em>fibonacci</em>(0) = 0 <br />
+<em>fibonacci</em>(1) = 1 <br />
+<em>fibonacci</em>(2) = 0 + 1 = 1 <br />
+<em>fibonacci</em>(3) = 1 + 1 = 2 <br />
+<em>fibonacci</em>(4) = 2 + 1 = 3 <br />
+<em>fibonacci</em>(5) = 3 + 2 = 5 <br />
+<em>fibonacci</em>(6) = 5 + 3 = 8 <br /></p>
+
+<p>…</p>
+
+<p>In the sequence above, <em>fibonacci</em>(3) is 2.</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>너무나도 많이 풀어본 피보나치 수열 문제이다. <br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

@@ -1,0 +1,116 @@
+I"Q<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/alternating-characters/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=strings">String Manipulation</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>You are given a string containing characters  and  only. Your task is to change it into a string such that there are no matching adjacent characters. To do this, you are allowed to delete zero or more characters in the string.</p>
+
+<p>Your task is to find the minimum number of required deletions.</p>
+
+<p>Example</p>
+
+<p>Remove an  at positions  and  to make  in  deletions.</p>
+
+<p>Function Description</p>
+
+<p>Complete the alternatingCharacters function in the editor below.</p>
+
+<p>alternatingCharacters has the following parameter(s):</p>
+
+<p>string s: a string
+Returns</p>
+
+<p>int: the minimum number of deletions required
+Input Format</p>
+
+<p>The first line contains an integer , the number of queries.
+The next  lines each contain a string  to analyze.</p>
+
+<p>Constraints</p>
+
+<p>Each string  will consist only of characters  and .
+Sample Input</p>
+
+<p>5
+AAAA
+BBBBB
+ABABABAB
+BABABA
+AAABBB
+Sample Output</p>
+
+<p>3
+4
+0
+0
+4
+Explanation</p>
+
+<p>The characters marked red are the ones that can be deleted so that the string does not have matching adjacent characters.</p>
+
+<div style="text-align: center;">
+     <img src="https://s3.amazonaws.com/hr-assets/0/1502450721-a0a2e9b5bd-alternatingCharacter2.png" />
+     <br />
+</div>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'alternatingCharacters' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts STRING s as parameter.
+#
+</span>
+<span class="k">def</span> <span class="nf">alternatingCharacters</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="c1"># ex. AAAAA, BBBBB
+</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">fptr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'OUTPUT_PATH'</span><span class="p">],</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">q</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">().</span><span class="n">strip</span><span class="p">())</span>
+
+    <span class="k">for</span> <span class="n">q_itr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">alternatingCharacters</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="n">fptr</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>본 문제는 두 개의 문자 ‘A’, ‘B’가 각각 연속되어 나오지 않도록 문자를 제거해 그 제거한 횟수를 반환하는 문제였다. 딱히 고려할 사항이 많은 문제는 아니었다. “AAAA”, “BBBBB” 이런 경우만 예외처리해준 뒤에 일반적인 방법론으로 해결하면 되는 문제였다. 
+<br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

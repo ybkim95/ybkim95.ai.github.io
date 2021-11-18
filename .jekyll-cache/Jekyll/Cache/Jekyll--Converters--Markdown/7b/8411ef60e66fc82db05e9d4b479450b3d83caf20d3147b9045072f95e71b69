@@ -1,0 +1,140 @@
+I"l<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/recursive-digit-sum/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=recursion-backtracking">Recursive Digit Sum</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>We define super digit of an integer  using the following rules:</p>
+
+<p>Given an integer, we need to find the super digit of the integer.</p>
+
+<p>If  has only  digit, then its super digit is .
+Otherwise, the super digit of  is equal to the super digit of the sum of the digits of .
+For example, the super digit of  will be calculated as:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>super_digit(9875)   	9+8+7+5 = 29 
+super_digit(29) 	2 + 9 = 11
+super_digit(11)		1 + 1 = 2
+super_digit(2)		= 2   Example
+</code></pre></div></div>
+
+<p>The number  is created by concatenating the string   times so the initial .</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>superDigit(p) = superDigit(9875987598759875)
+              9+8+7+5+9+8+7+5+9+8+7+5+9+8+7+5 = 116
+superDigit(p) = superDigit(116)
+              1+1+6 = 8
+superDigit(p) = superDigit(8) All of the digits of  sum to . The digits of  sum to .  is only one digit, so it is the super digit.
+</code></pre></div></div>
+
+<p>Function Description</p>
+
+<p>Complete the function superDigit in the editor below. It must return the calculated super digit as an integer.</p>
+
+<p>superDigit has the following parameter(s):</p>
+
+<p>string n: a string representation of an integer
+int k: the times to concatenate  to make 
+Returns</p>
+
+<p>int: the super digit of  repeated  times
+Input Format</p>
+
+<p>The first line contains two space separated integers,  and .</p>
+
+<p>Constraints</p>
+
+<p>Sample Input 0</p>
+
+<p>148 3
+Sample Output 0</p>
+
+<p>3
+Explanation 0</p>
+
+<p>Here  and , so .</p>
+
+<p>super_digit(P) = super_digit(148148148) 
+               = super_digit(1+4+8+1+4+8+1+4+8)
+               = super_digit(39)
+               = super_digit(3+9)
+               = super_digit(12)
+               = super_digit(1+2)
+               = super_digit(3)
+               = 3
+Sample Input 1</p>
+
+<p>9875 4
+Sample Output 1</p>
+
+<p>8
+Sample Input 2</p>
+
+<p>123 3
+Sample Output 2</p>
+
+<p>9
+Explanation 2</p>
+
+<p>Here  and , so .</p>
+
+<p>super_digit(P) = super_digit(123123123) 
+               = super_digit(1+2+3+1+2+3+1+2+3)
+               = super_digit(18)
+               = super_digit(1+8)
+               = super_digit(9)
+               = 9</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'superDigit' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING n
+#  2. INTEGER k
+#
+</span>
+<span class="k">def</span> <span class="nf">superDigit</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="n">k</span>
+
+    <span class="n">decomposed</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">superDigit</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">decomposed</span><span class="p">)</span><span class="o">*</span><span class="n">k</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+    
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">fptr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'OUTPUT_PATH'</span><span class="p">],</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">first_multiple_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">().</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="n">first_multiple_input</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">first_multiple_input</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">superDigit</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>처음에 조금 삽질을 하긴 했는데, logic은 굉장히 명료하다. input으로 들어온 string의 길이가 1이면 바로 return되고, 그게 아니라면 각 자리수 int로 변환해 합한 결과를 string으로 변환해 return하는데, 이때 trick이 k번 반복한 string에 대해서 하는게 아니라 기본 string을 통해 계산된 숫자에 k를 곱하면 되는 것이다. 주의 해야할 것이 있다면, 그 어느 과정에서도 n*k라는 연산을 직접적으로 하면 바로 runtime error가 난다는 것이다. <br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

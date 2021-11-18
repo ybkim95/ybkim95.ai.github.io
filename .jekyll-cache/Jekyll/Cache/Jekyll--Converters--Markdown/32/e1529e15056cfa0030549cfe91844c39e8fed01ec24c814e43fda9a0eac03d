@@ -1,0 +1,124 @@
+I"�"<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/ctci-making-anagrams/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=strings">String Manipulation</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>A student is taking a cryptography class and has found anagrams to be very useful. Two strings are anagrams of each other if the first string’s letters can be rearranged to form the second string. In other words, both strings must contain the same exact letters in the same exact frequency. For example, bacdc and dcbac are anagrams, but bacdc and dcbad are not.</p>
+
+<p>The student decides on an encryption scheme that involves two large strings. The encryption is dependent on the minimum number of character deletions required to make the two strings anagrams. Determine this number.</p>
+
+<p>Given two strings,  and , that may or may not be of the same length, determine the minimum number of character deletions required to make  and  anagrams. Any characters can be deleted from either of the strings.</p>
+
+<p>Example</p>
+
+<p>Delete  from  and  from  so that the remaining strings are  and  which are anagrams. This takes  character deletions.</p>
+
+<p>Function Description</p>
+
+<p>Complete the makeAnagram function in the editor below.</p>
+
+<p>makeAnagram has the following parameter(s):</p>
+
+<p>string a: a string
+string b: another string
+Returns</p>
+
+<p>int: the minimum total characters that must be deleted
+Input Format</p>
+
+<p>The first line contains a single string, .
+The second line contains a single string, .</p>
+
+<p>Constraints</p>
+
+<p>The strings  and  consist of lowercase English alphabetic letters, ascii[a-z].
+Sample Input</p>
+
+<p>cde
+abc
+Sample Output</p>
+
+<p>4
+Explanation</p>
+
+<p>Delete the following characters from the strings make them anagrams:</p>
+
+<p>Remove d and e from cde to get c.
+Remove a and b from abc to get c.
+It takes  deletions to make both strings anagrams.</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'makeAnagram' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING a
+#  2. STRING b
+#
+</span>
+<span class="k">def</span> <span class="nf">makeAnagram</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># freq dict
+</span>    <span class="n">dict_a</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">}</span>
+    <span class="n">dict_b</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">b</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">_a</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">_a</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+            <span class="n">dict_a</span><span class="p">[</span><span class="n">_a</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="k">for</span> <span class="n">_b</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">_b</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+            <span class="n">dict_b</span><span class="p">[</span><span class="n">_b</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="c1"># not included words count
+</span>    <span class="k">for</span> <span class="n">_a</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">dict_a</span><span class="p">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">_a</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dict_b</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">+=</span> <span class="n">dict_a</span><span class="p">[</span><span class="n">_a</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">dict_a</span><span class="p">[</span><span class="n">_a</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">_b</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">dict_b</span><span class="p">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">_b</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dict_a</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">+=</span> <span class="n">dict_b</span><span class="p">[</span><span class="n">_b</span><span class="p">]</span> 
+            <span class="k">del</span> <span class="n">dict_b</span><span class="p">[</span><span class="n">_b</span><span class="p">]</span>
+    
+    <span class="c1"># same words but diff freq
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dict_a</span><span class="p">:</span>
+        <span class="n">ans</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dict_a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">dict_b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">ans</span>      
+        
+    
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">fptr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'OUTPUT_PATH'</span><span class="p">],</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">makeAnagram</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>본 문제는 두 string에 대해서 각 sub-string들이 서로 anagram 관계에 있는 경우, 이를 만들기 위해 각 string에서 제거해야하는 문자의 수의 합을 반홚하는 것이 목표였다.
+일단 먼저 헷갈렸던건, 내가 아는 anagram과 다르게, 여기서의 anagram은 각 string의 구성 문자와 그 빈도수가 같은 것으로 정의되었다. 이를 토대로, 일단 각 string에 없는 문자들을 제거하고, 빈도수가 다른 애들을 ans에 더해주는 식으로 문제를 풀었다.  <br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET
