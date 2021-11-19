@@ -143,7 +143,7 @@ Sarsa에 비해, expected Sarsa는 계산 비용이 더 들지만, 여러 step-s
 
 위는 Double Q-learning의 pseudocode입니다. 참고로 Loop안에서 처음 ϵ-greedy 정책에 따른 행동 선택을 할 때는 Q1과 Q2를 함께 이용해서 선택을 합니다. 예를 들어 각 행동의 probability를 두 Q함수에서 평균을 낸 것을 사용하는 방법이 있습니다.
 
-본 글은 IREALISM 블로그의 글을 참고로 하였습니다. 본문은 아래 링크를 참조부탁드리겠습니다.
+본 글은 IREALISM 블로그의 글을 참고로 하였습니다. 
 
 [Reference](https://irealist.org/data-science/?mod=document&uid=7864)
 

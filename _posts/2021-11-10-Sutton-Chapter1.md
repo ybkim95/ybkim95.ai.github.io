@@ -67,7 +67,7 @@ Tic-Tac-Toe 같은 경우 환경을 정의하고 묘사한 모델이 있었지�
 이후는 챕터 요약과 강화학습의 역사에 대해서 여러 장을 할애하는데 생략하도록 하겠습니다.
 
 
-본 글은 [IREALISM](https://irealist.org/data-science/?mod=document&uid=7864) 블로그의 글을 참고로 하였습니다. 본문은 아래 링크를 참조부탁드리겠습니다.
+본 글은 [IREALISM](https://irealist.org/data-science/?mod=document&uid=7864) 블로그의 글을 참고로 하였습니다.
 
 <br>
 

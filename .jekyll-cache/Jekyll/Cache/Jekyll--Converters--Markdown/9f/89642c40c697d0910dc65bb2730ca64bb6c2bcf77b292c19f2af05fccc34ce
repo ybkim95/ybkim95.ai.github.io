@@ -1,0 +1,13 @@
+I"�<p><strong>Server(서버) and Client(클라이언트)</strong></p>
+
+<ul>
+  <li>클라이언트가 요청(Request)을 보내면 서버는 그에 대한 응답(Response)을 한다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaCSob%2FbtqKABWdFop%2Fmd3CBY88VjHnerR1uSeKd0%2Fimg.png" />
+</div>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

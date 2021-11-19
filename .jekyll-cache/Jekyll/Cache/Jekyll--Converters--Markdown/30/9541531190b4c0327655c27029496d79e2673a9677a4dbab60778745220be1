@@ -1,0 +1,142 @@
+I"�<p><strong>Server(서버) and Client(클라이언트)</strong></p>
+
+<ul>
+  <li>클라이언트가 요청(Request)을 보내면 서버는 그에 대한 응답(Response)을 한다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaCSob%2FbtqKABWdFop%2Fmd3CBY88VjHnerR1uSeKd0%2Fimg.png" />
+</div>
+
+<p><strong>클라이언트(Client) = 고객</strong></p>
+
+<ul>
+  <li>서버로 요청을 보내고 응답이 도착할 때까지 기다린다.</li>
+  <li>서버로부터 응답을 받은 뒤, 서버의 응답을 화면에 출력한다.<br />
+- ex1) 웹 브라우저: 서버로부터 받은 HTML, CSS 코드를 화면에 적절한 형태로 출력한다. <br />
+- ex2) 게임 App: 서버로부터 받은 경험치, 친구 귓속말 정보 등을 화면에 적절한 형태로 출력한다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbt1qMe%2FbtqKy7Vo3S7%2FVux47bjhD54sCGjJkhQfg0%2Fimg.png" />
+</div>
+
+<p><strong>서버(Server) = 서비스 제공자</strong></p>
+
+<ul>
+  <li>클라이언트로부터 받은 요청을 처리해 응답을 전송한다. <br />
+- ex) 웹 서버: 로그인 요청을 받아 ID와 PW가 정확한지 검사하고, 그 결과를 응답한다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbSg4IQ%2FbtqKBP7Nseq%2Fda7Z1Ut84Dk3B4EBMBYKr1%2Fimg.png" />
+</div>
+
+<p><strong>HTTP 개요</strong></p>
+
+<ul>
+  <li>
+    <p>HTTP(Hypertext Transfer Protocol)는 Web상에서 data를 주고받기 위한 protocol(통신규약)을 의미한다.<br />
+- 보통은 웹 문서(HTML)를 주고받는 데 사용된다. <br />
+- 모바일 앱 및 게임 개발 등에서 특정 형식의 데이터를 주고받는 용도로도 사용된다.</p>
+  </li>
+  <li>
+    <p>클라이언트는 요청의 목적에 따라 적절한 HTTP method를 이용해 통신을 진행한다. <br />
+- 대표적인 HTTP method는 다음과 같다:</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>HTTP 매소드</th>
+      <th>설명</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET</td>
+      <td>특정한 data의 조회를 요청</td>
+      <td>특정 페이지 접속, 정보 검색</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>특정한 data의 생성을 요청</td>
+      <td>회원가입, 글쓰기</td>
+    </tr>
+    <tr>
+      <td>PUT</td>
+      <td>특정한 data의 수정을 요청</td>
+      <td>회원 정보 수정</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>특정한 data의 삭제를 요청</td>
+      <td>회원 정보 삭제</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Python Web Request example: GET</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">target</span> <span class="o">=</span> <span class="s">"http://google.com"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">target</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>Output</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span><span class="nt">&lt;html</span> <span class="na">itemscope=</span><span class="s">" "</span><span class="err">...</span>
+</code></pre></div></div>
+
+<p><strong>REST 등장 배경</strong></p>
+
+<ul>
+  <li>HTTP는 GET, POST, PUT 그리고 DELETE 등의 다양한 매소드를 지원한다. <br />
+- 실제로는 서버가 각 매소드의 기본 설명을 따르지 않아도 프로그램을 개발할 수 있다. <br />
+- 하지만, 저마다 다른 방식으로 개발을 하면, 문제가 될 수 있기 때문에, 기준이 되는 architecture가 필요하다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbee61k%2FbtqKxRkYSod%2FoGnnNN0Q0FrbzEJwrjwbu0%2Fimg.png" />
+</div>
+
+<p><strong>REST 개요</strong></p>
+
+<ul>
+  <li>REST(Representational State Transfer)는 각 자원(Resource)에 대하여 자원의 상태 정보를 주고받는 개발 방식을 의미한다.</li>
+  <li>REST의 구성 요소 <br />
+- 자원(Resource): URI 이용 <br />
+- 행위(Verb): HTTP 매소드 이용 <br />
+- 표현(Representations): Payload 이용</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbKPACg%2FbtqKEy5wpRi%2FXuKCQdkhVQUyzB2OwZdJQ1%2Fimg.png" http="" 패킷="" 정보="" />
+</div>
+
+<p><strong>REST API란?</strong></p>
+
+<ul>
+  <li>API(Application Programming Interface): 프로그램이 상호작용하기 위한 인터페이스를 의미한다.</li>
+  <li>REST API: REST 아키텍처를 따라한 API를 의미한다.</li>
+  <li>REST API 호출: REST 방식을 따르고 있는 서버에 특정한 요청을 전송하는 것을 의미한다.</li>
+</ul>
+
+<blockquote>
+  <p>카카오브레인 패스파인터 코딩테스트 - 백엔드 부문에서 REST API 호출 문제가 나온다고 하는데, 이 부분에 대한 연습이 필요했다.</p>
+</blockquote>
+
+<p><strong>JSON</strong></p>
+
+<ul>
+  <li>JSON(JavaScript Object Notation): 데이터를 주고받는 데 사용하는 light한 data format.</li>
+  <li>JSON 형식을 따르는 data의 예시는 다음과 같다:</li>
+</ul>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET

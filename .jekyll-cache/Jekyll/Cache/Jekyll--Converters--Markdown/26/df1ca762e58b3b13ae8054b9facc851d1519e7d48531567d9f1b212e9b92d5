@@ -1,0 +1,94 @@
+I"�<p><strong>Server(서버) and Client(클라이언트)</strong></p>
+
+<ul>
+  <li>클라이언트가 요청(Request)을 보내면 서버는 그에 대한 응답(Response)을 한다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaCSob%2FbtqKABWdFop%2Fmd3CBY88VjHnerR1uSeKd0%2Fimg.png" />
+</div>
+
+<p><strong>클라이언트(Client) = 고객</strong></p>
+
+<ul>
+  <li>서버로 요청을 보내고 응답이 도착할 때까지 기다린다.</li>
+  <li>서버로부터 응답을 받은 뒤, 서버의 응답을 화면에 출력한다.<br />
+- ex1) 웹 브라우저: 서버로부터 받은 HTML, CSS 코드를 화면에 적절한 형태로 출력한다. <br />
+- ex2) 게임 App: 서버로부터 받은 경험치, 친구 귓속말 정보 등을 화면에 적절한 형태로 출력한다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbt1qMe%2FbtqKy7Vo3S7%2FVux47bjhD54sCGjJkhQfg0%2Fimg.png" />
+</div>
+
+<p><strong>서버(Server) = 서비스 제공자</strong></p>
+
+<ul>
+  <li>클라이언트로부터 받은 요청을 처리해 응답을 전송한다. <br />
+- ex) 웹 서버: 로그인 요청을 받아 ID와 PW가 정확한지 검사하고, 그 결과를 응답한다.</li>
+</ul>
+
+<div style="text-align: center;">
+     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbSg4IQ%2FbtqKBP7Nseq%2Fda7Z1Ut84Dk3B4EBMBYKr1%2Fimg.png" />
+</div>
+
+<p><strong>HTTP 개요</strong></p>
+
+<ul>
+  <li>
+    <p>HTTP(Hypertext Transfer Protocol)는 Web상에서 data를 주고받기 위한 protocol(통신규약)을 의미한다.<br />
+- 보통은 웹 문서(HTML)를 주고받는 데 사용된다. <br />
+- 모바일 앱 및 게임 개발 등에서 특정 형식의 데이터를 주고받는 용도로도 사용된다.</p>
+  </li>
+  <li>
+    <p>클라이언트는 요청의 목적에 따라 적절한 HTTP method를 이용해 통신을 진행한다. <br />
+- 대표적인 HTTP method는 다음과 같다:</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>HTTP 매소드</th>
+      <th>설명</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GET</td>
+      <td>특정한 data의 조회를 요청</td>
+      <td>특정 페이지 접속, 정보 검색</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>특정한 data의 생성을 요청</td>
+      <td>회원가입, 글쓰기</td>
+    </tr>
+    <tr>
+      <td>PUT</td>
+      <td>특정한 data의 수정을 요청</td>
+      <td>회원 정보 수정</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>특정한 data의 삭제를 요청</td>
+      <td>회원 정보 삭제</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Python Web Request example: GET</strong></p>
+
+<p>Code</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">target</span> <span class="o">=</span> <span class="s">"http://google.com"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">target</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET
