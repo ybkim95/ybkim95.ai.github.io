@@ -1,0 +1,206 @@
+I"�"<p><img src="/assets/img/photo/yu-bin.png" width="20%" height="20%" style="float: left;" /></p>
+
+<p><span style=" font-style: ;  font-weight: bold;  font-size: 1.7em; line-height: 1.0em;  color: black; font-family: arial; margin:70px; padding:0px; text-align: right; ">
+Yu Bin, Kim
+</span></p>
+
+<p><span style=" font-style: ;  font-size: 1.0em; line-height: 0em;  color: black; font-family: arial; margin:60px; padding:0px; text-align: right; ">
+Robotics &amp; ML Engineer
+</span></p>
+
+<p><span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; "><br /><br />
+I’m a M.S. candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in Sim2Real transfer and solving tasks in our daily routine with robotic systems.<br />
+</span></p>
+
+<!--
+주석 처리
+-->
+
+<p><span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; ">
+As an Engineer, I tried to analyze the world in a logical and systematical way based on the engineering knowledge that I have learned.
+However, there were many values that cannot be judged to be the only truth, I realized that I could not interpret them solely by Engineering knowledge.
+Accordingly, I became interested not only in Engineering but also in convergence studies where various studies gets combined.  <br />
+My lifetime goal is to make advances in technology by intermingling the various kinds of studies and always strive to create something from that gained knowledge to make a better future.   <br />
+<br />
+Also, I love to play ice-hockey and do work out in my spare time and also like to cook and see an exhibition. </span></p>
+
+<p><img src="/assets/img/ice-hockey.png" width="20%" height="20%" alt="Markdown Monster icon" style="float: center;" />  
+<img src="/assets/img/exhibition.png" width="26%" height="26%" alt="Markdown Monster icon" style="float: center;" />  
+<img src="/assets/img/noodle.png" width="17%" height="17%" alt="Markdown Monster icon" style="float: center;" />   
+<img src="/assets/img/cafe.png" width="23%" height="23%" alt="Markdown Monster icon" style="float: center;" /></p>
+
+<p><br />
+<span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; ">
+For more information, please refer to my <a href="https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing">Curriculum Vitae(CV)</a>
+</span></p>
+
+<div class="container my-4">
+
+<p class="font-weight-bold">Bootstrap carousel multiple items is an improved version of the standard bootstrap
+     carousel which allows you to put inside more than one element.</p>
+
+<p><strong>Detailed documentation and more examples of Bootstrap grid you can find in our <a href="https://mdbootstrap.com/docs/standard/components/carousel/" target="_blank">Bootstrap Carousel Docs</a>.&lt;/p&gt;
+
+<hr class="my-4" />
+
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+<!--Controls-->
+<div class="controls-top">
+<a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+<a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+</div>
+<!--/.Controls-->
+
+<!--Indicators-->
+<ol class="carousel-indicators">
+<li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+<li data-target="#multi-item-example" data-slide-to="1"></li>
+<li data-target="#multi-item-example" data-slide-to="2"></li>
+</ol>
+<!--/.Indicators-->
+
+<!--Slides-->
+<div class="carousel-inner" role="listbox">
+
+<!--First slide-->
+<div class="carousel-item active">
+
+<div class="row">
+     <div class="col-md-4">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+</div>
+
+<div class="col-md-4 clearfix d-none d-md-block">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap" />
+          <div class="card-body">
+               <h4 class="card-title">Card title</h4>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+</div>
+
+     <div class="col-md-4 clearfix d-none d-md-block">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+     </div>
+</div>
+
+</div>
+<!--/.First slide-->
+
+<!--Second slide-->
+<div class="carousel-item">
+
+<div class="row">
+     <div class="col-md-4">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+     </div>
+
+     <div class="col-md-4 clearfix d-none d-md-block">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+     </div>
+
+     <div class="col-md-4 clearfix d-none d-md-block">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+     </div>
+</div>
+
+</div>
+<!--/.Second slide-->
+
+<!--Third slide-->
+<div class="carousel-item">
+
+<div class="row">
+     <div class="col-md-4">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+     </div>
+
+     <div class="col-md-4 clearfix d-none d-md-block">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+     </div>
+
+     <div class="col-md-4 clearfix d-none d-md-block">
+     <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg" alt="Card image cap" />
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+          card's content.</p>
+          <a class="btn btn-primary">Button</a>
+          </div>
+     </div>
+     </div>
+</div>
+
+</div>
+<!--/.Third slide-->
+
+</div>
+<!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+
+
+&lt;/div&gt;
+</strong></p></div>
+:ET
