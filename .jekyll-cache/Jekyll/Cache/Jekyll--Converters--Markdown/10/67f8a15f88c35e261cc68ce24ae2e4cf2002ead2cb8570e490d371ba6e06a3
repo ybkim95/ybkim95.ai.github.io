@@ -1,0 +1,149 @@
+I"�<h2 id="problem"><strong>Problem</strong></h2>
+<p><a href="https://www.hackerrank.com/challenges/two-strings/problem?isFullScreen=true&amp;h_l=interview&amp;playlist_slugs%5B%5D=interview-preparation-kit&amp;playlist_slugs%5B%5D=dictionaries-hashmaps">Two Strings</a></p>
+
+<p><br /></p>
+
+<p><strong>[원문]</strong></p>
+
+<p>Given two strings, determine if they share a common substring. A substring may be as small as one character.</p>
+
+<p>Example</p>
+
+<p>s1 = “and”
+s2 = “art”</p>
+
+<p>These share the common substring a.</p>
+
+<p>s1 = “be”
+s2 = “cat”</p>
+
+<p>These do not share a substring.</p>
+
+<p><strong>Function Description</strong></p>
+
+<p>Complete the function twoStrings in the editor below.</p>
+
+<p>twoStrings has the following parameter(s):</p>
+
+<p>string s1: a string
+string s2: another string</p>
+
+<p>*Returns**</p>
+
+<ul>
+  <li>string: either YES or NO</li>
+</ul>
+
+<p><strong>Input Format</strong></p>
+
+<p>The first line contains a single integer p, the number of test cases.</p>
+
+<p>The following p  pairs of lines are as follows:</p>
+
+<ul>
+  <li>The first line contains string s1.</li>
+  <li>The second line contains string s2.</li>
+</ul>
+
+<p><strong>Constraints</strong></p>
+
+<ul>
+  <li>s1 and s2 consist of characters in the range ascii[a-z].</li>
+  <li>1 &lt;= p &lt;= 10</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>1 &lt;=</td>
+          <td>s1</td>
+          <td>,</td>
+          <td>s2</td>
+          <td>&lt;= 10^5</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p><strong>Output Format</strong></p>
+
+<p>For each pair of strings, return YES or NO.</p>
+
+<p>Sample Input</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+hello
+world
+hi
+world
+</code></pre></div></div>
+
+<p>Sample Output</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>YES
+NO
+</code></pre></div></div>
+
+<p>Explanation</p>
+
+<p>We have p = 2 pairs to check:</p>
+
+<p>s1 = “hello”, s2 = “world”. The substrings ‘o’ and ‘1’ are common to both strings.
+a = “hi”, b = “world”. s1 and s2 share no common substrings.</p>
+
+<h2 id="code"><strong>Code</strong></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/bin/python3
+</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#
+# Complete the 'twoStrings' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. STRING s1
+#  2. STRING s2
+#
+</span>
+<span class="k">def</span> <span class="nf">twoStrings</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
+    <span class="n">_s1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+    <span class="n">_s2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">_s1</span> <span class="o">&amp;</span> <span class="n">_s2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">"YES"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">"NO"</span>
+    <span class="c1"># Write your code here
+</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">fptr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'OUTPUT_PATH'</span><span class="p">],</span> <span class="s">'w'</span><span class="p">)</span>
+
+    <span class="n">q</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">().</span><span class="n">strip</span><span class="p">())</span>
+
+    <span class="k">for</span> <span class="n">q_itr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+        <span class="n">s1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+        <span class="n">s2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">twoStrings</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span>
+
+        <span class="n">fptr</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">fptr</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="notes"><strong>Notes</strong></h2>
+
+<p>두 string array 간 공통된 원소를 공유하는지 여부를 판단하는 문제이다. 각 list의 고유한 alphabet만 비교하면 되니까 set()을 사용하였고, set의 intersection 연산자인 &amp;을 사용하였다.</p>
+
+<p><br /><br /></p>
+
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ybkim95" data-color="#FFDD00" data-emoji="" data-font="Comic" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+
+:ET
