@@ -1,74 +1,28 @@
----
-layout: page
-title: ABOUT
-permalink: /about/
----
+I"\<p><img src="/assets/img/photo/yu-bin.png" width="20%" height="20%" style="float: left;" /></p>
 
-
-<img src="/assets/img/photo/yu-bin.png" width="20%" height="20%" style="float: left;"/>
-
-<span
-style="
-font-style: ; 
-font-weight: bold; 
-font-size: 1.7em;
-line-height: 1.0em; 
-color: black;
-font-family: arial;
-margin:70px;
-padding:0px;
-text-align: right;
-">
+<p><span style=" font-style: ;  font-weight: bold;  font-size: 1.7em; line-height: 1.0em;  color: black; font-family: arial; margin:70px; padding:0px; text-align: right; ">
 Yu Bin, Kim
-</span>
+</span></p>
 
-<span
-style="
-font-style: ; 
-font-size: 1.0em;
-line-height: 0em; 
-color: black;
-font-family: arial;
-margin:60px;
-padding:0px;
-text-align: right;
-">
-Robotics & ML Engineer
-</span>
+<p><span style=" font-style: ;  font-size: 1.0em; line-height: 0em;  color: black; font-family: arial; margin:60px; padding:0px; text-align: right; ">
+Robotics &amp; ML Engineer
+</span></p>
 
-<span
-style="
-font-style: ; 
-font-size: 1em;
-line-height: 0.4em; 
-color: black;
-font-family: arial;
-margin:0px;
-padding:0px;
-"><br><br><br>
-I'm a M.S candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in creating intelligent household mobile-manipulators that can make proper decisions to solve tasks in a cluttered environment.  
-</span>
+<p><span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; "><br /><br /><br />
+I’m a M.S candidate at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in creating intelligent household mobile-manipulators that can make proper decisions to solve tasks in a cluttered environment.<br />
+</span></p>
 
 <!--
 주석 처리
 -->
 
-<span
-style="
-font-style: ; 
-font-size: 1em;
-line-height: 0.4em; 
-color: black;
-font-family: arial;
-margin:0px;
-padding:0px;
-">
+<p><span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; ">
 As an Engineer, I tried to analyze the world in a logical and systematical way based on the engineering knowledge that I have learned.
 However, there were many values that cannot be judged to be the only truth, I realized that I could not interpret them solely by Engineering knowledge.
-Accordingly, I became interested not only in Engineering but also in convergence studies where various studies gets combined.    
-My lifetime goal is to make advances in technology by intermingling the various kinds of studies and always strive to create something from that gained knowledge to make a better future.     
-<br>
-In my spare time, I love to play ice-hockey and do work out and also like to cook and see an exhibition. </span>
+Accordingly, I became interested not only in Engineering but also in convergence studies where various studies gets combined.  <br />
+My lifetime goal is to make advances in technology by intermingling the various kinds of studies and always strive to create something from that gained knowledge to make a better future.   <br />
+<br />
+In my spare time, I love to play ice-hockey and do work out and also like to cook and see an exhibition. </span></p>
 
 <!-- <img src="/assets/img/ice-hockey.png" width="20%" height="20%"
      alt="Markdown Monster icon"
@@ -83,16 +37,7 @@ In my spare time, I love to play ice-hockey and do work out and also like to coo
      alt="Markdown Monster icon"
      style="float: center;"/>  -->
 
-<span
-style="
-font-style: ; 
-font-size: 1em;
-line-height: 0.4em; 
-color: black;
-font-family: arial;
-margin:0px;
-padding:0px;
-">
+<p><span style=" font-style: ;  font-size: 1em; line-height: 0.4em;  color: black; font-family: arial; margin:0px; padding:0px; "></span></p>
 
 <style>
 .col-md-3{
@@ -119,10 +64,12 @@ body .no-padding{
    }
 </style>
 
-<!-- !samjichang mis-localization problem occurs due to this part! -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -133,7 +80,7 @@ body .no-padding{
   </ul> -->
   
   <!-- The slideshow -->
-  <div class="container carousel-inner no-padding">
+  <!-- <div class="container carousel-inner no-padding">
     <div class="carousel-item active">
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img src="/assets/img/ice-hockey.png" width="16%" height="16%"
@@ -200,7 +147,7 @@ body .no-padding{
      style="float: center;"/>
       </div>  
     </div>
-  </div>
+  </div> -->
   
   <!-- Left and right controls -->
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -211,6 +158,7 @@ body .no-padding{
   </a>
 </div>
 
-<br><br>
-For more information, please refer to my [Curriculum Vitae(CV)](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing) <br> <br>
-<!-- </span> -->
+<p><br /><br />
+For more information, please refer to my <a href="https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing">Curriculum Vitae(CV)</a> <br /> <br />
+<!-- </span> --></p>
+:ET

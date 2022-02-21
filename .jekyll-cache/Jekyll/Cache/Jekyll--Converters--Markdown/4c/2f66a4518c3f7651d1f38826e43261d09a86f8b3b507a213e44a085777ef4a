@@ -1,10 +1,4 @@
----
-layout: page
-title: PROJECT
-permalink: /project/
----
-
-<!--HTML 방법
+I"<!--HTML 방법
 [<img src="/assets/img/roborts_original.png" alt="Hello" width="400" height="270" onmouseover="this.src='/assets/img/roborts_modified.png'" width="400" height="270"  onmouseout="this.src='/assets/img/roborts_original.png'"/>](/roborts/)
 -->
 
@@ -214,9 +208,9 @@ permalink: /project/
       left:335px;
       width:380px;
       height:196px;
-      background: url(/assets/img/nft-image.png) no-repeat;
+      background: url(/assets/img/nft-image.jpg) no-repeat;
       background-size: contain;
-      max-width: 240px;
+      max-width: 340px;
     }
     .text7
     {
@@ -242,9 +236,8 @@ permalink: /project/
 
   <div class="pic0">
     <div class="text0">
-    <br>
-    <a href="/minerl/" class="no-uline" 
-    style="
+    <br />
+    <a href="/minerl/" class="no-uline" style="
     color: black;
     font-size: 1.0em;
     font-weight: bold;
@@ -257,9 +250,8 @@ permalink: /project/
 
   <div class="pic1">
   <div class="text1">
-  <br>
-  <a href="/roborts/" class="no-uline" 
-  style="
+  <br />
+  <a href="/roborts/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -272,9 +264,8 @@ permalink: /project/
   
   <div class="pic2">
   <div class="text2">
-  <br>
-  <a href="/stargazer/" class="no-uline" 
-  style="
+  <br />
+  <a href="/stargazer/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -287,9 +278,8 @@ permalink: /project/
   
   <div class="pic3">
   <div class="text3">
-  <br>
-  <a href="/dori/" class="no-uline" 
-  style="
+  <br />
+  <a href="/dori/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -302,9 +292,8 @@ permalink: /project/
 
   <div class="pic4">
   <div class="text4">
-  <br>
-  <a href="/sentiment-analysis/" class="no-uline" 
-  style="
+  <br />
+  <a href="/sentiment-analysis/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -317,9 +306,8 @@ permalink: /project/
 
   <div class="pic5">
   <div class="text5">
-  <br>
-  <a href="/gesture-generation/" class="no-uline" 
-  style="
+  <br />
+  <a href="/gesture-generation/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -332,9 +320,8 @@ permalink: /project/
 
   <div class="pic6">
   <div class="text6">
-  <br>
-  <a href="/odmgpf/" class="no-uline" 
-  style="
+  <br />
+  <a href="/odmgpf/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -347,9 +334,8 @@ permalink: /project/
 
   <div class="pic7">
   <div class="text7">
-  <br>
-  <a href="/nft-image/" class="no-uline" 
-  style="
+  <br />
+  <a href="/nft-image/" class="no-uline" style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
@@ -360,13 +346,8 @@ permalink: /project/
   </div>
 </div>
 
-</div>
+&lt;/div&gt;
 </body>
 </html>
 
-
-
-
-
-
-
+:ET

@@ -1,10 +1,4 @@
----
-layout: page
-title: PROJECTS
-permalink: /work/
----
-
-<style type="text/css">
+I"´<style type="text/css">
     body {
     padding: 20px;
     font-family: sans-serif;
@@ -86,7 +80,7 @@ permalink: /work/
           MineRL          </a>
       <div class="location-image">
         <a href="/minerl/">
-            <img width="300" height="169" src="/assets/img/minerl.jpg" alt="paris">          
+            <img width="300" height="169" src="/assets/img/minerl.jpg" alt="paris" />          
           </a>
       </div>
     </article>
@@ -95,7 +89,7 @@ permalink: /work/
           RoboMaster AI Challenge           </a>
       <div class="location-image">
         <a href="/roborts/">
-            <img width="300" height="169" src="/assets/img/roborts_original.png" alt="san francisco">    </a>
+            <img width="300" height="169" src="/assets/img/roborts_original.png" alt="san francisco" />    </a>
       </div>
     </article>
     <article id="3688" class="location-listing">
@@ -103,7 +97,7 @@ permalink: /work/
           Gesture Generation            </a>
       <div class="location-image">
         <a href="/gesture-generation/">
-            <img width="300" height="169" src="/assets/img/gesture-generation.jpg" alt="london">  </a>
+            <img width="300" height="169" src="/assets/img/gesture-generation.jpg" alt="london" />  </a>
       </div>
     </article>
     <article id="3691" class="location-listing">
@@ -111,7 +105,7 @@ permalink: /work/
           Sentiment Analysis           </a>
       <div class="location-image">
         <a href="/sentiment-analysis/">
-            <img width="300" height="169" src="/assets/img/sentiment-analysis.png" alt="new york">  </a>
+            <img width="300" height="169" src="/assets/img/sentiment-analysis.png" alt="new york" />  </a>
       </div>
     </article>
     <article id="3694" class="location-listing">
@@ -119,7 +113,7 @@ permalink: /work/
           Digital Companion Robot          </a>
       <div class="location-image">
         <a href="/dori/">
-            <img width="300" height="169" src="/assets/img/DORI.png" alt="cape town">  </a>
+            <img width="300" height="169" src="/assets/img/DORI.png" alt="cape town" />  </a>
       </div>
     </article>
     <article id="3697" class="location-listing">
@@ -127,7 +121,7 @@ permalink: /work/
           Stargazer       </a>
       <div class="location-image">
         <a href="/stargazer/">
-            <img width="300" height="169" src="/assets/img/burger.png" alt="beijing">    </a>
+            <img width="300" height="169" src="/assets/img/burger.png" alt="beijing" />    </a>
       </div>
     </article>
     <article id="3700" class="location-listing">
@@ -135,16 +129,16 @@ permalink: /work/
           ODMG-PF          </a>
       <div class="location-image">
         <a href="/odmgpf/">
-            <img width="300" height="169" src="/assets/img/odmgpf.jpg" alt="paris">          
+            <img width="300" height="169" src="/assets/img/odmgpf.jpg" alt="paris" />          
           </a>
       </div>
     </article>
     <article id="3703" class="location-listing">
       <a class="location-title" href="/nft-image/">
-          NFT Images          </a>
+          NFT-IMAGES          </a>
       <div class="location-image">
         <a href="/nft-image/">
-            <img width="300" height="169" src="/assets/img/nft-image.png" alt="paris">          
+            <img width="300" height="169" src="/assets/img/chatbot.jpg" alt="paris" />          
           </a>
       </div>
     </article>
@@ -152,3 +146,4 @@ permalink: /work/
   </div>
   <!-- end grid container -->
 </div>
+:ET

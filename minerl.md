@@ -147,3 +147,29 @@ data = minerl.data.make("MineRLObtainDiamond-v0")
 for obs, rew, done, act in data.batch_iter(num_epochs=1, batch_size=32):
     # Do something
 ```
+
+**Presentation**
+---
+The overall work is presented in the below video (Korean). 
+
+<iframe width="650" height="335" src="https://www.youtube.com/embed/QeQHPlEHI_o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br>
+
+Our main idea was to adopt InfoGAIL algorithm instead of using generic RL algorithms to train the agent since we were able to utilize the expert's demonstration dataset.
+
+<img src="/assets/img/InfoGAIL/abstract.png" width="70%" height="70%"
+     alt="Markdown Monster icon"
+     style="float: center;"/>
+
+For more details about InfoGAIL algorithm, please refer to my paper review about this: [LINK](/study/2021/11/26/InfoGAIL/)
+
+And for more detailed report, please email me to ybkim95@yonsei.ac.kr.
+
+
+**Result**
+---
+
+Our team got 1st place with popularity award for the Software Capstone Project.
+
+<img src="/assets/img/photo/award.png" width="50%" height="50%"
+     alt="Markdown Monster icon"
+     style="float: center;"/>
