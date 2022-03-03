@@ -99,21 +99,21 @@ permalink: /work/
       </div>
     </article>
     <article id="3688" class="location-listing">
-      <a class="location-title" href="/gesture-generation/">
-          Gesture Generation            </a>
+      <a class="location-title" href="/rfusion/">
+          RFusion Implementation           </a>
       <div class="location-image">
-        <a href="/gesture-generation/">
-            <img width="300" height="169" src="/assets/img/gesture-generation.jpg" alt="london">  </a>
+        <a href="/rfusion/">
+            <img width="200" height="169" src="/assets/img/rfusion.png" alt="london">  </a>
       </div>
     </article>
-    <article id="3691" class="location-listing">
+    <!-- <article id="3691" class="location-listing">
       <a class="location-title" href="/sentiment-analysis/">
           Sentiment Analysis           </a>
       <div class="location-image">
         <a href="/sentiment-analysis/">
             <img width="300" height="169" src="/assets/img/sentiment-analysis.png" alt="new york">  </a>
       </div>
-    </article>
+    </article> -->
     <article id="3694" class="location-listing">
       <a class="location-title" href="/dori/">
           Digital Companion Robot          </a>
@@ -122,14 +122,14 @@ permalink: /work/
             <img width="300" height="169" src="/assets/img/DORI.png" alt="cape town">  </a>
       </div>
     </article>
-    <article id="3697" class="location-listing">
+    <!-- <article id="3697" class="location-listing">
       <a class="location-title" href="/stargazer/">
           Stargazer       </a>
       <div class="location-image">
         <a href="/stargazer/">
             <img width="300" height="169" src="/assets/img/burger.png" alt="beijing">    </a>
       </div>
-    </article>
+    </article> -->
     <article id="3700" class="location-listing">
       <a class="location-title" href="/odmgpf/">
           ODMG-PF          </a>
@@ -140,11 +140,11 @@ permalink: /work/
       </div>
     </article>
     <article id="3703" class="location-listing">
-      <a class="location-title" href="/nft-image/">
-          NFT Images          </a>
+      <a class="location-title" href="/ddpg/">
+          DDPG          </a>
       <div class="location-image">
-        <a href="/nft-image/">
-            <img width="300" height="169" src="/assets/img/nft-image.png" alt="paris">          
+        <a href="/ddpg/">
+            <img width="300" height="169" src="/assets/img/ddpg.png" alt="paris">          
           </a>
       </div>
     </article>

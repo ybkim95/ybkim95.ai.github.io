@@ -49,7 +49,7 @@ legal:
     url:               /impress/
 
 # COPYRIGHT 설정
-copyright:             © 2019-2021 by Yu Bin, Kim www.ybkim95.github.io
+copyright:             © 2019-2022 by Yu Bin, Kim www.ybkim95.github.io
 
 # Format of the permalinks
 permalink:             pretty #/:categories/:year-:month-:day-:title/

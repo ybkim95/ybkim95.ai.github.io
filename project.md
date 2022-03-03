@@ -318,14 +318,14 @@ permalink: /project/
   <div class="pic5">
   <div class="text5">
   <br>
-  <a href="/gesture-generation/" class="no-uline" 
+  <a href="/rfusion/" class="no-uline" 
   style="
   color: black;
   font-size: 1.0em;
   font-weight: bold;
   text-decoration: none;
   ">
-    Gesture Generation
+    RFusion Implementation
   </a>
   </div>
 </div>

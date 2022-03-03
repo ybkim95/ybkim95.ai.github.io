@@ -13,7 +13,7 @@ Obstacle-dependent Multi-Gaussian Potential Field (ODMG-PF)
 **Keywords:** Mixed Gaussian Potential Field(혼합 가우시안 포텐셜 필드), Dynamic Obstacle Avoidance(DOA, 동적 장애물 회피), Holonomic Mobile Robot(홀로노믹 모바일 로봇)
 
 ## Abstract
-This paper is about the new obstacle avoidance method called Obstacle-Dependent Mixed Gaussian Potential Field(ODMG-PF) which defines obstacles from the sensor detection and calculates the likelihood of collision with them. In this paper, a novel attractive field and repulsive field calculation method and the robot direction decision approach is presented. Simulations and the experiments were carried out to benchmark with previous potential field-based obstacle avoidance method. The results show that ODMG-PF performed 23.2% and 25.0% improvement for simulation and 17.19% and 14.28% improvements for the real experiment in terms of average deviation and the collision rate.
+This paper is about the new obstacle avoidance method called **O**bstacle-**D**ependent **M**ixed **G**aussian **P**otential **F**ield(**ODMG-PF**) which defines obstacles from the sensor detection and calculates the likelihood of collision with them. In this paper, a novel attractive field and repulsive field calculation method and the robot direction decision approach is presented. Simulations and the experiments were carried out to benchmark with previous potential field-based obstacle avoidance method. The results show that ODMG-PF performed 23.2% and 25.0% improvement for simulation and 17.19% and 14.28% improvements for the real experiment in terms of average deviation and the collision rate.
 
 ## 1. 서론
  이동 로봇(Mobile Robot)의 자율 주행에 대한 연구는 오래전부터 진행되어 왔으며, 오늘날에도 꾸준히 연구되고 있다. 초창기에는 단순 작업과 간단한 이동이 요구되었던 반면, 최근에는 여러 가지 변수가 존재하는 공장 또는 위험한 건설 현장과 같이 인간이 작업하기에 위험한 곳에서의 작업, 전자동화 process로 운영되는 공장에서의 물류의 운반, 미지의 지역에 대한 탐사 등 다양한 분야에서 활용 및 개발되고 있다. 이때 주목해야 할 점은 로봇이 미지의 환경에서 활용되는 경우가 많아짐에 따라 주변 상황을 스스로 감지하고 로봇 스스로 판단하여 장애물 회피는 물론 정밀하고 안전한 주행을 하는 것이 굉장히 중요하다는 것이다. 
@@ -41,3 +41,9 @@ To read more, please refer to following original paper:
 ---
 
 <img src="/assets/img/assemble.gif" width="450" height="370">
+
+
+**Presentation**
+---
+
+<iframe width="650" height="335" src="https://www.youtube.com/embed/R-NFALPbP4U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
