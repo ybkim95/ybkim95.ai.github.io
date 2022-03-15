@@ -1,19 +1,18 @@
 ---
 layout: page
-title: MineRL Diamond Competition 2021
+title: RL Agent in Minecraft Env
 permalink: /minerl/
 ---
 
 **Introduction**
 ---
 
-The MineRL 2021 Diamond Competition aims to foster the development of algorithms which can efficiently leverage human demonstrations to drastically reduce the number of samples needed to solve complex, hierarchical, and sparse environments. 
+The MineRL 2021 Diamond Competition aims to foster the development of algorithms which can efficiently leverage human demonstrations to drastically reduce the number of samples needed to solve complex, hierarchical, and sparse environments. [LINK](https://www.aicrowd.com/challenges/neurips-2021-minerl-diamond-competition)
 
 <img src="/assets/img/minerl.gif" width="60%" height="60%"
      alt="Markdown Monster icon"
      style="float: center;"/>
 
-[LINK](https://www.aicrowd.com/challenges/neurips-2021-minerl-diamond-competition)
 
 **Task**
 ---
@@ -156,13 +155,21 @@ The overall work is presented in the below video (Korean).
 
 Our main idea was to adopt InfoGAIL algorithm instead of using generic RL algorithms to train the agent since we were able to utilize the expert's demonstration dataset.
 
-<img src="/assets/img/InfoGAIL/abstract.png" width="70%" height="70%"
+<img src="/assets/img/InfoGAIL/abstract.png" width="80%" height="80%"
      alt="Markdown Monster icon"
      style="float: center;"/>
 
+Below is the pipeline for the whole system. The left one is showing the Generator model and the right is Discriminator model. Generator takes input image and outputs the action sequence. On the other hand, Discriminator takes input image and auxiliary varibles to output discrimination score in order to updat the policy. 
+
+
+<img src="/assets/img/infogail_arch.png" width="100%" height="100%"
+     alt="Markdown Monster icon"
+     style="float: center;"/>
+
+
 For more details about InfoGAIL algorithm, please refer to my paper review about this: [LINK](/study/2021/11/26/InfoGAIL/)
 
-And for more detailed report, please email me to ybkim95@yonsei.ac.kr.
+and for detailed paper, please email me to ybkim95@yonsei.ac.kr.
 
 
 **Result**

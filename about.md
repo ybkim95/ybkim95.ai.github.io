@@ -46,7 +46,7 @@ font-family: arial;
 margin:0px;
 padding:0px;
 "><br><br><br>
-I'm a M.S student at KAIST AI Graduate (Advisor: Prof. Kee Eung, Kim) and my research interest lies in creating intelligent (mobile) manipulators that can make efficient decisions on solving challenging tasks in a cluttered environment.  
+I'm a M.S student at KAIST AI Graduate and my research interest lies in creating intelligent (mobile) manipulators that can make efficient decisions on solving tasks in a cluttered environment.  
 </span>
 
 <!--
@@ -65,23 +65,11 @@ padding:0px;
 ">
 As an Engineer, I tried to analyze the world in a logical and systematical way based on the engineering knowledge that I have learned.
 However, there were many values that cannot be judged to be the only truth, I realized that I could not interpret them solely by Engineering knowledge.
-Accordingly, I became interested not only in Engineering but also in convergence studies where various studies like Art, Philosophy, etc get combined.    
-My lifetime goal is to make advances in robot intelligence by intermingling the various kinds of studies such as AI, Robotics, Cognitive Science, etc and always strive to create the values from that gained knowledge to make a better future.     
+Accordingly, I became interested not only in Engineering field but also in social problems like aging population, manpower lackage etc.
+My lifetime goal is to make advances in robot intelligence by intermingling AI, Robotics, Cognitive Science, etc and always strive to create the values from that gained knowledge to make a better future.     
 <br>
-In my spare time, I love to play ice-hockey and do the workout and also like to cook. </span>
+In my spare time, I love to read books, play ice-hockey and cook. </span>
 
-<!-- <img src="/assets/img/ice-hockey.png" width="20%" height="20%"
-     alt="Markdown Monster icon"
-     style="float: center;"/> &nbsp;
-<img src="/assets/img/exhibition.png" width="26%" height="26%"
-     alt="Markdown Monster icon"
-     style="float: center;"/> &nbsp;
-<img src="/assets/img/noodle.png" width="17%" height="17%"
-     alt="Markdown Monster icon"
-     style="float: center;"/> &nbsp; 
-<img src="/assets/img/cafe.png" width="23%" height="23%"
-     alt="Markdown Monster icon"
-     style="float: center;"/>  -->
 
 <span
 style="
@@ -212,5 +200,5 @@ body .no-padding{
 </div>
 
 <br><br>
-For more information, please refer to my [Curriculum Vitae(CV)](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing). <br> <br>
+For more information, please refer to my [Curriculum Vitae (CV)](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing). <br> <br>
 <!-- </span> -->

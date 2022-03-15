@@ -81,6 +81,14 @@ permalink: /work/
 
 <div class="child-page-listing">
   <div class="grid-container">
+      <article id="3688" class="location-listing">
+      <a class="location-title" href="/rfusion/">
+          Pick & Place with UR5          </a>
+      <div class="location-image">
+        <a href="/rfusion/">
+            <img width="200" height="169" src="/assets/img/rfusion4.png" alt="london">  </a>
+      </div>
+    </article>
       <article id="3700" class="location-listing">
       <a class="location-title" href="/minerl/">
           MineRL          </a>
@@ -88,6 +96,14 @@ permalink: /work/
         <a href="/minerl/">
             <img width="300" height="169" src="/assets/img/minerl.jpg" alt="paris">          
           </a>
+      </div>
+    </article>
+    <article id="3694" class="location-listing">
+      <a class="location-title" href="/dori/">
+          Elder-care Robot          </a>
+      <div class="location-image">
+        <a href="/dori/">
+            <img width="300" height="169" src="/assets/img/DORI.png" alt="cape town">  </a>
       </div>
     </article>
     <article id="3685" class="location-listing">
@@ -98,38 +114,6 @@ permalink: /work/
             <img width="300" height="169" src="/assets/img/roborts_original.png" alt="san francisco">    </a>
       </div>
     </article>
-    <article id="3688" class="location-listing">
-      <a class="location-title" href="/rfusion/">
-          RFusion Implementation           </a>
-      <div class="location-image">
-        <a href="/rfusion/">
-            <img width="200" height="169" src="/assets/img/rfusion.png" alt="london">  </a>
-      </div>
-    </article>
-    <!-- <article id="3691" class="location-listing">
-      <a class="location-title" href="/sentiment-analysis/">
-          Sentiment Analysis           </a>
-      <div class="location-image">
-        <a href="/sentiment-analysis/">
-            <img width="300" height="169" src="/assets/img/sentiment-analysis.png" alt="new york">  </a>
-      </div>
-    </article> -->
-    <article id="3694" class="location-listing">
-      <a class="location-title" href="/dori/">
-          Digital Companion Robot          </a>
-      <div class="location-image">
-        <a href="/dori/">
-            <img width="300" height="169" src="/assets/img/DORI.png" alt="cape town">  </a>
-      </div>
-    </article>
-    <!-- <article id="3697" class="location-listing">
-      <a class="location-title" href="/stargazer/">
-          Stargazer       </a>
-      <div class="location-image">
-        <a href="/stargazer/">
-            <img width="300" height="169" src="/assets/img/burger.png" alt="beijing">    </a>
-      </div>
-    </article> -->
     <article id="3700" class="location-listing">
       <a class="location-title" href="/odmgpf/">
           ODMG-PF          </a>
@@ -141,13 +125,23 @@ permalink: /work/
     </article>
     <article id="3703" class="location-listing">
       <a class="location-title" href="/ddpg/">
-          DDPG          </a>
+          Self-driving Car in V-REP  </a>
       <div class="location-image">
         <a href="/ddpg/">
-            <img width="300" height="169" src="/assets/img/ddpg.png" alt="paris">          
+            <img width="300" height="70" src="/assets/img/ddpg.png" alt="paris">          
           </a>
       </div>
     </article>
+    <article id="3705" class="location-listing">
+      <a class="location-title" href="/genara/">
+          Folding Robot  </a>
+      <div class="location-image">
+        <a href="/genara/">
+            <img width="300" height="70" src="/assets/img/genara.png" alt="paris">          
+          </a>
+      </div>
+    </article>
+
 
   </div>
   <!-- end grid container -->
