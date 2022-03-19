@@ -1,10 +1,4 @@
----
-layout: page
-title: PROJECTS
-permalink: /work/
----
-
-<style type="text/css">
+I"<style type="text/css">
     body {
     padding: 20px;
     font-family: sans-serif;
@@ -127,10 +121,10 @@ permalink: /work/
   <div class="grid-container">
     <article id="3688" class="location-listing">
       <a class="location-title" href="/rfusion/">
-          Pick & Place with UR5          </a>
+          Pick &amp; Place with UR5          </a>
       <div class="location-image">
         <a href="/rfusion/">
-            <img width="200" height="169" src="/assets/img/rfusion4.png" alt="london">  </a>
+            <img width="200" height="169" src="/assets/img/rfusion4.png" alt="london" />  </a>
       </div>
     </article>
       <article id="3700" class="location-listing">
@@ -138,7 +132,7 @@ permalink: /work/
           MineRL          </a>
       <div class="location-image">
         <a href="/minerl/">
-            <img width="300" height="169" src="/assets/img/minerl.jpg" alt="paris">          
+            <img width="300" height="169" src="/assets/img/minerl.jpg" alt="paris" />          
           </a>
       </div>
     </article>
@@ -147,7 +141,7 @@ permalink: /work/
           Elder-care Robot          </a>
       <div class="location-image">
         <a href="/dori/">
-            <img width="300" height="169" src="/assets/img/DORI.png" alt="cape town">  </a>
+            <img width="300" height="169" src="/assets/img/DORI.png" alt="cape town" />  </a>
       </div>
     </article>
     <article id="3685" class="location-listing">
@@ -155,7 +149,7 @@ permalink: /work/
           RoboMaster AI Challenge           </a>
       <div class="location-image">
         <a href="/roborts/">
-            <img width="300" height="169" src="/assets/img/roborts_original.png" alt="san francisco">    </a>
+            <img width="300" height="169" src="/assets/img/roborts_original.png" alt="san francisco" />    </a>
       </div>
     </article>
     <article id="3700" class="location-listing">
@@ -163,7 +157,7 @@ permalink: /work/
           ODMG-PF          </a>
       <div class="location-image">
         <a href="/odmgpf/">
-            <img width="300" height="169" src="/assets/img/odmgpf.jpg" alt="paris">          
+            <img width="300" height="169" src="/assets/img/odmgpf.jpg" alt="paris" />          
           </a>
       </div>
     </article>
@@ -172,7 +166,7 @@ permalink: /work/
           Self-driving Car in V-REP  </a>
       <div class="location-image">
         <a href="/ddpg/">
-          <img width="300" height="70" src="/assets/img/ddpg.png" alt="paris">          
+          <img width="300" height="70" src="/assets/img/ddpg.png" alt="paris" />          
         </a>
       </div>
     </article>
@@ -181,16 +175,16 @@ permalink: /work/
           Folding Robot  </a>
       <div class="location-image">
         <a href="/genara/">
-            <img width="300" height="70" src="/assets/img/genara.png" alt="paris">          
+            <img width="300" height="70" src="/assets/img/genara.png" alt="paris" />          
           </a>
       </div>
     </article>
     <article id="3707" class="location-listing">
       <a class="location-title" href="/chatbot/">
-          Elder-care Chatbot  </a>
+          Chatbot  </a>
       <div class="location-image">
         <a href="/genara/">
-            <img width="300" height="70" src="/assets/img/chatbot.png" alt="">          
+            <img width="300" height="70" src="/assets/img/chatbot.png" alt="" />          
           </a>
       </div>
     </article>
@@ -231,3 +225,5 @@ permalink: /work/
   });
 
 </script>
+
+:ET
