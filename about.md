@@ -200,5 +200,5 @@ body .no-padding{
 </div>
 
 <br><br>
-For more information, please refer to my [Curriculum Vitae (CV)](https://docs.google.com/document/d/1dc5RSCyprbWt2Q6dbBL1Ist_kNvqwt5qNtLp1Kb2u0U/edit?usp=sharing). <br> <br>
+For more information, please refer to my [Curriculum Vitae (CV)](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/29416a2d-84d1-417b-9e53-48823bbd364d/CV_Y.B.KIM_2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220322T151835Z&X-Amz-Expires=86400&X-Amz-Signature=6cdf79f90927f9d96a1ec09a0ab0d4c9544dc8e14a97a21ff6372f5d068dabb0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22CV_Y.B.KIM_2022.pdf%22&x-id=GetObject). <br> <br>
 <!-- </span> -->
