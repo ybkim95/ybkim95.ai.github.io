@@ -46,7 +46,7 @@ font-family: arial;
 margin:0px;
 padding:0px;
 "><br><br><br>
-I'm a M.S student at KAIST AI Graduate and my research interest lies in creating intelligent (mobile) manipulators that can make efficient decisions on solving tasks in a cluttered environment.  
+I'm a M.S student at KAIST AI Graduate and my research interest lies in developing intelligent (mobile) manipulators that solves practical tasks and collaborate with humans in a cluttered environments.  
 </span>
 
 <!--
@@ -63,12 +63,12 @@ font-family: arial;
 margin:0px;
 padding:0px;
 ">
-As an Engineer, I tried to analyze the world in a logical and systematical way based on the engineering knowledge that I have learned.
-However, there were many values that cannot be judged to be the only truth, I realized that I could not interpret them solely by Engineering knowledge.
-Accordingly, I became interested not only in Engineering field but also in social problems like aging population, manpower lackage etc.
-My lifetime goal is to make advances in robot intelligence by intermingling AI, Robotics, Cognitive Science, etc and always strive to create the values from that gained knowledge to make a better future.     
+As an Engineer, I tried to analyze the world in a logical and systematical way based on the Engineering knowledge that I have learned.
+However, there were many values that cannot be judged to be the only truth. I realized that I could not interpret them solely by Engineering knowledge.
+Accordingly, I became interested not only in Engineering but also in social problems like aging population, manpower lackage, etc.
+My lifetime goal is to make advances in robot intelligence by intermingling Robotics with Artificial Intelligence, Cognitive Science, etc and always strive to create the values from that gained knowledge to make a better future.     
 <br>
-In my spare time, I love to read books, play ice-hockey and cook. </span>
+In my spare time, I love to play ice-hockey and do fun stuffs with scripts. </span>
 
 
 <span
@@ -200,5 +200,5 @@ body .no-padding{
 </div>
 
 <br><br>
-For more information, please refer to my [Curriculum Vitae (CV)](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/29416a2d-84d1-417b-9e53-48823bbd364d/CV_Y.B.KIM_2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220322T151835Z&X-Amz-Expires=86400&X-Amz-Signature=6cdf79f90927f9d96a1ec09a0ab0d4c9544dc8e14a97a21ff6372f5d068dabb0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22CV_Y.B.KIM_2022.pdf%22&x-id=GetObject). <br> <br>
+For more information, please refer to my [Curriculum Vitae (CV)](https://drive.google.com/file/d/1ZbHwkW_8Q0pFleo-stwcvNgUjy6zlv8q/view?usp=sharing). <br> <br>
 <!-- </span> -->
