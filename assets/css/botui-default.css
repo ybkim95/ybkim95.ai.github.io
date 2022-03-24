@@ -140,9 +140,14 @@
     font-family:"Open Sans",sans-serif;background:#003d35;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
 
 
-
-
-
+/* Bot and Human icon image */
+.profil>img.agent{
+    content: url("/assets/img/bot.png");
+}
+.profil>img.human{
+    content: url("/assets/img/human.png");
+    border-radius: 50%;
+}
 
 
 
