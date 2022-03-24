@@ -1,0 +1,16 @@
+I"Ð<section class="gallery">
+    <div class="container">
+
+    </div>
+</section>
+
+<div class="row">
+ <div class="gallery-filter">
+   <span class="filter-item active" data-filter="all">all</span>
+   <span class="filter-item" data-filter="watch">Watch</span>
+   <span class="filter-item" data-filter="headphone">headphone</span>
+   <span class="filter-item" data-filter="camera">camera</span>
+   <span class="filter-item" data-filter="phone">Phone</span>
+ </div>
+</div>
+:ET

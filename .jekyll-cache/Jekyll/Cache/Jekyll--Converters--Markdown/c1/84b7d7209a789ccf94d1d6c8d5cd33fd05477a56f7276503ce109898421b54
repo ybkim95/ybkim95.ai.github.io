@@ -1,0 +1,65 @@
+I"ù<link rel="stylesheet" href="/assets/css/botui-min.css" />
+
+<script src="/assets/bots/home/home/home-bot1.js"></script>
+
+<section class="gallery">
+    <div class="container">
+
+    </div>
+</section>
+
+<div class="row">
+ <div class="gallery-filter">
+   <span class="filter-item active" data-filter="all">all</span>
+   <span class="filter-item" data-filter="watch">Watch</span>
+   <span class="filter-item" data-filter="headphone">headphone</span>
+   <span class="filter-item" data-filter="camera">camera</span>
+   <span class="filter-item" data-filter="phone">Phone</span>
+ </div>
+</div>
+
+<div class="row">
+
+ <!--1st gallery item start -->
+ <div class="gallery-item shoe">
+   <div class="gallery-item-inner">
+      <img src="/assets/img/elders/1.png" alt="shoe" />
+   </div>
+ </div>
+
+
+<!--2nd gallery item start -->
+ <div class="gallery-item headphone">
+  <div class="gallery-item-inner">
+    <img src="/assets/img/elders/2.png" alt="headphone" />
+  </div>
+ </div>
+
+
+<!--3rd gallery item start -->
+ <div class="gallery-item camera">
+  <div class="gallery-item-inner">
+    <img src="/assets/img/elders/3.png" alt="camera" />
+  </div>
+ </div>
+
+
+<!--4th gallery item start -->
+ <div class="gallery-item headphone">
+  <div class="gallery-item-inner">
+    <img src="/assets/img/elders/4.png" alt="headphone" />
+  </div>
+ </div>
+
+
+<!--5th gallery item start -->
+ <div class="gallery-item camera">
+   <div class="gallery-item-inner">
+     <img src="/assets/img/elders/5.png" alt="camera" />
+   </div>
+ </div>
+
+ </div>
+
+<p>&lt;/div&gt;</p>
+:ET

@@ -1,0 +1,200 @@
+I"ü<p>&lt;!DOCTYPE html&gt;
+<!-- Design by foolishdeveloper.com--></p>
+<html lang="en">
+<head>
+  <title>filterable gallery</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style media="screen">
+  body{
+    line-height: 1.5;
+    font-family: sans-serif;
+  }
+  *{
+    margin:0;
+    box-sizing: border-box;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  img{
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  /*.gallery*/
+  .gallery{
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    padding: 100px 0;
+  }
+  .gallery .gallery-filter{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .gallery .gallery-filter .filter-item{
+    color: #000000;
+    font-size: 17px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+    padding: 8px 20px 8px 20px;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+  }
+  .gallery .gallery-filter .filter-item.active{
+    color: black;
+    border-color : white;
+    background: #21DACF;
+  }
+  .gallery .gallery-item{
+    width: calc(100% / 3);
+    padding: 15px;
+  }
+  .gallery .gallery-item-inner img{
+    width: 100%;
+    border: 3px solid #d4dad9;
+  }
+  .gallery .gallery-item.show{
+    animation: fadeIn 0.5s ease;
+  }
+  @keyframes fadeIn{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  .gallery .gallery-item.hide{
+    display: none;
+  }
+  /*responsive*/
+  @media(max-width: 491px){
+    .gallery .gallery-item{
+      width: 50%;
+    }
+  }
+  @media(max-width: 467px){
+      .gallery .gallery-item{
+      width: 100%;
+    }
+    .gallery .gallery-filter .filter-item{
+      margin-bottom: 10px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<section class="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="gallery-filter">
+        <span class="filter-item active" data-filter="all">all</span>
+        <span class="filter-item" data-filter="friends">friends</span>
+        <span class="filter-item" data-filter="family">family</span>
+        <span class="filter-item" data-filter="home">home</span>
+        <span class="filter-item" data-filter="memories">memories</span>
+      </div>
+    </div>
+    <div class="row">
+      <!-- gallery item start -->
+      <div class="gallery-item shoe">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-QvLveiaH3VI/YS_C1lXw6-I/AAAAAAAACa0/1hIbUlfQUQ8ew--PZ8IYB_55WFYTX8OtQCNcBGAsYHQ/s0/shoe-1.jpg" alt="shoe" />
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item family">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-T3KmNJ1-wYw/YS_E3rHDRII/AAAAAAAACb4/_DVj1_wL7eUZzJ45z9RQS5JG1orI_VlvACNcBGAsYHQ/s0/family-1.jpg" alt="family" />
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item home">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-I4zq8AEp_jY/YS_C3MiTUqI/AAAAAAAACa8/GjRpPmI0eqE_g52nIv7gUrh_9AGQbQkoACNcBGAsYHQ/s0/home-1.jpg" alt="home" />
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item family">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-pEh6HYKdNtc/YS_DSTsTrVI/AAAAAAAACbk/ND95Y8qxhPUQlUE0N38GNUx207fkzTR2QCNcBGAsYHQ/s0/family-2.jpg" alt="family" />
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item home">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/--7JZU9HynIU/YS_DH53WPiI/AAAAAAAACbY/ivcZm6OVbTgSfc9JWX1OE4WwKmvhcY07wCNcBGAsYHQ/s0/home-2.jpg" alt="home" />
+        </div>
+      </div>
+      <!-- gallery item end -->
+            <div class="gallery-item memories">
+              <div class="gallery-item-inner">
+                <img src="https://1.bp.blogspot.com/-wX4lusii0OE/YS_DC2BpADI/AAAAAAAACbA/tTGcB7QUQnshvW8hbEtf1-Nnj6dl3wSzgCNcBGAsYHQ/s0/memories-1.jpg" alt="memories" />
+              </div>
+            </div>
+      <div class="gallery-item home">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-12xO4l2QXGM/YS_DDwhwSYI/AAAAAAAACbI/OyLyIX89tnwmpwxcYoVED-x8uRWq56TawCNcBGAsYHQ/s0/home-3.jpg" alt="home" />
+        </div>
+      </div>
+      <div class="gallery-item friends">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-rAOuebpUc6E/YS_C1gP9q2I/AAAAAAAACa4/emX-5ZEz-MUeUr11_iaj_BkEYbs-FH8kQCNcBGAsYHQ/s0/friends-1.jpg" alt="friends" />
+        </div>
+      </div>
+      <!-- gallery item start -->
+      <div class="gallery-item friends">
+        <div class="gallery-item-inner">
+          <img src="https://1.bp.blogspot.com/-sBZvlxLrXL8/YS_DDZdTaJI/AAAAAAAACbE/RKImX4fKJIs7NJV_SAj1bIGYjx1-acB8wCNcBGAsYHQ/s0/friends-2.jpg" alt="friends" />
+        </div>
+      </div>
+      <!-- gallery item end -->
+    </div>
+  </div>
+</section>
+
+<script>
+ const filterContainer = document.querySelector(".gallery-filter"),
+ galleryItems = document.querySelectorAll(".gallery-item");
+
+ filterContainer.addEventListener("click", (event) =>{
+   if(event.target.classList.contains("filter-item")){
+     // deactivate existing active 'filter-item'
+     filterContainer.querySelector(".active").classList.remove("active");
+     // activate new 'filter-item'
+     event.target.classList.add("active");
+     const filterValue = event.target.getAttribute("data-filter");
+     galleryItems.forEach((item) =>{
+       if(item.classList.contains(filterValue) || filterValue === 'all'){
+        item.classList.remove("hide");
+         item.classList.add("show");
+       }
+       else{
+        item.classList.remove("show");
+        item.classList.add("hide");
+       }
+     });
+   }
+ });
+</script>
+</body>
+</html>
+:ET

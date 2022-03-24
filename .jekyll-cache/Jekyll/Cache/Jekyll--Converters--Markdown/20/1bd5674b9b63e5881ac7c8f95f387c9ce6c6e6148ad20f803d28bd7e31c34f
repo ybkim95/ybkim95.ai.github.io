@@ -1,0 +1,23 @@
+I"<link rel="stylesheet" href="/assets/css/report-skill.css" />
+
+<div class="graph">
+    <ul class="months">
+    </ul>
+    <ul class="days">
+      <li>Sun</li>
+    </ul>
+    <ul class="squares">
+      <!-- added via javascript -->
+    </ul>
+  </div>
+
+<div class="label l1">chitchat</div>
+<p><br />
+<span class="label l2">greetings</span>
+<span class="label l3">answer</span>
+<span class="label l4">word-of-the-day</span>
+<span class="label l5">report-skill</span></p>
+
+<script src="/assets/bots/home/home/report-skill.js"></script>
+
+:ET

@@ -1,0 +1,30 @@
+I"<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/gallery.css" />
+  <title>Image Gallery</title>
+</head>
+<body>
+  <div class="container">
+    <div class="images">
+      <div class="imageFlex1">
+        <img src="/assets/img/elders/1.png" />
+        <img src="/assets/img/elders/2.png" />
+      </div>
+    </div>
+    <div class="images">
+      <div class="imageFlex2">
+        <img src="/assets/img/elders/3.png" />
+        <img src="/assets/img/elders/4.png" />
+      </div>
+    </div>
+    <div class="images">
+      <div class="imageFlex3">
+        <img src="/assets/img/elders/5.png" />
+
+      </div>
+    </div>
+  </div>
+</body>
+:ET

@@ -27,81 +27,81 @@ botui.action.button({ // let user do something
         text: 'chitchat',
         value: '1',
       },
-      {
-        cssClass: 'greetings',
-        text: 'greetings',
-        value: '2'
-      },
+      // {
+      //   cssClass: 'greetings',
+      //   text: 'greetings',
+      //   value: '2'
+      // },
       {
         cssClass: 'answer',
         text: 'answer',
         value: '3'
       },
-      {
-        cssClass: 'word-of-the-day',
-        text: 'word-of-the-day',
-        value: '4'
-      },
+      // {
+      //   cssClass: 'word-of-the-day',
+      //   text: 'word-of-the-day',
+      //   value: '4'
+      // },
       {
         cssClass: 'report-skill',
         text: 'report-skill',
         value: '5'
       },
-      {
-        cssClass: 'radio',
-        text: 'radio',
-        value: '6'
-      },
+      // {
+      //   cssClass: 'radio',
+      //   text: 'radio',
+      //   value: '6'
+      // },
       {
         cssClass: 'clock',
         text: 'clock',
         value: '7'
       },
-      {
-        cssClass: 'surprises-date',
-        text: 'surprises-date',
-        value: '8'
-      },
-      {
-        cssClass: 'settings',
-        text: 'settings',
-        value: '9'
-      },
-      {
-        cssClass: 'circuit-saver',
-        text: 'circuit-saver',
-        value: '10'
-      },
-      {
-        cssClass: 'introductions',
-        text: 'introductions',
-        value: '11'
-      },
-      {
-        cssClass: 'photos',
-        text: 'photos',
-        value: '12'
-      },
+      // {
+      //   cssClass: 'surprises-date',
+      //   text: 'surprises-date',
+      //   value: '8'
+      // },
+      // {
+      //   cssClass: 'settings',
+      //   text: 'settings',
+      //   value: '9'
+      // },
+      // {
+      //   cssClass: 'circuit-saver',
+      //   text: 'circuit-saver',
+      //   value: '10'
+      // },
+      // {
+      //   cssClass: 'introductions',
+      //   text: 'introductions',
+      //   value: '11'
+      // },
+      // {
+      //   cssClass: 'photos',
+      //   text: 'photos',
+      //   value: '12'
+      // },
       {
         cssClass: 'gallery',
         text: 'gallery',
         value: '13'
       },
-      {
-        cssClass: 'exercise',
-        text: 'exercise',
-        value: '14'
-      },
+      // {
+      //   cssClass: 'exercise',
+      //   text: 'exercise',
+      //   value: '14'
+      // },
       {
         cssClass: 'who-am-i',
         text: 'who-am-i',
         value: '15'
       },
-      {
-        cssClass: 'bot-basics',
-        text: 'bot-basics',
-        value: '16'
-      },
+      // {
+      //   cssClass: 'bot-basics',
+      //   text: 'bot-basics',
+      //   value: '16'
+      // },
     ]
   }
 ).then(function (res) {
@@ -120,9 +120,17 @@ botui.action.button({ // let user do something
       value: '2'
     });
   }
+  // (5) REPORT SKILL
+  else if (res.value==5) {
+    report_skill();
+  }
   // (7) CLOCK
   else if (res.value==7) {
     clock();
+  }
+  // (13) GALLERY
+  else if (res.value==13) {
+      gallery();
   }
   // (15) WHO-AM-I
   else if (res.value==15) {
@@ -130,12 +138,20 @@ botui.action.button({ // let user do something
   }
 })
 
+var report_skill = function () {
+  window.location.href = '../report-skill/';
+}
+
 var clock = function () {
   window.location.href = '../clock/';
 }
 
 var aboutme = function () {
   window.location.href = '../jibo_aboutme/';
+}
+
+var gallery = function () {
+  window.location.href = '../gallery/';
 }
 
 var correct = 0;

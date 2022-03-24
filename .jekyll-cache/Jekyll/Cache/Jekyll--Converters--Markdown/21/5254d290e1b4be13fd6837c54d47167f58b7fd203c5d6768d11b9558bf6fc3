@@ -1,0 +1,16 @@
+I"9<link rel="stylesheet" href="/assets/css/report-skill.css" />
+
+<div class="graph">
+    <ul class="months">
+    </ul>
+    <ul class="days">
+      <li>Sun</li>
+    </ul>
+    <ul class="squares">
+      <!-- added via javascript -->
+    </ul>
+  </div>
+
+<script src="/assets/bots/home/home/report-skill.js"></script>
+
+:ET

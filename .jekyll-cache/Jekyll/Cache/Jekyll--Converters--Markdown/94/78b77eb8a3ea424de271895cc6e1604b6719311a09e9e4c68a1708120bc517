@@ -1,0 +1,22 @@
+I"<link rel="stylesheet" href="/assets/css/report-skill.css" />
+
+<div class="graph">
+    <ul class="months">
+    </ul>
+    <ul class="days">
+      <li>Sun</li>
+    </ul>
+    <ul class="squares">
+      <!-- added via javascript -->
+    </ul>
+  </div>
+
+<p><span class="label success">Success</span>
+<span class="label info">Info</span>
+<span class="label warning">Warning</span>
+<span class="label danger">Danger</span>
+<span class="label other">Other</span></p>
+
+<script src="/assets/bots/home/home/report-skill.js"></script>
+
+:ET
