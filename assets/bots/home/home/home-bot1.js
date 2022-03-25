@@ -1,3 +1,5 @@
+// Create a new bot with the default settings.
+
 var botui = new BotUI('botui-app'), // give it the id of container
             todo_list = [];
 
@@ -144,8 +146,39 @@ botui.action.button({ // let user do something
   }
 })
 
+
+// Chatbot System
+var count = 0;
+// var reply = null;
+
 var chitchat = function () {
-  window.location.href = '../chitchat/';
+  if (count == 0) {
+    botui.message.bot({
+        delay: 500,
+        content: 'Hello!',
+        photo: '/assets/img/11.png',
+    })
+  }
+  count = count + 1;
+
+  var ans = new RiveScript();
+  ans.loadFile(["/assets/brain/hellobot.rive"], on_load_success, on_load_error);
+
+  // window.location.href = '../chitchat/';
+
+  botui.action.text({
+      delay: 1000,
+      action: {
+        placeholder: 'Some texts'
+      }
+    }).then(function (res) {
+    botui.message
+      .bot({
+        delay: 500,
+        content: bot.reply("local-user", res.value),// res.value,
+        photo: '/assets/img/11.png',
+      });
+    }).then(chitchat);
 }
 
 var report_skill = function () {
@@ -347,4 +380,48 @@ var answer = function () {
 
 
 
+}
+
+function set_size() {
+    var height = $(window).height();
+    var width = $(window).width();
+    $('.inner-wrapper').height(height);
+    $('.inner-wrapper').width(width);
+    $('.terminal').height(height - 50);
+}
+
+function botRespond(term, text) {
+  term.echo(botPrompt + '[[;#666;transparent]' + text + ']');
+}
+
+function header(term) {
+
+  // term.echo(
+  //   '[[b;#111;transparent]' +
+  //   "================================ \n" +
+  //   "      _     _     _         \n" +
+  //   "      | |   (  )   |  |__        ___   \n" +
+  //   "  _  | |   |  |   |    _  \\    /    _  \\  \n" +
+  //   " | |_| |   |  |   |   |_)  |  |   (_)  | \n" +
+  //   " \\___/   |_|   |__.__/   \\____/  v1.0.0"  + "\n" +
+  //   "]" +
+  //   '[[;#111;transparent]Companion Robot]\n\n' +
+  //   "================================ \n"  
+  // );
+}
+
+function botInit(term) {
+  botRespond(term, 'Hello!');
+}
+
+function showHelp(term) {
+  botRespond(term, 'Looking for help? Why not you just directly ask me.');
+}
+
+function on_load_success() {
+  bot.sortReplies();
+}
+
+function on_load_error(err) {
+  console.log("Loading error: " + err);
 }

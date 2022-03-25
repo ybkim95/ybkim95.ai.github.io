@@ -32,7 +32,8 @@ $('.terminal').terminal(function(command, term) {
 	//	term.resume();
 	//}, 1000);
 
-}, {
+}, 
+{
   prompt: '[[gb;#0c0;#000000]>_] ',
   name: 'Jibo',
   onResize: set_size,
