@@ -31,6 +31,7 @@ $('.terminal').terminal(function(command, term) {
 	//setTimeout(function() {
 	//	term.resume();
 	//}, 1000);
+
 }, {
   prompt: '[[gb;#0c0;#000000]>_] ',
   name: 'Jibo',
@@ -38,7 +39,7 @@ $('.terminal').terminal(function(command, term) {
   history: false,
   greetings: null,
   onInit: function(term) {
-    term.set_prompt('[[;#0074D9;transparent]][[b;#333;transparent]' + userPrompt + '][[;#0074D9;transparent]User > ] '); // default promptName: YOU
+    term.set_prompt('[[;#236DB9;transparent]][[b;#333;transparent]' + userPrompt + '][[;#236DB9;transparent]User > ] '); // default promptName: YOU
     header(term); // display header/logo
     botInit(term); // initialize bot 1st conversation
   },
@@ -71,16 +72,19 @@ function botRespond(term, text) {
 }
 
 function header(term) {
-  term.echo(
-    '[[b;#111;transparent]' +
-    "      _     _     _         \n" +
-    "      | |   (  )   |  |__        ___   \n" +
-    "  _  | |   |  |   |    _  \\    /    _  \\  \n" +
-    " | |_| |   |  |   |   |_)  |  |   (_)  | \n" +
-    " \\___/   |_|   |__.__/   \\____/  v1.0.0"  + "\n" +
-    "]" +
-    '[[;#111;transparent]Companion Robot]\n\n' 
-  );
+
+  // term.echo(
+  //   '[[b;#111;transparent]' +
+  //   "================================ \n" +
+  //   "      _     _     _         \n" +
+  //   "      | |   (  )   |  |__        ___   \n" +
+  //   "  _  | |   |  |   |    _  \\    /    _  \\  \n" +
+  //   " | |_| |   |  |   |   |_)  |  |   (_)  | \n" +
+  //   " \\___/   |_|   |__.__/   \\____/  v1.0.0"  + "\n" +
+  //   "]" +
+  //   '[[;#111;transparent]Companion Robot]\n\n' +
+  //   "================================ \n"  
+  // );
 }
 
 function botInit(term) {
