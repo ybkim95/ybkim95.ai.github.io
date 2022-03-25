@@ -36,7 +36,7 @@ botui.action.button({ // let user do something
       // },
       {
         cssClass: 'answer',
-        text: 'q & a',
+        text: 'Q&A',
         value: '3'
       },
       // {
@@ -169,7 +169,7 @@ var chitchat = function () {
   botui.action.text({
       delay: 1000,
       action: {
-        placeholder: 'Some texts'
+        placeholder: 'Say something.'
       }
     }).then(function (res) {
     botui.message

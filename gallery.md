@@ -102,7 +102,6 @@ permalink: /gallery/
   </style>
 </head>
 <body>
-
 <section class="gallery">
   <div class="container">
     <div class="row">

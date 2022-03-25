@@ -10,10 +10,10 @@ permalink: /report-skill/
     <ul class="months">
     </ul>
     <ul class="days">
-    </ul>
-    <ul class="squares">
-      <!-- added via javascript -->
-    </ul>
+    </ul> 
+      <ul class="squares">  
+      <!-- javascript -->
+      </ul> 
   </div>
 
 

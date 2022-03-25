@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Elder-care chatbot, "Jibo"
-date:   2017-08-09 09:33:45 +0200
+date:   2022-03-25 09:33:45 +0200
 permalink: /chatbot/
 # categories: jekyll bot chatbot conversational
 --- 

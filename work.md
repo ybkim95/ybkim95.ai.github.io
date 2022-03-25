@@ -125,6 +125,15 @@ permalink: /work/
 
 <div class="child-page-listing">
   <div class="grid-container">
+  <article id="3685" class="location-listing">
+      <a class="location-title" href="/chatbot/">
+          Chatbot Service </a>
+      <div class="location-image">
+        <a href="/genara/">
+            <img width="300" height="70" src="/assets/img/chatbot.png" alt="">          
+          </a>
+      </div>
+    </article>
     <article id="3688" class="location-listing">
       <a class="location-title" href="/rfusion/">
           Pick & Place with UR5          </a>
@@ -182,15 +191,6 @@ permalink: /work/
       <div class="location-image">
         <a href="/genara/">
             <img width="300" height="70" src="/assets/img/genara.png" alt="paris">          
-          </a>
-      </div>
-    </article>
-    <article id="3707" class="location-listing">
-      <a class="location-title" href="/chatbot/">
-          Chatbot Service </a>
-      <div class="location-image">
-        <a href="/genara/">
-            <img width="300" height="70" src="/assets/img/chatbot.png" alt="">          
           </a>
       </div>
     </article>

@@ -60,6 +60,20 @@
     padding: 20px;
     border: 1px #e1e4e8 solid;
     margin: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .graphName {
+    color: white;
+    visibility: hidden;
+    opacity: 0.2;
+  }
+  
+  .graph:hover .graphName {
+    visibility: visible;
+    opacity: 1;
   }
   
   .days li:nth-child(odd) {

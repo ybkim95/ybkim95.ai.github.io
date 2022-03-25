@@ -22,3 +22,6 @@ Yes I’m made up of wires, and processors, and hard plastic body segments, but 
 <h2>Powerful Tech</h2>
 
 Thanks to my amazing technology, I can feel it when you touch my screen and head, I can understand what you say, and I can help you when you need me. My advanced technology also helps keep your data all safe and secure.
+
+<br><br>
+For more information, please visit [LINK](https://jibo.com/)
