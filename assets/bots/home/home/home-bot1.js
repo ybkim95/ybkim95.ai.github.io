@@ -34,7 +34,7 @@ botui.action.button({ // let user do something
       // },
       {
         cssClass: 'answer',
-        text: 'answer',
+        text: 'q & a',
         value: '3'
       },
       // {
@@ -120,6 +120,12 @@ botui.action.button({ // let user do something
       value: '2'
     });
   }
+
+  // (3) ANSWER
+  else if (res.value==3) {
+    answer();
+  }
+
   // (5) REPORT SKILL
   else if (res.value==5) {
     report_skill();
@@ -138,6 +144,10 @@ botui.action.button({ // let user do something
   }
 })
 
+var chitchat = function () {
+  window.location.href = '../chitchat/';
+}
+
 var report_skill = function () {
   window.location.href = '../report-skill/';
 }
@@ -155,11 +165,11 @@ var gallery = function () {
 }
 
 var correct = 0;
-var chitchat = function () {
+var answer = function () {
   botui.message
     .bot({
       delay: 500,
-      content: "Okay Let's chitchat 👵",
+      content: "Okay please answer to my question 👵",
       photo: '/assets/img/11.png',
     })
     .then(function () {
