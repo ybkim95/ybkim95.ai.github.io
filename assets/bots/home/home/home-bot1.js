@@ -183,7 +183,7 @@ var chitchat = function () {
 }
 
 var report_skill = function () {
-  window.location.href = '../report-skill/';
+  window.location.href = '../calendar/';
 }
 
 var clock = function () {
