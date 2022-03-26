@@ -1,20 +1,14 @@
----
-# layout: page
-# title: a
-permalink: /gallery/
----
-
-<head>
-	<meta charset="utf-8">
+I"O<head>
+	<meta charset="utf-8" />
 	<title>Caption Hover Animations</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900" />
 	<style type="text/css">
 	body{
 		/*height: 10000px;*/
 		font-family: "Lato";
-		background-color: #000000;
+		background-color: #2980b9;
 		padding:20px 30px;
 		margin: 0px;
 	}
@@ -54,7 +48,7 @@ permalink: /gallery/
 	}
 	.caption-style-1 .blur{
 		background-color: rgba(0,0,0,0.65);
-		height: 230px;
+		height: 300px;
 		width: 400px;
 		z-index: 5;
 		position: absolute;
@@ -145,62 +139,72 @@ permalink: /gallery/
 		<h1>JIBO'S GALLERY</h1>
 		<!-- <h2>WITH CSS3 TRANSITIONS & TRANSFORMS</h2> -->
 		<p>
-			While living with Jibo, we shared a lot of memories and these are all saved and classified. This is an example of image captioning while hovering on images, using CSS3 transitions and transform rules. 
+			This is an example of caption animation while hovering on images, using CSS3 transitions and transform rules. There is no Javascript used so it will work on modern browsers where CSS3 animations are supported. Please check the sourcecode of this page to understand how the animation is working. 
 		</p>
 	</div>
-  <br><br>
 	<div class="container-a1">
 		<ul class="caption-style-1">
 			<li>
-				<img src="/assets/img/elders/1.png" alt="" height="230px" width="400px">
+				<img src="img/chaps_1x.jpg" alt="" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>2022.03.14 MON</h1>
-						<p>Talking with Jibo for the first time.</p>
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
 					</div>
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/2.png" alt="" height="230px" width="400px">
+				<img src="img/everycowboy_dribbbleready_shot.jpg" alt="" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>2022.03.22 TUE</h1>
-						<p>Shwowing Jibo to clark.</p>
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
 					</div>
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/3.png" alt="" height="230px" width="400px">
+				<img src="img/ithinkican_01.jpg" alt="" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>2022.03.25 FRI</h1>
-						<p>Asking few recipes to Jibo</p>
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
 					</div>
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/4.png" alt="" height="230px" width="400px">
+				<img src="img/m.jpg" alt="" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>2022.03.26 SAT</h1>
-						<p>Went to hospital to meet doctor.</p>
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
 					</div>
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/6.png" alt="" height="230px" width="400px">
+				<img src="img/raspberry.jpg" alt="" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>2022.03.31 THU </h1>
-						<p>Zoom with my family in Canada.</p>
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/sketch_1x.jpg" alt="" />
+				<div class="caption">
+					<div class="blur"></div>
+					<div class="caption-text">
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
 					</div>
 				</div>
 			</li>
 		</ul>
 	</div>
 </body>
+:ET

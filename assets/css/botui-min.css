@@ -15,7 +15,8 @@ a.botui-message-content-link:focus:active,a.botui-message-content-link:focus:hov
 
 form.botui-actions-text{margin:0}
 
-button.botui-actions-buttons-button,input.botui-actions-text-input{margin:0;font-size:100%;line-height:normal;vertical-align:baseline}
+/* button intervals */
+button.botui-actions-buttons-button,input.botui-actions-text-input{margin:7px;font-size:100%;line-height:normal;vertical-align:baseline}
 
 button.botui-actions-buttons-button::-moz-focus-inner,input.botui-actions-text-input::-moz-focus-inner{border:0;padding:0}
 

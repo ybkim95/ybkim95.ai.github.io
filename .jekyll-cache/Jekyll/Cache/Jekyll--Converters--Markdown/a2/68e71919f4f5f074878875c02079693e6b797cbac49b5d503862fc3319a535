@@ -1,15 +1,9 @@
----
-# layout: page
-# title: a
-permalink: /gallery/
----
-
-<head>
-	<meta charset="utf-8">
+I"ž<head>
+	<meta charset="utf-8" />
 	<title>Caption Hover Animations</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900" />
 	<style type="text/css">
 	body{
 		/*height: 10000px;*/
@@ -148,11 +142,11 @@ permalink: /gallery/
 			While living with Jibo, we shared a lot of memories and these are all saved and classified. This is an example of image captioning while hovering on images, using CSS3 transitions and transform rules. 
 		</p>
 	</div>
-  <br><br>
+  <br /><br />
 	<div class="container-a1">
 		<ul class="caption-style-1">
 			<li>
-				<img src="/assets/img/elders/1.png" alt="" height="230px" width="400px">
+				<img src="/assets/img/elders/1.png" alt="" height="230px" width="400px" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
@@ -162,7 +156,7 @@ permalink: /gallery/
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/2.png" alt="" height="230px" width="400px">
+				<img src="/assets/img/elders/2.png" alt="" height="230px" width="400px" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
@@ -172,35 +166,36 @@ permalink: /gallery/
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/3.png" alt="" height="230px" width="400px">
+				<img src="/assets/img/elders/3.png" alt="" height="230px" width="400px" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
 						<h1>2022.03.25 FRI</h1>
-						<p>Asking few recipes to Jibo</p>
+						<p>Asking recipe to Jibo</p>
 					</div>
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/4.png" alt="" height="230px" width="400px">
+				<img src="/assets/img/elders/4.png" alt="" height="230px" width="400px" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>2022.03.26 SAT</h1>
-						<p>Went to hospital to meet doctor.</p>
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
 					</div>
 				</div>
 			</li>
 			<li>
-				<img src="/assets/img/elders/6.png" alt="" height="230px" width="400px">
+				<img src="/assets/img/elders/6.png" alt="" height="230px" width="400px" />
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1>2022.03.31 THU </h1>
-						<p>Zoom with my family in Canada.</p>
+						<h1>Amazing Caption</h1>
+						<p>Whatever It Is - Always Awesome</p>
 					</div>
 				</div>
 			</li>
 		</ul>
 	</div>
 </body>
+:ET

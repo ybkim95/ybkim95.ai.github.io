@@ -47,18 +47,22 @@
     color:#919292
 }
 
+/* User Input */
 .botui-actions-text-input {
-    border:0;
-    outline:0;
-    border-radius:0;
-    padding:5px 7px;
+    width: 180px;
+    left: 3%;
+    position: relative;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    padding: 10px 12px;
     font-family:"Open Sans", sans-serif;
     background-color:transparent;
     color:#229494;
-    border-bottom:1px solid #919292
+    border-bottom: 1px solid #919292;
 }
 
-.botui-actions-text-submit{color:#fff;width:30px;padding:5px;height:30px;line-height:1;border-radius:50%;border:1px solid #919292;background:#777979}
+.botui-actions-text-submit{color:#fff;width:10px;padding:5px;height:30px;line-height:1;border-radius:50%;border:1px solid #919292;background:#777979}
 
 /* button-related things */
 .botui-actions-buttons-button {
@@ -77,15 +81,29 @@
 
 /* chitchat */
 .chitchat { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
-    font-family:"Open Sans",sans-serif;background:#ff0000;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
+    font-family:"Open Sans",sans-serif;background:#ff0000;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)
+}
+.chitchat:hover{
+    transition : 0.2s;
+    transform: scale(1.1);
+}
 
 /* greetings */
 .greetings { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
     font-family:"Open Sans",sans-serif;background:#ff7300;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
+.greetings:hover{
+    transition : 1s;
+    transform: scale(1.1);
+}
 
 /* answer */
 .answer { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
     font-family:"Open Sans",sans-serif;background:#ff00f2;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
+.answer:hover{
+    transition : 0.2s;
+    transform: scale(1.1);
+}
+
 
 /* word-of-the-day */
 .word-of-the-day { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
@@ -94,6 +112,11 @@
 /* report-skill */
 .report-skill { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
     font-family:"Open Sans",sans-serif;background:#e7a68c;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
+.report-skill:hover{
+    transition : 0.2s;
+    transform: scale(1.1);
+}
+
 
 /* radio */
 .radio { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
@@ -123,9 +146,16 @@
 .photos { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
     font-family:"Open Sans",sans-serif;background:#d0d67f;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
 
+
 /* gallery */
 .gallery { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
     font-family:"Open Sans",sans-serif;background:#dab6d8;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
+
+.gallery:hover{
+    transition : 0.2s;
+    transform: scale(1.1);
+}
+
 
 /* exercise */
 .exercise { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
@@ -134,6 +164,11 @@
 /* who-am-i */
 .who-am-i { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;
     font-family:"Open Sans",sans-serif;background:#002547;box-shadow:2px 3px 4px 0 rgba(0,0,0,.25)}
+
+.who-am-i:hover{
+    transition : 0.2s;
+    transform: scale(1.1);
+}
 
 /* bot-basics */
 .bot-basics { border:0;color:rgb(255, 255, 255);line-height:1;cursor:pointer;font-size:14px;font-weight:500;padding:7px 15px;border-radius:4px;

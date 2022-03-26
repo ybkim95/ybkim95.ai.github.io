@@ -9,14 +9,14 @@ botui.message.bot({ // show first message
   content: 'Greetings!',
 }).then(function () {
   return botui.message.add({ // second one
-    delay: 1000, // wait 1 sec.
+    delay: 700, // wait 1 sec.
     photo: '/assets/img/11.png',
     content: "I'm your companion robot Jibo. How can I help you? ![product image](/assets/img/jibo.png)",
   });
 })
 
 botui.action.button({ // let user do something
-    _delay: 1000,
+    _delay: 2300,
     get delay() {
       return this._delay;
     },
@@ -25,6 +25,7 @@ botui.action.button({ // let user do something
     },
     action: [
       {
+        // defined in /assets/css/botui-default.css
         cssClass: 'chitchat',
         text: 'chitchat',
         value: '1',
@@ -54,11 +55,11 @@ botui.action.button({ // let user do something
       //   text: 'radio',
       //   value: '6'
       // },
-      {
-        cssClass: 'clock',
-        text: 'clock',
-        value: '7'
-      },
+      // {
+      //   cssClass: 'clock',
+      //   text: 'clock',
+      //   value: '7'
+      // },
       // {
       //   cssClass: 'surprises-date',
       //   text: 'surprises-date',
@@ -246,7 +247,7 @@ var answer = function () {
         content: 'Correct! the answer is 88590.'
       });
       correct = correct + 1;
-      results.push(res.value);
+      results.push(res.text);
     }  
     else {
       botui.message
@@ -255,7 +256,7 @@ var answer = function () {
         delay: 500,
         content: 'Wrong.. the answer was 88590.'
       })
-      results.push(res.value);
+      results.push(res.text);
     }
   }).then(function () {
     botui.message
@@ -294,7 +295,7 @@ var answer = function () {
           content: 'Correct! the answer is 0.01$.'
         });
         correct = correct + 1;
-        results.push(res.value);
+        results.push(res.text);
 
         if (correct==2) {
           botui.message
@@ -312,7 +313,7 @@ var answer = function () {
           delay: 500,
           content: 'Wrong.. the answer was 0.01$.'
         })
-        results.push(res.value);
+        results.push(res.text);
       }
     }).then(function () {
       botui.message
@@ -351,7 +352,7 @@ var answer = function () {
             content: 'Correct! a Matryoshka doll is also known as a Nesting Doll.'
           });
           correct = correct + 1;
-          results.push(res.value);
+          results.push(res.text);
 
           if (correct==3) {
             botui.message
@@ -369,7 +370,7 @@ var answer = function () {
             delay: 500,
             content: 'Wrong.. Matryoshka Doll has no relationship with Japan.'
           })
-          results.push(res.value);
+          results.push(res.text);
         }
       }).then(function (res) {
         botui.message.bot({
