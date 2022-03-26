@@ -1,10 +1,4 @@
----
-# layout: page
-# title: Report of use
-permalink: /calendar/
----
-
-<!-- 
+I"R<!-- 
 <html>
 <head>
     <title>Calendar Yearview with Blocks demo page</title>
@@ -96,19 +90,8 @@ permalink: /calendar/
     <div class="seperate"></div>
     <!-- <div id="calendar_yearview_blocks_chart_2"></div>
     <div class="seperate"></div> -->
-<!--</body>
-</html> -->
-
-<style>
-    h1 {
-        text-align: center; 
-        color: white;
-    }
-    .title {
-        color: white;
-        text-align: center; 
-      }
-</style>
+<p>&lt;/body&gt;
+&lt;/html&gt; –&gt;</p>
 
 <html lang="en">
   <head>
@@ -116,37 +99,22 @@ permalink: /calendar/
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashboard - Dark Style</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <br>
-    <h1 class="title">Skill Report (2021-2022)</h1>
     <div id="wrapper">
       <div class="content-area">
         <div class="container-fluid">
           <div class="text-right mt-3 mb-3 d-fixed">
-            <!-- <a
-              href="https://github.com/apexcharts/apexcharts.js/tree/master/samples/vanilla-js/dashboards/dark"
-              target="_blank"
-              class="btn btn-outline-warning mr-2"
-            >
+            <a href="https://github.com/apexcharts/apexcharts.js/tree/master/samples/vanilla-js/dashboards/dark" target="_blank" class="btn btn-outline-warning mr-2">
               <span class="btn-text">View Code</span>
-            </a> -->
+            </a>
           </div>
           <div class="main">
-            <!-- <div class="row sparkboxes mt-4">
+            <div class="row sparkboxes mt-4">
               <div class="col-md-3">
                 <div class="box box1">
                   <div class="details">
@@ -183,7 +151,7 @@ permalink: /calendar/
                   <div id="spark4"></div>
                 </div>
               </div>
-            </div> -->
+            </div>
             <div class="row mt-4">
               <div class="col-md-5">
                 <div class="box shadow mt-4">
@@ -217,3 +185,4 @@ permalink: /calendar/
     <script src="/assets/js/scripts.js"></script>
   </body>
 </html>
+:ET

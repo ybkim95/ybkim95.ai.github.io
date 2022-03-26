@@ -1,0 +1,37 @@
+I"M<div id="chart"></div>
+
+<script>
+    $(function(){
+        var options = {
+            series: [{
+                data: [3, 16, 2, 14, 15, 7, 9, 21, 7, 5, 4],
+            },{
+                data: [11, 2, 3, 1, 10, 13, 7, 8, 21, 22, 3],
+            }],
+            chart: {
+                type: 'line',
+                height: 350
+            },
+            stroke: {
+                curve: 'stepline',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            title: {
+                text: 'Stepline Chart',
+                align: 'left'
+            },
+            markers: {
+                hover: {
+                    sizeOffset: 4
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    });
+</script>
+
+:ET

@@ -163,9 +163,9 @@
                     '<text text-anchor="middle" class="wday" dx="-10" dy="74">{0}</text>'.formatString(settings.day_names[2]);
             }
 
-            // Fixed size with width= 721 and height = 110
+            // Fixed size with width= 1442 and height = 220
             var wire_html =
-                '<svg width="721" height="110">' +
+                '<svg width="1442" height="220">' +
                 '<g transform="translate(25, 20)">' +
                 loop_html +
                 '</g>' + '"Your browser does not support inline SVG."' +

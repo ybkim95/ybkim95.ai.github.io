@@ -1,10 +1,4 @@
----
-# layout: page
-# title: Report of use
-permalink: /calendar/
----
-
-<!-- 
+I"å<!-- 
 <html>
 <head>
     <title>Calendar Yearview with Blocks demo page</title>
@@ -100,14 +94,7 @@ permalink: /calendar/
 </html> -->
 
 <style>
-    h1 {
-        text-align: center; 
-        color: white;
-    }
-    .title {
-        color: white;
-        text-align: center; 
-      }
+    h1 {text-align: center;}
 </style>
 
 <html lang="en">
@@ -116,23 +103,14 @@ permalink: /calendar/
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashboard - Dark Style</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
-    <br>
-    <h1 class="title">Skill Report (2021-2022)</h1>
+    <br />
+    <h1>This is a heading</h1>
     <div id="wrapper">
       <div class="content-area">
         <div class="container-fluid">
@@ -217,3 +195,4 @@ permalink: /calendar/
     <script src="/assets/js/scripts.js"></script>
   </body>
 </html>
+:ET

@@ -1,85 +1,70 @@
-/*
-  Global
-*/
-html {
-    position: relative;
-    min-height: 100%;
-  }
-  
-  /*
-   * Navbar
-   */
-  .navbar {
-    margin-bottom: 0;
-    border-radius: 0;
-  }
-  
-  /*
-   * Sidebar
-   */
-  .blog-sidebar {
-    padding-top: 4rem;
-    background-color: #f9f9f9;
-    border-left: .05rem solid #e5e5e5;
-  }
-  .blog-sidebar-header {
-    font-weight: 500;
-  }
-  .blog-sidebar-group {
-    padding: 0;
-    margin-bottom: 0.5rem;
-  }
-  
-  .blog-sidebar-menu {
-    padding-left: 0.5rem;
-  }
-  
-  /*
-   * Content
-   */
-  .blog-content {
-    margin-top: 5rem;
-  }
-  /*
-   * Blog posts
-   */
-  .blog-post {
-    padding-left: 1rem;
-  }
-  .blog-post-title {
-    margin-bottom: .25rem;
-    font-size: 1.8rem;
-    color: black;
-  }
-  .blog-post-meta {
-    margin-bottom: 1.25rem;
-    font-size: .8rem;
-    color: #999;
-  }
-  .blog-post-excerpt {
-    color: #6E6E6E;
-  }
-  
-  article .blog-post-title {
-    font-size: 2rem;
-  }
-  article .blog-post-meta {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #999;
-  }
-  article .article_body {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  
-  /*
-   * Footer
-   */
-  .blog-footer {
-    padding: 0.5rem;
-    width: 100%;
-    color: #999;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
-  }
+
+body {
+  background: #343E59;
+  color: #777;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.body-bg {
+  background: #F3F4FA !important;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+}
+
+body {
+  /*background: linear-gradient(45deg,#3a3a60,#5f5f8e);
+  min-height: 100vh;*/
+}
+
+.content-area {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #2B2D3E;
+  padding: 25px 20px;
+}
+
+.shadow {
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+}
+.sparkboxes .box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 1px 1px #666;
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  position: relative;
+  border-radius: 5px;
+}
+
+.sparkboxes .box .details {
+  position: absolute;
+  color: #fff;
+  transform: scale(0.7) translate(-22px, 20px);
+}
+.sparkboxes strong {
+  position: relative;
+  z-index: 3;
+  top: -8px;
+  color: #fff;
+}
+
+
+.sparkboxes .box1 {
+  background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+}
+
+.sparkboxes .box2 {
+  background-image: linear-gradient( 135deg, #2AFADF 10%, #4C83FF 100%);
+}
+
+.sparkboxes .box3 {
+  background-image: linear-gradient( 135deg, #FFD3A5 10%, #FD6585 100%);
+}
+
+.sparkboxes .box4 {
+  background-image: linear-gradient( 135deg, #EE9AE5 10%, #5961F9 100%);
+}

@@ -441,8 +441,13 @@ var answer = function () {
   })
 }
 
+function sleep(ms) {
+  const wakeUpTime = Date.now() + ms;
+  while (Date.now() < wakeUpTime) {}
+}
 
 function getPDF(results) {
+  sleep(500);
   var name = "Yu Bin, Kim"; //prompt('What is your name?');
   var multiplier = "123-45-6789"; //prompt('Enter a number:');
   multiplier = parseInt(multiplier);
@@ -456,19 +461,49 @@ function getPDF(results) {
   doc.text(20, 40, 'Q1. WHAT IS THE POPULATION FO NEWTON, MASSACHUSETTS?')
   doc.text(20, 50, 'A1. 88590')
   doc.setFontSize(10);
-  doc.text(20, 60, 'YOUR ANS: ' + results[0])
+  if (results[0] == '88590')
+  {
+    doc.setTextColor(0,255,0);
+    doc.text(20, 60, 'YOUR ANS: ' + results[0])
+  }
+  else {
+    doc.setTextColor(255,0,0);
+    doc.text(20, 60, 'YOUR ANS: ' + results[0])
+  }
 
+  doc.setTextColor(0,0,0);
   doc.setFontSize(15);
   doc.text(20, 80, 'Q2. WHAT IS A RUSSIAN RUBLE WORTH IN AMERICAN MONEY?')
   doc.text(20, 90, 'A2. 0.01$')
   doc.setFontSize(10);
-  doc.text(20, 100, 'YOUR ANS: ' + results[1])
-  
+  if (results[1] == '0.01$')
+  {
+    doc.setTextColor(0,255,0);
+    doc.text(20, 100, 'YOUR ANS: ' + results[1])
+  }
+  else {
+    doc.setTextColor(255,0,0);
+    doc.text(20, 100, 'YOUR ANS: ' + results[1])
+  }
+    
+  doc.setTextColor(0,0,0);
   doc.setFontSize(15);
   doc.text(20, 120, 'Q3. WHAT IS A MATRYOSHKA DOLL?')
   doc.text(20, 130, 'A3. Nesting Doll')
   doc.setFontSize(10);
-  doc.text(20, 140, 'YOUR ANS: ' + results[2])
+  if (results[2] == 'Nesting Doll')
+  {
+    doc.setTextColor(0,255,0);
+    doc.text(20, 140, 'YOUR ANS: ' + results[2])
+  }
+  else {
+    doc.setTextColor(255,0,0);
+    doc.text(20, 140, 'YOUR ANS: ' + results[2])
+  }
+
+  doc.setTextColor(0,0,0);
+  doc.setFontSize(13);
+  doc.text(20, 160, 'Score: ' + correct + " / 3")
 
   // for(var i = 1; i <= 12; i ++) {
   //   doc.text(20, 30 + (i * 10), i + ' x ' + multiplier + ' = ___');
