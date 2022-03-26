@@ -251,7 +251,7 @@ var optionsLine = {
     curve: 'smooth',
     width: 2
   },
-  colors: ["#3F51B5", '#2196F3'],
+  colors: ["#008FFB", "#FEB019", '#00E396'],
   series: [{
       name: "Clock",
       data: [1, 15, 26, 20, 33, 27]
