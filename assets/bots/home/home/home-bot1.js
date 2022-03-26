@@ -197,7 +197,9 @@ var gallery = function () {
   window.location.href = '../gallery/';
 }
 
+
 var correct = 0;
+var results = [];
 var answer = function () {
   botui.message
     .bot({
@@ -244,6 +246,7 @@ var answer = function () {
         content: 'Correct! the answer is 88590.'
       });
       correct = correct + 1;
+      results.push(res.value);
     }  
     else {
       botui.message
@@ -252,6 +255,7 @@ var answer = function () {
         delay: 500,
         content: 'Wrong.. the answer was 88590.'
       })
+      results.push(res.value);
     }
   }).then(function () {
     botui.message
@@ -290,6 +294,7 @@ var answer = function () {
           content: 'Correct! the answer is 0.01$.'
         });
         correct = correct + 1;
+        results.push(res.value);
 
         if (correct==2) {
           botui.message
@@ -307,6 +312,7 @@ var answer = function () {
           delay: 500,
           content: 'Wrong.. the answer was 0.01$.'
         })
+        results.push(res.value);
       }
     }).then(function () {
       botui.message
@@ -345,6 +351,7 @@ var answer = function () {
             content: 'Correct! a Matryoshka doll is also known as a Nesting Doll.'
           });
           correct = correct + 1;
+          results.push(res.value);
 
           if (correct==3) {
             botui.message
@@ -362,25 +369,123 @@ var answer = function () {
             delay: 500,
             content: 'Wrong.. Matryoshka Doll has no relationship with Japan.'
           })
+          results.push(res.value);
         }
       }).then(function (res) {
-        botui.message
-        .bot({
+        botui.message.bot({
           photo: '/assets/img/11.png',
-          delay: 2500,
+          delay: 1500,
           content: 'This is end of my Q&A. Well done!'
         });
+      }).then(function() {
+        botui.action.button({
+          _delay: 2500,
+          get delay() {
+            return this._delay;
+          },
+          set delay(value) {
+            this._delay = value;
+          },
+          action: [
+            {
+              text: 'download',
+              value: true,
+            },
+          ]
+        })
+      }).then(function () {
+        botui.message
+        .bot({
+          delay: 2000,
+          content: "Do you want to download the result?",
+          photo: '/assets/img/11.png',
+        })
+      
+        botui.action.button({ 
+          _delay: 2500,
+          get delay() {
+            return this._delay;
+          },
+          set delay(value) {
+            this._delay = value;
+          },
+          action: [
+            {
+              // cssClass: 'chitchat',
+              text: 'Yes',
+              value: 'yes',
+            },
+            {
+              // cssClass: 'chitchat',
+              text: 'No',
+              value: 'no',
+            },
+          ]
+        }).then(function (res) {
+          if (res.value=="yes") {
+            
+            getPDF(results);
+          
+          }
+          else {
+            botui.message.bot({
+            delay: 700,
+            content: "Okay. See you next time :D",
+            photo: '/assets/img/11.png',
+          })
+          }
+        })
       })
     })
   })
-
-  
-
-
-
-
-
 }
+
+
+function getPDF(results) {
+  var name = "Yu Bin, Kim"; //prompt('What is your name?');
+  var multiplier = "123-45-6789"; //prompt('Enter a number:');
+  multiplier = parseInt(multiplier);
+
+  var doc = new jsPDF();
+  doc.setFontSize(22);
+  doc.text(20, 15, 'QUESTIONS & ANSWERS');
+  doc.setFontSize(15);
+  // doc.text(20, 30, 'This belongs to: ' + name);
+
+  doc.text(20, 40, 'Q1. WHAT IS THE POPULATION FO NEWTON, MASSACHUSETTS?')
+  doc.text(20, 50, 'A1. 88590')
+  doc.setFontSize(10);
+  doc.text(20, 60, 'YOUR ANS: ' + results[0])
+
+  doc.setFontSize(15);
+  doc.text(20, 80, 'Q2. WHAT IS A RUSSIAN RUBLE WORTH IN AMERICAN MONEY?')
+  doc.text(20, 90, 'A2. 0.01$')
+  doc.setFontSize(10);
+  doc.text(20, 100, 'YOUR ANS: ' + results[1])
+  
+  doc.setFontSize(15);
+  doc.text(20, 120, 'Q3. WHAT IS A MATRYOSHKA DOLL?')
+  doc.text(20, 130, 'A3. Nesting Doll')
+  doc.setFontSize(10);
+  doc.text(20, 140, 'YOUR ANS: ' + results[2])
+
+  // for(var i = 1; i <= 12; i ++) {
+  //   doc.text(20, 30 + (i * 10), i + ' x ' + multiplier + ' = ___');
+  // }
+
+  // doc.addPage();
+  // doc.setFontSize(22);
+  // doc.text(20, 20, 'Answers');
+  // doc.setFontSize(16);
+
+  // for(var i = 1; i <= 12; i ++) {
+  //   doc.text(20, 30 + (i * 10), i + ' x ' + multiplier + ' = ' + (i * multiplier));
+  // }
+  doc.save('Result.pdf');
+}
+
+
+
 
 function set_size() {
     var height = $(window).height();

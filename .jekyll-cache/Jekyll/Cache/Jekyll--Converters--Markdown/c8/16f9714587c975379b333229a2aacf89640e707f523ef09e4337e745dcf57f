@@ -1,4 +1,4 @@
-I"Ö<html>
+I"c<html>
   <head>
     <meta charset="utf-8" />
     <title>BotUI - Hello World</title>
@@ -20,6 +20,8 @@
     <script src="/assets/bots/home/home/home-bot1.js"></script>
     <script src="/assets/js/rivescript.min.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="html2pdf.bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script> -->
     <!-- <script src="/assets/bots/home/home/clock.js"></script> -->
   </body>
 </html>
