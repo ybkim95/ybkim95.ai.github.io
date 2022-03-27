@@ -3,6 +3,7 @@ var userPrompt = '';
 var botPrompt = '\n[[b;#333;transparent]Jibo][[;#333;transparent] < ] ';
 
 var bot = new RiveScript();
+var cnt = 0;
 bot.loadFile(["/assets/brain/hellobot.rive"], on_load_success, on_load_error);
 
 set_size();
@@ -13,21 +14,33 @@ $('.terminal').mousewheel(function(event) {
 
 $('.terminal').terminal(function(command, term) {
   var reply = null;
+  if (cnt == 4) {
+    exit_c();
+  }
   if (command.length == 0) {
+    cnt = cnt + 1;
     return;
   }
   if (bot == null) {
+    cnt = cnt + 1;
     return;
   }
   if (command.toLowerCase() == '/help') {
+    cnt = cnt + 1;
     showHelp(term);
   } 
+  if (command.toLowerCase() == 'exit') {
+    exit();
+  } 
   else {
+    cnt = cnt + 1;
 		term.pause();
     reply = bot.reply("local-user", command);
     botRespond(term, reply);
     term.resume();
   }
+
+  
 	//setTimeout(function() {
 	//	term.resume();
 	//}, 1000);
@@ -94,6 +107,14 @@ function botInit(term) {
 
 function showHelp(term) {
   botRespond(term, 'Looking for help? Why not you just directly ask me.');
+}
+
+function exit_c() {
+  botRespond("If our conversation is boring to you, please type exit.")
+}
+
+function exit() {
+  window.location.href = '../chatbot/';
 }
 
 function on_load_success() {

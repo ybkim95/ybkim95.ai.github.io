@@ -1,6 +1,7 @@
 window.Apex = {
   chart: {
-    foreColor: '#ccc',
+    // chart text color
+    foreColor: '#000000',
     toolbar: {
       show: false
     },
@@ -15,7 +16,8 @@ window.Apex = {
     theme: 'dark'
   },
   grid: {
-    borderColor: "#535A6C",
+    // chart grid color!
+    borderColor: "#e3e3e3",
     xaxis: {
       lines: {
         show: true

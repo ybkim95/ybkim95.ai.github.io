@@ -99,13 +99,15 @@ permalink: /calendar/
 </html> -->
 
 <style>
-    h1 {
+    /* h1 {
         text-align: center; 
-        color: white;
-    }
+        color: black;
+        font: 50px sans-serif;
+    } */
     .title {
-        color: white;
+        color: black;
         text-align: center; 
+        font: 40px sans-serif;
       }
 </style>
 
@@ -135,14 +137,13 @@ permalink: /calendar/
     <div id="wrapper">
       <div class="content-area">
         <div class="container-fluid">
-          <div class="text-right mt-3 mb-3 d-fixed">
-            <!-- <a
-              href="https://github.com/apexcharts/apexcharts.js/tree/master/samples/vanilla-js/dashboards/dark"
-              target="_blank"
+          <div class="text-left mt-3 mb-3 d-fixed">
+            <a
+              href="../chatbot"
               class="btn btn-outline-warning mr-2"
             >
-              <span class="btn-text">View Code</span>
-            </a> -->
+              <span class="btn-text">Reload</span>
+            </a>
           </div>
           <div class="main">
             <!-- <div class="row sparkboxes mt-4">

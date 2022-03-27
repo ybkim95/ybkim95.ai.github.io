@@ -1,8 +1,10 @@
 
 body {
-  background: #0e0025;
-  color: #777;
+  /* background color is this! */
+  background: #F7FCFF;
+  color: rgb(0, 0, 0);
   font-family: Montserrat, Arial, sans-serif;
+  /* text: #000000; */
 }
 
 .body-bg {
@@ -24,7 +26,8 @@ body {
 }
 
 .box {
-  background-color: #2B2D3E;
+  /* 4 individual box color */
+  background-color: #ffffff;
   padding: 25px 20px;
 }
 

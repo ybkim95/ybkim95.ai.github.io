@@ -14,7 +14,7 @@ permalink: /gallery/
 	body{
 		/*height: 10000px;*/
 		font-family: "Lato";
-		background-color: #000000;
+		background-color: #ffffff;
 		padding:20px 30px;
 		margin: 0px;
 	}
@@ -102,7 +102,7 @@ permalink: /gallery/
 	}
 	.content h1, .content h2{
 		font-family: "Source Sans Pro",sans-serif;
-		color: #ecf0f1;
+		color: #000000;
 		padding: 0px;
 		margin: 0px;
 		font-weight: normal;
@@ -115,7 +115,7 @@ permalink: /gallery/
 		font-size:26px;
 	}
 	.content p{
-		color: #ffffff;
+		color: #000000;
 		font-family: "Lato";
 		line-height: 28px;
 		font-size: 15px;
@@ -131,16 +131,16 @@ permalink: /gallery/
 	/** fork icon**/
 	.fork{
 		position: absolute;
-		top:0px;
-		left: 0px;
+		top:100px;
+		left: 10px;
 	}
 	</style>
 </head>
 
 <body>
-	<!-- <div class="fork">
-		<a href='https://github.com/hasinhayder/ImageCaptionHoverAnimation' target='_blank'><img src="img/fork.png" alt=""></a>
-	</div> -->
+	<div class="fork">
+		<a href='../chatbot'><img src="/assets/img/jibo_menu.gif" width="35%" height="35%" alt=""></a>
+	</div>
 	<div class="content">
 		<h1>JIBO'S GALLERY</h1>
 		<!-- <h2>WITH CSS3 TRANSITIONS & TRANSFORMS</h2> -->

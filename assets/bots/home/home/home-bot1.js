@@ -160,6 +160,7 @@ var chitchat = function () {
         photo: '/assets/img/11.png',
     })
   }
+
   count = count + 1;
 
   var ans = new RiveScript();
@@ -173,13 +174,23 @@ var chitchat = function () {
         placeholder: 'Say something.'
       }
     }).then(function (res) {
-    botui.message
-      .bot({
-        delay: 500,
-        content: bot.reply("local-user", res.value),// res.value,
-        photo: '/assets/img/11.png',
-      });
-    }).then(chitchat);
+      if (res.value == '/exit') {
+        exit();
+      }
+      if (count % 5 == 4) {
+        botui.message.bot({
+            delay: 500,
+            content: 'By the way, if our conversation is boring, type /exit.',
+            photo: '/assets/img/11.png',
+        })
+      }
+      botui.message
+        .bot({
+          delay: 500,
+          content: bot.reply("local-user", res.value),// res.value,
+          photo: '/assets/img/11.png',
+        });
+      }).then(chitchat);
 }
 
 var report_skill = function () {
@@ -196,6 +207,10 @@ var aboutme = function () {
 
 var gallery = function () {
   window.location.href = '../gallery/';
+}
+
+var reload = function () {
+  window.location.href = '../chatbot/';
 }
 
 
@@ -423,10 +438,8 @@ var answer = function () {
             },
           ]
         }).then(function (res) {
-          if (res.value=="yes") {
-            
+          if (res.value=="yes") {    
             getPDF(results);
-          
           }
           else {
             botui.message.bot({
@@ -435,6 +448,28 @@ var answer = function () {
             photo: '/assets/img/11.png',
           })
           }
+        })
+        .then(function () {      
+          botui.action.button({ 
+            _delay: 1500,
+            get delay() {
+              return this._delay;
+            },
+            set delay(value) {
+              this._delay = value;
+            },
+            action: [
+              {
+                // cssClass: 'chitchat',
+                text: 'Reload',
+                value: 'reload',
+              },
+            ]
+          }).then(function (res) {
+            if (res.value=="reload") {    
+              reload();
+            }
+          })
         })
       })
     })
@@ -549,6 +584,10 @@ function header(term) {
   //   '[[;#111;transparent]Companion Robot]\n\n' +
   //   "================================ \n"  
   // );
+}
+
+function exit() {
+  window.location.href = '../chatbot/';
 }
 
 function botInit(term) {
