@@ -200,5 +200,5 @@ body .no-padding{
 </div>
 
 <br><br>
-For more information, please refer to my [Curriculum Vitae (CV)](https://drive.google.com/file/d/1ZbHwkW_8Q0pFleo-stwcvNgUjy6zlv8q/view?usp=sharing). <br> <br>
+For more information, please refer to my [Curriculum Vitae (CV)](https://drive.google.com/file/d/1yOCMIUSJbfoHxHQOwy9GPyodyT-d4u1b/view?usp=sharing). <br> <br>
 <!-- </span> -->
